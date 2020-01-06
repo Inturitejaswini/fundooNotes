@@ -1,3 +1,5 @@
+
+
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom';
 import {TextField, Card,Button} from '@material-ui/core'
@@ -8,6 +10,7 @@ export class login extends Component {
         email:'',
         password:''
         }
+
        }
     render() {
         return (
@@ -16,7 +19,7 @@ export class login extends Component {
              <Card className="login_card">
               <center>
                <div>
-                   <h2>FundooApp_Login</h2>
+                   <h2>FundooApp Login</h2>
                </div>
                
                  <TextField
@@ -36,24 +39,17 @@ export class login extends Component {
                  </center>
               
                  <div className="submit_Btn">
+                    <div className="forgot_password" variant="contained" color="primary" placeholder="bottem-left">
+                    <h5>ForgotPassword</h5>
+                 </div>
+                    </div>
                     <div>
-                        <Button className="login_Btn" variant="contained" color="default">
+                    <center>
+                     <Button className="login_Btn" variant="contained" color="primary">
                         login
-                        </Button>
+                    </Button>
+                    </center>
                     </div>
-                    <div>
-                     <Button  className="register_Btn" variant="contained" color="default">
-                        Register
-                        </Button>
-                    </div>
-                 </div>
-                 <div>
-                     <center>
-                     <Button className="forgot_password" variant="contained" color="secondary">
-                     ForgotPassword
-                     </Button>
-                     </center>
-                 </div>
              </Card>
             </div>
         )
