@@ -16,7 +16,7 @@ export class login extends Component {
         return (
            
             <div className="login_container">
-             <Card className="login_card">
+             <Card className="login_card"  styles={{ Card: { backgroundColor:'primary'}}}>
               <center>
                <div>
                    <h2>FundooApp Login</h2>
