@@ -1,0 +1,25 @@
+.login_container{
+   display:flex;
+   justify-content: center;
+   align-items:center ;
+}
+.login_card{
+  width:30em ;
+  height: 60vh;
+  background-color: lawngreen;
+}
+.submit_Btn{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  color:crimson;
+  font-size: large;
+  white-space: nowrap;
+  word-spacing: inherit;
+}
+.forgot_password{
+  justify-content: center;
+  font-size: inherit;
+  word-spacing: 0px;
+  border-width: thick;
+}
