@@ -14,9 +14,8 @@ export class login extends Component {
        }
     render() {
         return (
-           
             <div className="login_container">
-             <Card className="login_card"  styles={{ Card: { backgroundColor:'primary'}}}>
+             <Card className="login_card"  style={{backgroundColor: 'pink', width: '30em',height: '60vh' }}>  
               <center>
                <div>
                    <h2>FundooApp Login</h2>
@@ -37,8 +36,7 @@ export class login extends Component {
                  </TextField>
                  <br/>
                  </center>
-              
-                 <div className="submit_Btn">
+                <div className="submit_Btn">
                     <div className="forgot_password" variant="contained" color="primary" placeholder="bottem-left">
                     <h5>ForgotPassword</h5>
                  </div>

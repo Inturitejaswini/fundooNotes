@@ -2,11 +2,12 @@
    display:flex;
    justify-content: center;
    align-items:center ;
+   height: 100vh;
 }
 .login_card{
   width:30em ;
   height: 60vh;
-  background-color: lawngreen;
+  color: rgb(0, 59, 252);
 }
 .submit_Btn{
   display: flex;
@@ -22,4 +23,57 @@
   font-size: inherit;
   word-spacing: 0px;
   border-width: thick;
+}
+.login_Btn{
+  justify-content: center;
+  height: 2e;
+  width: 40vh;
+  background-color: lightcoral;
+}
+/**/
+.Registration_container{
+  display:flex;
+  justify-content: center;
+  align-items:center ;
+  height: 100vh;
+}
+.submit_Btn{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  color:crimson;
+  font-size: large;
+  white-space: nowrap;
+  word-spacing: inherit;
+}
+.forgot_password{
+  justify-content: center;
+  font-size: inherit;
+}
+.Registration_Btn{
+  justify-content: center;
+  height: 2e;
+  width: 40vh;
+}
+.Registration_card{
+  width:30em ;
+  height: 60vh;
+  color: rgb(0, 59, 252);
+}
+.cancel_Btn{
+  justify-content: center;
+  height: 2e;
+  width: 4vh;
+}
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+
+.container{
+  padding-top:50px;
+  margin: auto;
 }
