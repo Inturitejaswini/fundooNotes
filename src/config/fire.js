@@ -12,15 +12,15 @@ import firebase from 'firebase';
 //   const fire=firebase.initializeApp(firebaseConfig);
 //   export default fire;
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBuunyAI-toPtdSFmuxyMznPWk1ybwebnQ",
-    authDomain: "fundoonotes-ed23e.firebaseapp.com",
-    databaseURL: "https://fundoonotes-ed23e.firebaseio.com",
-    projectId: "fundoonotes-ed23e",
-    storageBucket: "fundoonotes-ed23e.appspot.com",
-    messagingSenderId: "585572239174",
-    appId: "1:585572239174:web:3e2429e741195aa7128747",
-    measurementId: "G-BHCYNMWHL2"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDJtp_oHMN3SCACLAeXWba6OdiU21lh12k",
+  authDomain: "fundooapp-53fa6.firebaseapp.com",
+  databaseURL: "https://fundooapp-53fa6.firebaseio.com",
+  projectId: "fundooapp-53fa6",
+  storageBucket: "fundooapp-53fa6.appspot.com",
+  messagingSenderId: "433375240350",
+  appId: "1:433375240350:web:761a07d1313cb7d33b9b8f",
+  measurementId: "G-L43LLRCK2R"
+};
   const fire=firebase.initializeApp(firebaseConfig);
   export default fire;

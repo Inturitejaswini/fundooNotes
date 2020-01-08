@@ -9,11 +9,11 @@ export class Registration extends Component {
         lastName:'',
         fullName:'',
         department:'',
-        address:'',
         email:'',
         password:'',
         conformPassword:'',
         mobileNo:'',
+        courseName:'',
         }
         }
     render() {
@@ -26,49 +26,69 @@ export class Registration extends Component {
                    <h2>FundooApp Registration</h2>
                </div>
                <TextField
-                     label="firstName"
-                     variant="standard"
-                     placeholder="firstName"/>
+               name="firstName"
+
+               label="firstName"
+               variant="standard"
+               placeholder="firstName"
+               onChange={this.handleChange}
+               />
                 <br/>
                  <TextField 
+                 name="lastName"
                     label="lastName"
                     variant="standard"
-                    placeholder="lastName"/>
+                    placeholder="lastName"
+                    onChange={this.handleChange}/>
                  <br/>
                  <TextField
+                 name="firstName"
                     label="fullName"
                     variant="standard"
-                    placeholder="fullName"/>
+                    placeholder="fullName"
+                    onChange={this.handleChange}/>
                  <br/>
                  <TextField
-                    label="address"
+                 name="department"
+                    label="department"
                     variant="standard"
-                    placeholder="address"/>
+                    placeholder="department"
+                    onChange={this.handleChange}/>
                  <br/>
                  <TextField
+                 name="emailAddress"
                     label="emailAddress"
                     variant="standard"
-                    placeholder="emailAddress"/>
+                    placeholder="emailAddress"
+                    onChange={this.handleChange}/>
                  <br/>
                  <TextField
+                 name="password"
                     label="password"
                     variant="standard"
-                    placeholder="password"/>
+                    placeholder="password"
+                    onChange={this.handleChange}/>
                  <br/>
                  <TextField
+                 name="confirm-Password"
                     label="confirm-Password"
                     variant="standard"
-                    placeholder="confirm-Password"/>
+                    placeholder="confirm-Password"
+                    onChange={this.handleChange}/>
                  <br/>
                  <TextField
+                 name="mobileNo"
                     label="mobileNo"
                     variant="standard"
-                    placeholder="mobileNo"/>
+                    placeholder="mobileNo"
+                    onChange={this.handleChange}/>
                  <br/>
                  <TextField
+                 name="courseName"
                     label="courseName"
                     variant="standard"
-                    placeholder="courseName"/>
+                    placeholder="courseName"
+                    onChange={this.handleChange}/>
                  <br/>
                  </center>
                  <div className="submit_Btn">
