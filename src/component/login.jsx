@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom';
 import {TextField, Card,Button,Checkbox} from '@material-ui/core'
-export class login extends Component {
+export class Login extends Component {
     constructor(){
         super();
         this.state={
@@ -74,4 +74,4 @@ export class login extends Component {
         )
     }
 }
-export default withRouter(login)
+export default withRouter(Login)
