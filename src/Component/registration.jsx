@@ -28,66 +28,47 @@ export class Registration extends Component {
                <TextField
                      label="firstName"
                      variant="standard"
-                     placeholder="firstName">
-                </TextField>
+                     placeholder="firstName"/>
                 <br/>
                  <TextField 
                     label="lastName"
                     variant="standard"
-                    placeholder="lastName">
-                 </TextField>
+                    placeholder="lastName"/>
                  <br/>
                  <TextField
                     label="fullName"
                     variant="standard"
-                    placeholder="fullName">
-                 </TextField>
+                    placeholder="fullName"/>
                  <br/>
                  <TextField
                     label="address"
                     variant="standard"
-                    placeholder="address">
-                 </TextField>
+                    placeholder="address"/>
                  <br/>
                  <TextField
                     label="emailAddress"
                     variant="standard"
-                    placeholder="emailAddress">
-                 </TextField>
+                    placeholder="emailAddress"/>
                  <br/>
                  <TextField
                     label="password"
                     variant="standard"
-                    placeholder="password">
-                  <div class="col-md-6">
-                  <input id="password-field"  class="feild-Icon" name="password" value="secret"/>
-                  <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                  </div>
-                 </TextField>
+                    placeholder="password"/>
                  <br/>
                  <TextField
                     label="confirm-Password"
                     variant="standard"
-                    placeholder="confirm-Password">
-                 </TextField>
+                    placeholder="confirm-Password"/>
                  <br/>
                  <TextField
                     label="mobileNo"
                     variant="standard"
-                    placeholder="mobileNo">
-                 </TextField>
+                    placeholder="mobileNo"/>
                  <br/>
                  <TextField
                     label="courseName"
                     variant="standard"
-                    placeholder="courseName">
-                  <select>
-                   <option value="java">Java</option>
-                   <option value="python">Python</option>
-                   <option value="react">Reactjs</option>
-                   <option value=".net">.Net</option>
-                   </select>
-                 </TextField>
+                    placeholder="courseName"/>
                  <br/>
                  </center>
                  <div className="submit_Btn">
@@ -98,9 +79,9 @@ export class Registration extends Component {
                     <div>
                     <center>
                      <Button className="Registration_Btn" variant="contained" color="primary">
-                        Registration
+                        Register
                     </Button>
-                    <Button className="cancel_Btn" variant="contained" color="default">
+                    <Button className="cancel_Btn" variant="contained" color="default" style={{marginLeft:"20px"}}>
                         Cancel
                     </Button>
                     </center>

@@ -14,20 +14,18 @@
   justify-content: center;
   align-items:center ;
   color:crimson;
-  font-size: large;
+  font-size:small;
   white-space: nowrap;
   word-spacing: inherit;
 }
 .forgot_password{
   justify-content: center;
-  font-size: inherit;
-  word-spacing: 0px;
-  border-width: thick;
+  height: "20px";
 }
 .login_Btn{
   justify-content: center;
   height: 2e;
-  width: 40vh;
+  width: 20vh;
   background-color: lightcoral;
 }
 /**/
@@ -65,15 +63,4 @@
   height: 2e;
   width: 4vh;
 }
-.field-icon {
-  float: right;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: relative;
-  z-index: 2;
-}
 
-.container{
-  padding-top:50px;
-  margin: auto;
-}

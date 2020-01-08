@@ -9,8 +9,7 @@ export class App extends Component {
     <Router>
       <Switch>
         <Route path='/login' component={login}></Route>
-        <Route path='/Registration' component={Registration}>
-        </Route>
+        <Route path='/registration' component={Registration}></Route>
       </Switch>
     </Router>
     )
