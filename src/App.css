@@ -54,7 +54,8 @@
   width: 40vh;
 }
 .Registration_card{
-  width:30em ;
+  justify-content: center;
+  width:10em ;
   height: 60vh;
   color: rgb(0, 59, 252);
 }

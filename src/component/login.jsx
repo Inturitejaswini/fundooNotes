@@ -21,11 +21,11 @@ export class Login extends Component {
     render() {
         return (
             <div className="login_container">
-             <Card className="login_card"  style={{backgroundColor: 'pink',
-             }}>  
+             <Card className="login_card"  style={{backgroundColor: 'pink' }}>  
               <center>
                <div>
-                   <h2>FundooApp Login</h2>
+               <h2><a href="/"><font color="#800080">Fundoo</font><font color="#00FF00">App</font><font 
+                color="#000080">Login</font></a></h2>
                </div>
                
                  <TextField
@@ -45,18 +45,19 @@ export class Login extends Component {
                  <br/>
                  </center>
                 <div className="submit_Btn">
-                    <div  onClick={this.handleForgotPassword} className="forgot_password" variant="contained" color="primary" placeholder="bottem-left">
+                    <div  onClick={this.handleForgotPassword} className="forgot_password" 
+                    variant="contained" color="primary" placeholder="bottem-left">
                     <h5>ForgotPassword?</h5>
                  </div>
                     </div>
                     <div>
                         <center>
                     <Button  onClick={this.handleRegister}  className="register_Btn" variant="contained"
-                     color="primary" style={{marginRight:"40px"}} style={{marginTop:"3px"}}>
+                     color="primary" style={{marginRight:"40px", marginTop:"3px"}}>
                        <span>Register</span>
                     </Button>
                      <Button    className="login_Btn" variant="contained" color="primary" 
-                     style={{marginTop:"40px"}} style={{marginLeft:"20px"}}>
+                     style={{marginTop:"3px",marginLeft:"20px"}}>
                        <span> login</span>
                     </Button>
                     </center>
