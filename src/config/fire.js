@@ -1,17 +1,4 @@
 import firebase from 'firebase';
-//  const firebaseConfig = {
-//   apiKey: process.env.REACT_APP_Firebase_Apikey,
-//   authDomain: process.env.REACT_APP_Firebase_authDomain,
-//   databaseURL: process.env.REACT_APP_Firebase_databaseURL,
-//   projectId: process.env.REACT_APP_Firebase_projectId,
-//   storageBucket: process.env.REACT_APP_Firebase_storageBucket,
-//   messagingSenderId: process.env.REACT_APP_Firebase_messagingSenderId,
-//   appId: process.env.REACT_APP_Firebase_appId,
-//   measurementId: process.env.REACT_APP_Firebase_measurementId
-//  };
-//   const fire=firebase.initializeApp(firebaseConfig);
-//   export default fire;
-
 const firebaseConfig = {
   apiKey: "AIzaSyDJtp_oHMN3SCACLAeXWba6OdiU21lh12k",
   authDomain: "fundooapp-53fa6.firebaseapp.com",

@@ -8,31 +8,67 @@ export class Login extends Component {
         super();
         this.state={
         email:'',
-        password:''
+        password:'',
+        emailError: '',
+        
         }
-
-       }
+       this.handleChangeEmail = this.handleChangeEmail.bind(this);
+       this.handleChangePassword = this.handleChangePassword.bind(this);
+       this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleChangeEmail = event => {
+        this.setState({ email: event.target.value });
+     };
+     handleChangePassword = event => {
+        this.setState({password: event.target.value});
+     };
+     validate = () => {
+        let emailError = "";
+        let passwordError = "";
+        if (!this.state.password) {
+           passwordError = "* password cannot be empty";
+        }
+        if (!this.state.email.includes('@')) {
+           emailError = '*inavlid emailid';
+        }
+        if (emailError || passwordError) {
+           this.setState({ emailError, passwordError});
+           return false;
+        }
+        return true;
+     }
+     handleSubmit(event){
+        event.preventDefault();
+        const isValid = this.validate();
+        if (isValid) {
+           console.log(this.state)
+        }
+     };
        handleRegister=()=>{
            this.props.history.push('/registration')
        }
        handleForgot=()=>{
         this.props.history.push('/forgot')
     }
+    handleLogin = () => {
+        this.props.history.push('/login')
+     }
     render() {
         return (
             <div className="login_container">
              <Card className="login_card"  style={{backgroundColor: 'pink' }}>  
               <center>
                <div>
-               <h2><a href="/"><font color="#800080">Fundoo</font><font color="#00FF00">App</font><font 
-                color="#000080">Login</font></a></h2>
+               <h2><a href="/"><font color="#800080">FundooLogin</font></a></h2>
                </div>
                
                  <TextField
                      id="outlined-basic"
                      label="email"
                      variant="standard"
-                     type="email">
+                     type="email"
+                     value={this.state.email}
+                    onChange={this.handleChangeEmail}>
                 </TextField>
                  <br/>
                  <TextField
@@ -40,7 +76,9 @@ export class Login extends Component {
                     id="standard-password-input"
                     label="Password"
                     variant="standard"
-                    type="password">
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.handleChangePassword}>
                  </TextField>
                  <br/>
                  </center>

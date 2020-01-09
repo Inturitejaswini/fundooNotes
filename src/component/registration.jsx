@@ -54,7 +54,7 @@ export class Registration extends Component {
          emailError = '*inavlid emailid';
       }
       if (!this.state.mobileNo.includes('@')) {
-         mobileNoError = '*inavlid mobileNo';
+         mobileNoError = '*inavlid mobileNo enter 10 digitnumber';
       }
       if (emailError || fullNameError || passwordError || mobileNoError) {
          this.setState({ emailError, fullNameError, passwordError, mobileNoError });
@@ -79,21 +79,11 @@ export class Registration extends Component {
             <div className="registartion_container">
             <center>
                   <Card  style={{ justifyContent: 'center', width: '25em', height: '80vh', 
-                  marginTop: '60px', backgroundColor: '#F08080' }}>
+                  marginTop: '60px', backgroundColor: '#FA8072' }}>
                         <center>
                            <div >
-                              <h2><a href="/"><font color="	#800080">R</font>
-                              <font color="#808000">e</font>
-                              <font color="#00FF00">g</font>
-                              <font color="#008000">i</font>
-                              <font color="#00FFFF">s</font>
-                              <font color="#008080">t</font>
-                              <font color="#0000FF">r</font>
-                              <font color="#000080">a</font>
-                              <font color="#FF00FF">t</font>
-                              <font color="#800080">i</font>
-                              <font color="#008000">o</font>
-                              <font color="#FF0000">n</font></a></h2>
+                              <h2><a href="/"><font color="	#800080">Registration</font>
+                              </a></h2>
                            </div>
                         </center>
                         <div className="form-group" style={{ marginBottom: '10px' }}>
@@ -123,7 +113,8 @@ export class Registration extends Component {
                            <TextField id="standard-basic"
                               type="mobileNo"
                               placeholder="mobileNo"
-                           />
+                              value={this.state.mobileNo}
+                              onChange={this.handleChangemobileNo} />
                            <div style={{ fontSize: 12, color: 'red' }}>
                               {this.state.mobileNoError}
                            </div>
@@ -131,9 +122,10 @@ export class Registration extends Component {
 
                         <div className="form-group" style={{ marginBottom: '10px' }}>
                            <TextField id="standard-basic"
-                              type="password"
-                              placeholder="Password"
-                           />
+                              type="create password"
+                              placeholder="create Password"
+                              value={this.state.createPassword}
+                              onChange={this.handleChangecreatePassword}/>
                            <div style={{ fontSize: 12, color: 'red' }}>
                               {this.state.passwordError}
                            </div>
@@ -143,7 +135,8 @@ export class Registration extends Component {
                               type="password"
                               placeholder="Confirm Password"
                               className="form-control"
-
+                              value={this.state.ConfirmPassword}
+                              onChange={this.handleChangeConformPassword}
                            />
                         </div>
                         <div className="submit_Btn">
