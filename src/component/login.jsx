@@ -10,6 +10,7 @@ export class Login extends Component {
         email:'',
         password:'',
         emailError: '',
+        passwordError:'',
         
         }
        this.handleChangeEmail = this.handleChangeEmail.bind(this);
@@ -39,7 +40,7 @@ export class Login extends Component {
      }
      handleSubmit(event){
         event.preventDefault();
-        const isValid = this.validate();
+        let isValid = this.validate();
         if (isValid) {
            console.log(this.state)
         }
