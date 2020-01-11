@@ -1,58 +1,68 @@
-
-
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom';
 import {TextField, Card,Button,Checkbox} from '@material-ui/core'
+import Log from '../controller/userController'
 export class Login extends Component {
     constructor(){
         super();
         this.state={
         email:'',
         password:'',
-        emailError: '',
-        passwordError:'',
+      //   emailError: '',
+      //   passwordError:'',
         
         }
-       this.handleChangeEmail = this.handleChangeEmail.bind(this);
-       this.handleChangePassword = this.handleChangePassword.bind(this);
-       this.handleSubmit = this.handleSubmit.bind(this);
+      //  this.handleChangeEmail = this.handleChangeEmail.bind(this);
+      //  this.handleChangePassword = this.handleChangePassword.bind(this);
+      //  this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChangeEmail = event => {
         this.setState({ email: event.target.value });
+        console.log("email",this.state.email);
      };
      handleChangePassword = event => {
         this.setState({password: event.target.value});
+        console.log("password", this.state.password);
      };
-     validate = () => {
-        let emailError = "";
-        let passwordError = "";
-        if (!this.state.password) {
-           passwordError = "* password cannot be empty";
-        }
-        if (!this.state.email.includes('@')) {
-           emailError = '*inavlid emailid';
-        }
-        if (emailError || passwordError) {
-           this.setState({ emailError, passwordError});
-           return false;
-        }
-        return true;
-     }
-     handleSubmit(event){
-        event.preventDefault();
-        let isValid = this.validate();
-        if (isValid) {
-           console.log(this.state)
-        }
-     };
+   //   validate = () => {
+   //      let emailError = "";
+   //      let passwordError = "";
+   //      if (!this.state.password) {
+   //         passwordError = "* password cannot be empty";
+   //      }
+   //      if (!this.state.email.includes('@')) {
+   //         emailError = '*inavlid emailid';
+   //      }
+   //      if (emailError || passwordError) {
+   //         this.setState({ emailError, passwordError});
+   //         return false;
+   //      }
+   //      return true;
+   //   }
+   //   handleSubmit(event){
+   //      event.preventDefault();
+   //      let isValid = this.validate();
+   //      if (isValid) {
+   //         console.log(this.state)
+   //      }
+   //   };
+  
        handleRegister=()=>{
            this.props.history.push('/registration')
        }
        handleForgot=()=>{
-        this.props.history.push('/forgot')
+        this.props.history.push('/forgotPassword')
     }
     handleLogin = () => {
-        this.props.history.push('/login')
+      const user = {
+         email: this.state.email,
+         password: this.state.password,
+      }
+      console.log("new user dateils", user);
+      Log(user).then(()=>{
+      //console.log(response.data);
+      })
+      // this.props.history.push('/login')
      }
     render() {
         return (
@@ -84,9 +94,10 @@ export class Login extends Component {
                  <br/>
                  </center>
                 <div className="submit_Btn">
-                    <div  onClick={this.handleForgotPassword} className="forgot_password" 
-                    variant="contained" color="primary" placeholder="bottem-left">
-                    <h5>ForgotPassword?</h5>
+                <div>
+                <Button onClick={this.handleForgot} className="forgotpassword" variant="contained" color="inherit">
+                forgotpassword
+                </Button>
                  </div>
                     </div>
                     <div>
@@ -95,7 +106,7 @@ export class Login extends Component {
                      color="primary" style={{marginRight:"40px", marginTop:"3px"}}>
                        <span>Register</span>
                     </Button>
-                     <Button    className="login_Btn" variant="contained" color="primary" 
+                     <Button   onClick={this.handleLogin} className="login_Btn" variant="contained" color="primary" 
                      style={{marginTop:"3px",marginLeft:"20px"}}>
                        <span> login</span>
                     </Button>

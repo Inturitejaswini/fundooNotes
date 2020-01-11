@@ -35,19 +35,6 @@
   align-items:center ;
   height: 100vh;
 }
-.submit_Btn{
-  display: flex;
-  justify-content: center;
-  align-items:center ;
-  color:crimson;
-  font-size: large;
-  white-space: nowrap;
-  word-spacing: inherit;
-}
-.forgot_password{
-  justify-content: center;
-  font-size: inherit;
-}
 .Registration_Btn{
   justify-content: center;
   height: 2e;
@@ -57,10 +44,68 @@
   justify-content: center;
   width:10em ;
   height: 60vh;
-  color: rgb(0, 59, 252);
 }
 .cancel_Btn{
   justify-content: center;
   height: 2e;
   width: 4vh;
 }
+.firstName-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  }
+  .input-text{
+  height: 33px;
+  border-radius: 4px;
+  border: 1px solid;
+  padding-left: 3px;
+  }
+  .lastName-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    }
+    .input-text{
+    height: 33px;
+    border-radius: 6px;
+    border: 2px solid;
+    padding-left: 4px;
+    }
+    .fullname-text{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      }
+      .input-text{
+      height: 33px;
+      border-radius: 4px;
+      border: 1px solid;
+      padding-left: 3px;
+      }
+     .email-text{
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+        }
+     .input-text{
+      height: 33px;
+      border-radius: 4px;
+      border: 1px solid;
+      padding-left: 3px;
+       }
+    .password-text{display: flex;
+     justify-content: center;
+     align-items: center;
+    padding-top: 10px;
+    }
+    .input-text{
+     height: 33px;
+     border-radius: 4px;
+     border: 1px solid;
+     padding-left: 3px;
+     }

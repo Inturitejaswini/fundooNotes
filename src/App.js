@@ -10,7 +10,7 @@ export class App extends Component {
       <Router>
         <Switch>
           <Route path='/login' component={Login}></Route>
-          <Route exact path='/' component={Registration}></Route>
+          <Route path='/registration' component={Registration}></Route>
           <Route path='/forgotPassword' component={ForgotPassword}></Route>
         </Switch>
       </Router>

@@ -1,53 +1,70 @@
-import jwt from 'jsonwebtoken';
-import firebaseAuthorization from '../const'
-import serviceConstant from '../const'
-export default async function Register(data){
- console.log("data in controller",data);
-try {
-const user = {
-fullName: data.fullName,
-email: data.email,
+// serviceConstant from '../const'
+import firebase from 'firebase'
+//import Registration from '../component/registration'
+import fire from '../config/fire'
+const db = firebase.firestore();
+export  default async function Register(data){
+console.log(data);
+const user={
+firstName:data.firstName,
+lastName:data.lastName,
+fullName:data.fullName,
+email:data.email,
 password:data.password,
 }
-console.log("data in controller",user);
-
-let response=await serviceConstant.firebaseAuthorization.collection('user').createUserWithEmailAndPassword(user.email,user.password);
-let userdetails= await serviceConstant.firestore.collection('user').doc(user.response.email,user.response.password).set(user);
-userdetails.get().then(function(doc){
-const details1={
-"userId":response.uid,
-"email":response.email,
+try {
+let response=await fire.auth().createUserWithEmailAndPassword(data.email,data.password);
+console.log('this is firebase',response)
+// //this is my url
+let currentUser=fire.auth().currentUser.uid
+console.log( "current user data",currentUser);
+let userdetails= db.collection('users').doc(currentUser).set(user);
+console.log("register succes",userdetails)
 }
-let token=jwt.sign(details1,firebaseAuthorization.collection('user').uid,{
-expiresIn:1440
-})
-})
-return userdetails
-}                                                    
 catch (error) {
 console.log(error)
 return error.message
 }
 }
-// export async function Login(user) {
-// try {
-// let userLogin=await serviceConstant.firebaseAuthorization.signInWithEmailAndPassword(user.email,user.password)
-// let userData = await serviceConstant.firestore.collection("users").doc(userLogin.user.uid)
-// await userData.get().then(function (doc) {
-// const payload = {
-// user_id:userLogin.user.uid,
-// email: userLogin.user.email,
-// fullName: doc.data().fullName,
-// }
-// let token = jwt.sign(payload, 'hsdyusd99d787sd7sjd89sdsd', {
-// expiresIn: 1440
-// })
-// localStorage.setItem('usertoken', token)
-// })
-// return userLogin
-// }
-// catch (error) {
-// console.log(error)
-// return error.message
-// }
-// }
+
+export  async function Log(data){
+    //console.log("login enterd into controller",data)
+    let user={
+    email:data.email,
+    password:data.password,
+    }
+    //console.log("data is came",userData)
+    try{
+    let response=await fire.auth().signInWithEmailAndPassword(data.email,data.password);
+    console.log("sighned",response)
+    let currentUser=fire.auth().currentUser.uid
+    console.log( "current user data",currentUser);
+    let userdetails= db.collection('users').doc(currentUser);
+    console.log("login succes",userdetails)
+    }
+    catch(error){
+    console.log(error)
+    return error.message
+    }
+    }
+
+    export  async function Forgot(data){
+        //console.log("login enterd into controller",data)
+        let user={
+         newpassword:data.newpassword,
+         confirmpasword:data.confirmpasword,
+        }
+        //console.log("data is came",userData)
+        try{
+        let response=await fire.auth().sendPasswordResetEmail(data.newpassword,data.confirmpasword);
+        console.log("sighned",response)
+        let currentUser=fire.auth().currentUser.uid
+        console.log( "current user data",currentUser);
+        let userdetails= db.collection('users').doc(currentUser).set(user);
+        console.log("login succes",userdetails)
+        }
+        catch(error){
+        console.log(error)
+        return error.message
+        }
+        }

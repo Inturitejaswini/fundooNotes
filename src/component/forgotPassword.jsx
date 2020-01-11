@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { Card, TextField, Button } from '@material-ui/core'
+import Forgot from '../controller/userController'
 export class ForgotPassword extends Component {
     constructor() {
         super();
@@ -9,6 +10,27 @@ export class ForgotPassword extends Component {
             confirmpasword: '',
         }
     }
+    handleChangeNewPassword= (event) => {
+        this.setState({newpassword: event.target.value });
+        console.log("newPassword", this.state.newpassword);
+  
+     };
+     handleChangeConformPassword = (event) => {
+        this.setState({conformPassword: event.target.value });
+        console.log("conformPassword", this.state.conformPassword);
+  
+     };
+     handleRegister = () => {
+        const user = {
+            newpassword: this.state.newpassword,
+            confirmpasword: this.state.confirmpasword,
+        }
+        console.log("new user dateils", user);
+        Forgot(user).then(()=>{
+        //console.log(response.data);
+        })
+     }
+    
     render() {
         return (
             <div>
@@ -17,7 +39,7 @@ export class ForgotPassword extends Component {
                         <Card className="login_card" style={{
                             backgroundColor: 'pink',
                             width: '30em',
-                            height: '80vh'
+                            height: '50vh'
                         }}>
                             <center>
                                 <div>
@@ -26,24 +48,23 @@ export class ForgotPassword extends Component {
                                 <div>
                                     <TextField
                                         id="standard-password-input"
-                                        label="create a password"
+                                        label="newPassword"
                                         variant="standard"
-                                        type="password"
+                                        type="newPassword"
+                                        onChange= {this.handleChangeNewPassword}
                                     //autoComplete="current-password"
                                     />
                                 </div>
                                 <div>
                                     <TextField
                                         id="standard-password-input"
-                                        label="confirm Password"
+                                        label="confirmPassword"
                                         variant="standard"
-                                        type="password"
-                                    //autoComplete="current-password"
+                                        type="conformPassword"
+                                        onChange= {this.handleChangeConformPassword}
                                     />
                                 </div>
                             </center>
-                            <div className="fundoonote">
-                            </div>
                             <div className="submit_btn">
 
                                 <center>
