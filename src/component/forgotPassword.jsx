@@ -1,3 +1,18 @@
+
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node forgotPassword.jsx 
+ *                      2. if nodemon installed cmd> nodemodule forgotPassword.jsx
+ * 
+ *  Purpose         : creating forgotPassword form.
+ *  @description    
+ * 
+ *  @file           :forgotPassword.jsx
+ *  @overview       :forgotPassword form problem.
+ *  @module         :forgotPassword - This is optional if expeclictly its an npm or local package
+ *  @author         :Tejaswini<chowdarytejaswini2@gmail.com>
+ *  @version        :1.0
+ *  @since          :9-1-2019
+ ******************************************************************************/
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { Card, TextField, Button, Snackbar } from '@material-ui/core'
