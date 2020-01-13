@@ -22,13 +22,8 @@ export class Login extends Component {
         this.state={
         email:'',
         password:'',
-      //   emailError: '',
-      //   passwordError:'',
         
         }
-      //  this.handleChangeEmail = this.handleChangeEmail.bind(this);
-      //  this.handleChangePassword = this.handleChangePassword.bind(this);
-      //  this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChangeEmail = event => {
         this.setState({ email: event.target.value });
@@ -38,28 +33,6 @@ export class Login extends Component {
         this.setState({password: event.target.value});
         console.log("password", this.state.password);
      };
-   //   validate = () => {
-   //      let emailError = "";
-   //      let passwordError = "";
-   //      if (!this.state.password) {
-   //         passwordError = "* password cannot be empty";
-   //      }
-   //      if (!this.state.email.includes('@')) {
-   //         emailError = '*inavlid emailid';
-   //      }
-   //      if (emailError || passwordError) {
-   //         this.setState({ emailError, passwordError});
-   //         return false;
-   //      }
-   //      return true;
-   //   }
-   //   handleSubmit(event){
-   //      event.preventDefault();
-   //      let isValid = this.validate();
-   //      if (isValid) {
-   //         console.log(this.state)
-   //      }
-   //   };
   
        handleRegister=()=>{
            this.props.history.push('/registration')
@@ -74,9 +47,8 @@ export class Login extends Component {
       }
       console.log("new user dateils", user);
       Log(user).then(()=>{
-      //console.log(response.data);
       })
-      // this.props.history.push('/login')
+       this.props.history.push('/login')
      }
     render() {
         return (
