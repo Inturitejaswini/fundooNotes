@@ -1,3 +1,17 @@
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node registration.jsx 
+ *                      2. if nodemon installed cmd> nodemodule registration.jsx
+ * 
+ *  Purpose         : creating registration form.
+ *  @description    
+ * 
+ *  @file           :registration.jsx
+ *  @overview       :registration form problem.
+ *  @module         :registration - This is optional if expeclictly its an npm or local package
+ *  @author         :Tejaswini<chowdarytejaswini2@gmail.com>
+ *  @version        :1.0
+ *  @since          :4-1-2019
+ ******************************************************************************/
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { Card, Button, Snackbar,Input } from '@material-ui/core';
