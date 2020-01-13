@@ -31,7 +31,7 @@ export class ForgotPassword extends Component {
         this.setState({ snackbarOpen: false })
         }
     handlechangeNewPassword = (event) => {
-        if (event.target.value.match(/^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/) != null) {
+        if (event.target.value.match("/^[a-z0-9 ]*$") != null) {
            this.setState({ newPassword: event.target.value });
            console.log("enter newpassword",this.state.newPassword)
         }
@@ -40,7 +40,7 @@ export class ForgotPassword extends Component {
         }
      }
      handlechangeConformPassword = (event) => {
-        if (event.target.value.match(/^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/) != null) {
+        if (event.target.value.match("^[a-z0-9 ]*$") != null) {
            this.setState({ conformPassword: event.target.value });
            console.log("enter conformpassword",this.state.conformPassword)
         }

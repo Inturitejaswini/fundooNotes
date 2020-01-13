@@ -67,8 +67,8 @@ export class Registration extends Component {
       }
    }
    handlechangeEmail = (event) => {
-      if(event.target.value.match(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i) !=null){
-      this.setState({ email: event.target.value });}
+      if(event.target.value.match("^([a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z])*$") !=null){
+      this.setState({ email: event.target.value })}
       else{
       this.setState({ snackbarOpen: true, snackbarMessage: " *enter valid email" })
       }
