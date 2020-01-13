@@ -102,7 +102,7 @@ export class Registration extends Component {
             <center>
                <Card style={{
                   justifyContent: 'center', width: '25em', height: '80vh',
-                  marginTop: '60px', backgroundColor: '#FFFF99'
+                  marginTop: '60px', backgroundColor: '#ffe5c9'
                }}>
                   <center>
                      <div >
@@ -128,11 +128,11 @@ export class Registration extends Component {
                         onChange={this.handlechangeFirstName} />
                   </div>
                   <div className="lastName-text">
-                     <input className="input-text"
+                     <Input className="input-text"
                         type="lastName"
                         placeholder="lastName"
                         onChange={this.handlechangeLastName}
-                        style={{ width: "200px", backgroundColor: '#FFFF99' }} />
+                        style={{ width: "205px", backgroundColor: '#ffe5c9' }} />
                   </div>
                   <div className="fullname-text">
                      <Input className="input-text"
