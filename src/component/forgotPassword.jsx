@@ -15,116 +15,59 @@
  ******************************************************************************/
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import { Card, TextField, Button, Snackbar } from '@material-ui/core'
+import { Card, TextField, Button } from '@material-ui/core'
 import forgot from '../controller/userController'
-export class ForgotPassword extends Component {
+export class Forgotpassword extends Component {
     constructor() {
-        super();
+        super()
         this.state = {
-            newpassword: '',
-            confirmpasword: '',
-            snackbarOpen: false,
-            snackbarMessage: '',
+        email: this.email
         }
     }
-    snackbarClose = (e) => {
-        this.setState({ snackbarOpen: false })
+    handlechangeEmail = (event) => {
+        this.setState({ email: event.target.value });
     }
-    handlechangeNewPassword = (event) => {
-        if (event.target.value.match("^[a-z0-9 ]*$") != null) {
-            this.setState({ newPassword: event.target.value });
-            console.log("enter newpassword", this.state.newPassword)
-        }
-        else {
-            this.setState({ snackbarOpen: true, snackbarMessage: " *password should minimum 6 character" })
-        }
-    }
-    handlechangeConformPassword = (event) => {
-        if (event.target.value.match("^[a-z0-9 ]*$") != null) {
-            this.setState({ conformPassword: event.target.value });
-            console.log("enter conformpassword", this.state.conformPassword)
-        }
-        else {
-            this.setState({ snackbarOpen: true, snackbarMessage: " *password should minimum 6 character" })
-        }
-    }
-    handleforgot = () => {
+    handleClick = () => {
         const user = {
-            newpassword: this.state.newpassword,
-            confirmpassword: this.state.confirmpassword
+            email: this.state.email
         }
-        if (this.state.newpassword.match(this.state.conformpassword)) {
-            forgot(user).then(() => {
-            }
-            )
+        forgot(user).then(() => {
         }
-        else {
-            this.setState({ snackbarOpen: true, snackbarMessage: "*password should be matched" })
-        }
+        )
     }
-
-
     render() {
         return (
-            <div>
-                <Card>
                     <div className="login_container">
-                        <Card className="login_card" style={{
-                            backgroundColor: 'pink',
-                            width: '30em',
-                            height: '50vh'
-                        }}>
+                        <Card className="login_card">
                             <center>
                                 <div>
                                     <h3>fundooapp</h3>
                                 </div>
-                                <Snackbar
-                                    anchorOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'center',
-                                    }}
-                                    open={this.state.snackbarOpen}
-                                    autoHideDuration={6000}
-                                    onClose={this.snackbarOpen}
-                                    message={<span id="messege-id"> {this.state.snackbarMessage}</span>}>
-                                </Snackbar>
-                                <div>
-                                    <TextField
-                                        id="standard-password-input"
-                                        label="newPassword"
-                                        variant="standard"
-                                        type="newPassword"
-                                        onChange={this.handlechangeNewPassword}
-                                    //autoComplete="current-password"
-                                    />
-                                </div>
-                                <div>
-                                    <TextField
-                                        id="standard-password-input"
-                                        label="confirmPassword"
-                                        variant="standard"
-                                        type="conformPassword"
-                                        onChange={this.handlechangeConformPassword}
-                                    />
+                                <div> <TextField
+                                    name="email"
+                                    value={this.state.email}
+                                    id="outlined-basic"
+                                    label="email"
+                                    variant="standard"
+                                    onChange={this.handlechangeemail}
+                                />
                                 </div>
                             </center>
                             <div className="submit_btn">
 
                                 <center>
                                     <div>
-                                        <Button onClick={this.handleforgot} className="submit">
+                                        <Button className="forget" onClick={this.handleClick} style={{ margin: "10px" }}>
                                             submit
-                                       </Button>
+                                        </Button>
+
                                     </div>
-                                </center>
-                            </div>
+                                </center> </div>
+
                         </Card>
                     </div>
-                </Card>
-            </div >
         )
     }
 }
 
-export default withRouter(ForgotPassword)
-
+export default withRouter(Forgotpassword)

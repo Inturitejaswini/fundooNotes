@@ -58,23 +58,19 @@ export  async function Log(data){
   * 
   * @param {data} data as a perameter
   */
-    export  async function forgot(data){
-        //console.log("login enterd into controller",data)
-        let user={
-         newpassword:data.newpassword,
-         confirmpasword:data.confirmpasword,
-        }
-        //console.log("data is came",userData)
-        try{
-        let response=await fire.auth().sendPasswordResetEmail(data.newpassword,data.confirmpasword);
-        console.log("sighned",response)
-        let currentUser=fire.auth().currentUser.uid
-        console.log( "current user data",currentUser);
-        let userdetails= db.collection('users').doc(currentUser).set(user);
-        console.log("login succes",userdetails)
-        }
-        catch(error){
-        console.log(error)
-        return error.message
-        }
-        }
+ 
+export default async function forgot(data){
+let user= {
+email:data.email
+}
+try{
+console.log("enterd in controller");
+let response=await fire.auth().sendPasswordResetEmail(data.email);
+console.log("reset mail send",response);
+return response;
+}
+catch(error){
+console.log(error);
+return error.message
+}
+}

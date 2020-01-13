@@ -30,14 +30,12 @@ export class Registration extends Component {
          snackbarMessage: '',
       }
    }
-
-
-   snackbarClose = (e) => {
+   snackbarClose = (event) => {
       this.setState({ snackbarOpen: false })
    }
-   onChange = (e) => {
-      this.setState({ [e.target.name]: e.target.value })
-      console.log(this.setState({ [e.target.name]: e.target.value }))
+   onChange = (event) => {
+      this.setState({ [event.target.name]: event.target.value })
+      console.log(this.setState({ [event.target.name]: event.target.value }))
    }
    handlechangeFirstName = (event) => {
       if (event.target.value.match("^[a-zA-z ]*$") != null) {
