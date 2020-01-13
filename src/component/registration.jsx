@@ -118,7 +118,8 @@ export class Registration extends Component {
                      open={this.state.snackbarOpen}
                      autoHideDuration={6000}
                      onClose={this.snackbarOpen}
-                     message={<span id="messege-id" > {this.state.snackbarMessage}</span> }>
+                     message={<span id="messege-id" > 
+                     {this.state.snackbarMessage}</span> }>
                   </Snackbar>
                   <div className="firstName-text">
                      <Input className="input-text"

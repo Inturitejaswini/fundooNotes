@@ -29,35 +29,40 @@ export class ForgotPassword extends Component {
     }
     snackbarClose = (e) => {
         this.setState({ snackbarOpen: false })
-        }
+    }
     handlechangeNewPassword = (event) => {
-        if (event.target.value.match("/^[a-z0-9 ]*$") != null) {
-           this.setState({ newPassword: event.target.value });
-           console.log("enter newpassword",this.state.newPassword)
-        }
-        else {
-           this.setState({ snackbarOpen: true, snackbarMessage: " *password should minimum 6 character" })
-        }
-     }
-     handlechangeConformPassword = (event) => {
         if (event.target.value.match("^[a-z0-9 ]*$") != null) {
-           this.setState({ conformPassword: event.target.value });
-           console.log("enter conformpassword",this.state.conformPassword)
+            this.setState({ newPassword: event.target.value });
+            console.log("enter newpassword", this.state.newPassword)
         }
         else {
-           this.setState({ snackbarOpen: true, snackbarMessage: " *password should minimum 6 character" })
+            this.setState({ snackbarOpen: true, snackbarMessage: " *password should minimum 6 character" })
         }
-     }
-    handleregister = () => {
+    }
+    handlechangeConformPassword = (event) => {
+        if (event.target.value.match("^[a-z0-9 ]*$") != null) {
+            this.setState({ conformPassword: event.target.value });
+            console.log("enter conformpassword", this.state.conformPassword)
+        }
+        else {
+            this.setState({ snackbarOpen: true, snackbarMessage: " *password should minimum 6 character" })
+        }
+    }
+    handleforgot = () => {
         const user = {
             newpassword: this.state.newpassword,
-            confirmpasword: this.state.confirmpasword,
+            confirmpassword: this.state.confirmpassword
         }
-        console.log("new user dateils", user);
-        forgot(user).then(() => {
-            //console.log(response.data);
-        })
+        if (this.state.newpassword.match(this.state.conformpassword)) {
+            forgot(user).then(() => {
+            }
+            )
+        }
+        else {
+            this.setState({ snackbarOpen: true, snackbarMessage: "*password should be matched" })
+        }
     }
+
 
     render() {
         return (
@@ -107,7 +112,7 @@ export class ForgotPassword extends Component {
 
                                 <center>
                                     <div>
-                                        <Button    onClick={this.handleforgot} className="submit">
+                                        <Button onClick={this.handleforgot} className="submit">
                                             submit
                                        </Button>
                                     </div>
