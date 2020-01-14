@@ -38,7 +38,7 @@ export class Forgotpassword extends Component {
     render() {
         return (
                     <div className="login_container">
-                        <Card className="login_card">
+                        <Card className="login_card" style={{backgroundColor: '#ffe5c9'}}>
                             <center>
                                 <div>
                                     <h3>fundooapp</h3>
