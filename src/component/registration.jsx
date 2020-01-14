@@ -90,7 +90,7 @@ export class Registration extends Component {
       }
       console.log("new user dateils", user);
       register(user).then(() => {
-         console.log("iuyhgujbnukhbyuhbujk"+user.data);
+         console.log("iuyhgujbnukhbyuhbujk",user);
       })
       //this.props.history.push('/login')
    }
