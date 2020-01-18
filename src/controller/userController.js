@@ -5,23 +5,24 @@ import firebase from 'firebase'
 //import Registration from '../component/registration'
 import fire from '../config/fire'
 const db = firebase.firestore();
-export  default async function register(data){
+export default async function register(data){
 console.log( "data in controller",data);
 const user={
 firstName:data.firstName,
 lastName:data.lastName,
 fullName:data.fullName,
 email:data.email,
-password:data.password,
+password:data.password
 }
 try {
     console.log("data in usercontroller",user)
-let response=await fire.auth().createUserWithEmailAndPassword(data.email,data.password);
-console.log('this is firebase',response);
+let response=await fire.auth().createUserWithEmailAndPassword(data.email,data.password)
+console.log("this is firebase",response);
 let currentUser=fire.auth().currentUser.uid
 console.log( "current user data",currentUser);
 let userdetails= db.collection('users').doc(currentUser).set(user);
 console.log("register succes",userdetails)
+let verification=fire.auth().currentUser.sendEmailVerification();
 return response;
 }
 catch (error) {
@@ -59,7 +60,7 @@ export  async function Log(data){
   * @param {data} data as a perameter
   */
  
-export default async function forgot(data){
+export  async function forgot(data){
 let user= {
 email:data.email
 }
