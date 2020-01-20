@@ -34,6 +34,7 @@ class DrawerComponent extends Component {
     }
     render() {
         return (
+            <div>
             <MuiThemeProvider theme={theme}>
                 <Drawer className="drawer"
                     variant="persistent"
@@ -80,6 +81,7 @@ class DrawerComponent extends Component {
                     </div>
                 </Drawer>
             </MuiThemeProvider>
+            </div>
         )
     }
 

@@ -70,7 +70,7 @@ export class Dashboard extends Component {
                         className="menuButton" 
                         color="primary" 
                         aria-label="menu"
-                        onClick={this.handlenavigationbar}>
+                        onClick={this.handlenavigationbar} >
                        <MenuIcon />
                        </IconButton>
                      <h3 style={{ cursor: "pointer", marginLeft: "10px", margin: "5px" }}></h3>
