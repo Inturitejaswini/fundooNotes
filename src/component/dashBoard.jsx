@@ -103,6 +103,7 @@ export class Dashboard extends Component {
                             title="googleApps"
                             color="default"
                             aria-label="open drawer"
+                            alignItems="center"
                             style={{ marginLeft: "40px" }}>
                             <AppsIcon />
                         </IconButton>

@@ -46,10 +46,11 @@ export class Login extends Component {
          password: this.state.password,
       }
       console.log("new user dateils", user);
-      Log(user).then(()=>{
-      })
-       this.props.history.push('/login')
-     }
+      Log(user).then(() => {
+        this.props.history.push('/dashBoard')
+    }
+   )
+ }
     render() {
         return (
             <div className="login_container">

@@ -90,10 +90,14 @@ export class Registration extends Component {
       }
       console.log("new user dateils", user);
       register(user).then(() => {
-         console.log("iuyhgujbnukhbyuhbujk",user);
+         console.log(user);
       })
       //this.props.history.push('/login')
    }
+   handleLogin = () =>  {
+      this.props.history.push('/login')
+    }
+  
    render() {
       return (
          <div className="registartion_container">
@@ -157,6 +161,11 @@ export class Registration extends Component {
                      <Button type="submit" style={{ marginTop: '40px', marginLeft: '50px' }} >
                         Cancel
                         </Button>
+                        <center>
+                   <Button onClick={this.handleLogin} className="login">
+                     login
+                 </Button>
+                 </center>
                   </div>
                </Card>
             </center>
