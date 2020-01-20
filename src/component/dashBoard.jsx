@@ -99,7 +99,7 @@ export class Dashboard extends Component {
                             title="ListView"
                             color="default"
                             aria-label="open drawer"
-                            style={{ marginLeft: "10px" }}>
+                            style={{ marginLeft: "20px" }}>
                             <ViewColumnIcon />
                         </IconButton>
                         <IconButton className="settings"
@@ -123,7 +123,7 @@ export class Dashboard extends Component {
                                 title="googleAccount"
                                 justify-container="center"
                                 alignItems="right"
-                                style={{ marginLeft: "30PX" }}>
+                                style={{ marginLeft: "20PX" }}>
                                 <IconButton>
                                     <Avatar className="account"></Avatar>
                                 </IconButton>
