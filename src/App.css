@@ -195,6 +195,33 @@
     .MuiOutlinedInput-input {
       padding: 18.5px 14px;
       width: 500px;
-      height: 4px;
-      align-items: center;
+      height: 3px;
   }
+  .search-bar-minimized {
+    height: 5px;
+    border-radius: 10px;
+  }
+  
+  .complete-search-bar-minimized {
+    margin-top: 2.5%;
+    width: 280px;
+  }
+  
+  .complete-search-bar-maximized {
+    margin-top: 2.5%;
+    width: 50%;
+  }
+  .SearchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+   
+    }
+    .input-text{
+    height: 33px;
+    width: 600px;
+    border-radius: 6px;
+    border: 2px solid;
+    padding-left: 4px;
+    }

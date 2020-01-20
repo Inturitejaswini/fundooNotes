@@ -6,7 +6,7 @@ import firebase from 'firebase'
 import fire from '../config/fire'
 const db = firebase.firestore();
 export default async function register(data){
-console.log( "data in controller",data);
+console.log( "data in  in registration",data);
 const user={
 firstName:data.firstName,
 lastName:data.lastName,
@@ -19,10 +19,11 @@ try {
 let response=await fire.auth().createUserWithEmailAndPassword(data.email,data.password)
 console.log("this is firebase",response);
 let currentUser=fire.auth().currentUser.uid
-console.log( "current user data",currentUser);
+console.log( "current user data in registration",currentUser);
 let userdetails= db.collection('users').doc(currentUser).set(user);
 console.log("register succes",userdetails)
 let verification=fire.auth().currentUser.sendEmailVerification();
+console.log("verification success",verification)
 return response;
 }
 catch (error) {

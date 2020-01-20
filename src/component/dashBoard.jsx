@@ -7,13 +7,29 @@ import AppsIcon from '@material-ui/icons/Apps';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import { createMuiTheme, InputBase } from '@material-ui/core';
 import SearchBar from '@material-ui/icons/Search'
 import Typography from '@material-ui/core/Typography'
 import image from '../assets/keep.jpeg';
 import DrawerComponent from '../component/drawerComponent'
 import DrawerMenu from '@material-ui/core/Drawer'
-import { AppBar, TextField, Grid, Avatar } from '@material-ui/core'
-
+import { AppBar,Input, Grid, Avatar } from '@material-ui/core'
+const Theme=createMuiTheme({
+    overrides:{
+        MuiAppBar:{
+            colorPrimary: {
+                color: "rgba(0, 0, 0, 0.87)",
+                backgroundColor:" white"
+        }
+     },
+    MuiOutlinedInput :{
+    padding: "18.5px 14px",
+    width: "500px",
+    height: "3px"
+    }
+    },
+})
 export class Dashboard extends Component {
     constructor(props) {
         super(props);
@@ -43,6 +59,7 @@ export class Dashboard extends Component {
     render() {
         return (
             <div>
+                
                 <AppBar position="static" title="My App">
                     <Toolbar className="toolbar" title="mainMenu">
                     <div>
@@ -62,28 +79,23 @@ export class Dashboard extends Component {
                             <h3 style={{ cursor: "pointer", marginLeft: "10px", marginDown: "10px" }}>Keep</h3>
                         </Typography>
 
-                        <div class="search-box" 
-                        style={{ marginLeft: "200px"}}>
-                            <TextField id="outlined-basic" 
-                            type="serach_icon" 
-                            placeholder="search..." 
-                            variant="outlined">
-                                <IconButton>
-                                    <SearchBar style={{ margin: '0 auto', maxWidth: "1000px", marginLeft: "20px" }} />
-                                </IconButton>
-                            </TextField>
+                        <div className="searchBox" title="searchBox">   
+                       <Input className="input-text"
+                        type="searchIcon"
+                        placeholder="search.." style={{marginLeft:"100px"}}/>               
+                        </div>
+                        <div className="searchIcon" title="search">
+                        <a href="#"> <SearchIcon /><i class="fa fa-search"></i></a>    
                         </div>
                         <div>
                         <IconButton className="refersh"
-                            position="static"
                             title="Refresh"
                             color="default"
                             aria-label="open drawer"
-                            style={{ marginLeft: "750px" }}>
+                            style={{ marginLeft: "30px" }}>
                             <RefreshIcon />
                         </IconButton>
                         <IconButton className="gridView"
-                            position="static"
                             title="ListView"
                             color="default"
                             aria-label="open drawer"
@@ -91,7 +103,6 @@ export class Dashboard extends Component {
                             <ViewColumnIcon />
                         </IconButton>
                         <IconButton className="settings"
-                            position="static"
                             title="Settings"
                             color="default"
                             aria-label="open drawer"
@@ -99,7 +110,6 @@ export class Dashboard extends Component {
                             <SettingsIcon />
                         </IconButton>
                         <IconButton className="googleApps"
-                            position="static"
                             title="googleApps"
                             color="default"
                             aria-label="open drawer"
@@ -110,9 +120,8 @@ export class Dashboard extends Component {
                         </div>
                         <div className="acountIcon">
                             <Grid className="grid"
-                                 position="static"
                                 title="googleAccount"
-                                container justify="right"
+                                justify-container="center"
                                 alignItems="right"
                                 style={{ marginLeft: "30PX" }}>
                                 <IconButton>
