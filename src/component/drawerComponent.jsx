@@ -44,13 +44,13 @@ class DrawerComponent extends Component {
                             <div className="note" style={{ display: "flex", marginBottom: "10px" }}>
                                 <Button>
                                     <div className="noteicon" style={{ marginRight: "10px" }}><EmojiObjectsOutlinedIcon /></div>
-                                    <div className="notetext">Notes</div>
+                                    <div className="notetext" title="notes">Notes</div>
                                 </Button>
                             </div>
                             <div className="remainder" style={{ display: "flex" }}>
                                 <Button>
                                     <div className="remaindericon" style={{ marginRight: "10px" }}><NotificationsNoneOutlinedIcon /></div>
-                                    <div className="remaindertext">Remainder</div>
+                                    <div className="remaindertext" title="remainder">Remainder</div>
                                 </Button>
                             </div><Divider type='horizontal'/></div>
                         <div className="label bar" style={{ marginLeft: "15px", marginRight: "70px" }}>
@@ -58,20 +58,20 @@ class DrawerComponent extends Component {
                             <div className="edit lables" style={{ display: "flex", marginBottom: "10px" }}>
                                 <Button>
                                     <div className="editlabelicon" style={{ marginRight: "10px" }}><EditOutlinedIcon /></div>
-                                    <div className="editlabel">Edit Lables</div>
+                                    <div className="editlabel" title="edit enables">Edit Lables</div>
                                 </Button>
                             </div><Divider type='horizontal'/></div>
                         <div className="archeive and trash" style={{ marginLeft: "15px", marginRight: "70px" }}>
                             <div className="archeive" style={{ display: "flex", marginBottom: "10px" }}>
                                 <Button>
                                     <div className="archeiveicon" style={{ marginRight: "10px" }}><ArchiveOutlinedIcon /></div>
-                                    <div className="archeive">Archeive</div>
+                                    <div className="archeive" title="archive">Archeive</div>
                                 </Button>
                             </div>
                             <div className="trash" style={{ display: "flex", marginBottom: "10px" }}>
                                 <Button>
                                     <div className="trashicon" style={{ marginRight: "10px" }}><DeleteOutlineOutlinedIcon /></div>
-                                    <div className="trash">Trash</div>
+                                    <div className="trash" title="trash">Trash</div>
                                 </Button>
                             </div>
                         </div>
