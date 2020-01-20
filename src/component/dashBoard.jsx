@@ -55,6 +55,9 @@ export class Dashboard extends Component {
         console.log("open log in dashboard", this.state.open);
     
       }
+      handlerefreshPage=()=>{
+         window.location.reload(false);
+      }
     
     render() {
         return (
@@ -74,15 +77,15 @@ export class Dashboard extends Component {
                      </div>
                         <img className="fundooimage" src={image} />
                         <Typography variant="title"
-                         color="primary" 
+                         color="textPrimary" 
                          title="Googlekeep">
                             <h3 style={{ cursor: "pointer", marginLeft: "10px", marginDown: "10px" }}>Keep</h3>
                         </Typography>
 
-                        <div className="searchBox" title="searchBox">   
+                        <div className="searchBox" title="searchBox" backgroundColor="E6E6FA">   
                        <Input className="input-text"
                         type="searchIcon"
-                        placeholder="search.." style={{marginLeft:"100px"}}/>               
+                        placeholder="search.." style={{marginLeft:"100px"}} />               
                         </div>
                         <div className="searchIcon" title="search">
                         <a href="#"> <SearchIcon /><i class="fa fa-search"></i></a>    
@@ -92,7 +95,8 @@ export class Dashboard extends Component {
                             title="Refresh"
                             color="default"
                             aria-label="open drawer"
-                            style={{ marginLeft: "30px" }}>
+                            style={{ marginLeft: "30px" }}
+                            onClick={this.handlerefreshPage}>
                             <RefreshIcon />
                         </IconButton>
                         <IconButton className="gridView"

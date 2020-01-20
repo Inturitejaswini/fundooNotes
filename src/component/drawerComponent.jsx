@@ -11,15 +11,17 @@ import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 import ArchiveOutlinedIcon from '@material-ui/icons/ArchiveOutlined';
 import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined';
 import { withRouter } from 'react-router-dom';
-import { Button } from '@material-ui/core'
+import { Button ,Divider} from '@material-ui/core'
 const theme = createMuiTheme({
     overrides: {
         MuiDrawer: {
             paperAnchorLeft: {
                 top: "64px",
-                height: "420px"
+                height: "420px",
+                
             }
         }
+       
     }
 })
 
@@ -50,7 +52,7 @@ class DrawerComponent extends Component {
                                     <div className="remaindericon" style={{ marginRight: "10px" }}><NotificationsNoneOutlinedIcon /></div>
                                     <div className="remaindertext">Remainder</div>
                                 </Button>
-                            </div><h4>__________________________________</h4></div>
+                            </div><Divider type='horizontal'/></div>
                         <div className="label bar" style={{ marginLeft: "15px", marginRight: "70px" }}>
                             <h6>LABELS</h6>
                             <div className="edit lables" style={{ display: "flex", marginBottom: "10px" }}>
@@ -58,7 +60,7 @@ class DrawerComponent extends Component {
                                     <div className="editlabelicon" style={{ marginRight: "10px" }}><EditOutlinedIcon /></div>
                                     <div className="editlabel">Edit Lables</div>
                                 </Button>
-                            </div><h4>__________________________________</h4></div>
+                            </div><Divider type='horizontal'/></div>
                         <div className="archeive and trash" style={{ marginLeft: "15px", marginRight: "70px" }}>
                             <div className="archeive" style={{ display: "flex", marginBottom: "10px" }}>
                                 <Button>
