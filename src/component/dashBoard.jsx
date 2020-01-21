@@ -8,26 +8,29 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import { createMuiTheme, InputBase } from '@material-ui/core';
+import { createMuiTheme, Paper } from '@material-ui/core';
+import Popper from '@material-ui/core/Popper'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SearchBar from '@material-ui/icons/Search'
 import Typography from '@material-ui/core/Typography'
 import image from '../assets/keep.jpeg';
 import DrawerComponent from '../component/drawerComponent'
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import DrawerMenu from '@material-ui/core/Drawer'
-import { AppBar,Input, Grid, Avatar } from '@material-ui/core'
-const Theme=createMuiTheme({
-    overrides:{
-        MuiAppBar:{
+import { AppBar, Input, Grid, Avatar, Divider, Button } from '@material-ui/core'
+const Theme = createMuiTheme({
+    overrides: {
+        MuiAppBar: {
             colorPrimary: {
                 color: "rgba(0, 0, 0, 0.87)",
-                backgroundColor:" white"
+                backgroundColor: " white"
+            }
+        },
+        MuiOutlinedInput: {
+            padding: "18.5px 14px",
+            width: "500px",
+            height: "3px"
         }
-     },
-    MuiOutlinedInput :{
-    padding: "18.5px 14px",
-    width: "500px",
-    height: "3px"
-    }
     },
 })
 export class Dashboard extends Component {
@@ -37,10 +40,11 @@ export class Dashboard extends Component {
             initialState: "Search...",
             currentText: " ",
             anchorEl: null,
-            open: false
+            open: false,
+            profileOpen: false
         }
     }
-    
+
 
     changeText(currentText) {
         this.setState({ currentText });
@@ -50,77 +54,85 @@ export class Dashboard extends Component {
         console.log("enter into navigation bar")
         // this.props.history.push('/drawerComponent')
         this.setState({
-          open: !this.state.open
+            open: !this.state.open
         })
         console.log("open log in dashboard", this.state.open);
-    
-      }
-      handlerefreshPage=()=>{
-         window.location.reload(false);
-      }
-    
+
+    }
+    handlerefreshPage = () => {
+        window.location.reload(false);
+    }
+    handleprofilemenu = (event) => {
+        this.setState({
+            anchorEl: (this.state.anchorEl ? null : event.currentTarget)
+        })
+    }
+
     render() {
+        const { anchorEl } = this.state;
+        const open = Boolean(anchorEl);
+        const id = open ? 'simple-popper' : undefined;
         return (
             <div>
-                
+
                 <AppBar position="static" title="My App">
                     <Toolbar className="toolbar" title="mainMenu">
-                    <div>
-                        <IconButton edge="start" 
-                        className="menuButton" 
-                        color="primary" 
-                        aria-label="menu"
-                        onClick={this.handlenavigationbar} >
-                       <MenuIcon />
-                       </IconButton>
-                     <h3 style={{ cursor: "pointer", marginLeft: "10px", margin: "5px" }}></h3>
-                     </div>
+                        <div>
+                            <IconButton edge="start"
+                                className="menuButton"
+                                color="primary"
+                                aria-label="menu"
+                                onClick={this.handlenavigationbar} >
+                                <MenuIcon />
+                            </IconButton>
+                            <h3 style={{ cursor: "pointer", marginLeft: "10px", margin: "5px" }}></h3>
+                        </div>
                         <img className="fundooimage" src={image} />
                         <Typography variant="title"
-                         color="textPrimary" 
-                         title="Googlekeep">
+                            color="textPrimary"
+                            title="Googlekeep">
                             <h3 style={{ cursor: "pointer", marginLeft: "10px", marginDown: "10px" }}>Keep</h3>
                         </Typography>
 
-                        <div className="searchBox" title="searchBox" backgroundColor="E6E6FA">   
-                       <Input className="input-text"
-                        type="searchIcon"
-                        placeholder="search.." style={{marginLeft:"100px"}} />               
+                        <div className="searchBox" title="searchBox" backgroundColor="E6E6FA">
+                            <Input className="input-text"
+                                type="searchIcon"
+                                placeholder="search.." style={{ marginLeft: "100px" }} />
                         </div>
                         <div className="searchIcon" title="search">
-                        <a href="#"> <SearchIcon /><i class="fa fa-search"></i></a>    
+                            <a href="#"> <SearchIcon /><i class="fa fa-search"></i></a>
                         </div>
                         <div>
-                        <IconButton className="refersh"
-                            title="Refresh"
-                            color="default"
-                            aria-label="open drawer"
-                            style={{ marginLeft: "30px" }}
-                            onClick={this.handlerefreshPage}>
-                            <RefreshIcon />
-                        </IconButton>
-                        <IconButton className="gridView"
-                            title="ListView"
-                            color="default"
-                            aria-label="open drawer"
-                            style={{ marginLeft: "20px" }}>
-                            <ViewColumnIcon />
-                        </IconButton>
-                        <IconButton className="settings"
-                            title="Settings"
-                            color="default"
-                            aria-label="open drawer"
-                            style={{ marginLeft: "40px" }}>
-                            <SettingsIcon />
-                        </IconButton>
-                        <IconButton className="googleApps"
-                            title="googleApps"
-                            color="default"
-                            aria-label="open drawer"
-                            alignItems="center"
-                            style={{ marginLeft: "40px" }}>
-                            <AppsIcon />
-                        </IconButton>
+                            <IconButton className="refersh"
+                                title="Refresh"
+                                color="default"
+                                aria-label="open drawer"
+                                style={{ marginLeft: "5px" }}
+                                onClick={this.handlerefreshPage}>
+                                <RefreshIcon />
+                            </IconButton>
+                            <IconButton className="gridView"
+                                title="ListView"
+                                color="default"
+                                aria-label="open drawer"
+                                style={{ marginLeft: "20px" }}>
+                                <ViewColumnIcon />
+                            </IconButton>
+                            <IconButton className="settings"
+                                title="Settings"
+                                color="default"
+                                aria-label="open drawer"
+                                style={{ marginLeft: "40px" }}>
+                                <SettingsIcon />
+                            </IconButton>
+                            <IconButton className="googleApps"
+                                title="googleApps"
+                                color="default"
+                                aria-label="open drawer"
+                                alignItems="center"
+                                style={{ marginLeft: "40px" }}>
+                                <AppsIcon />
+                            </IconButton>
                         </div>
                         <div className="acountIcon">
                             <Grid className="grid"
@@ -128,16 +140,54 @@ export class Dashboard extends Component {
                                 justify-container="center"
                                 alignItems="right"
                                 style={{ marginLeft: "20PX" }}>
-                                <IconButton>
-                                    <Avatar className="account"></Avatar>
+                                <IconButton aria-describedby={id} type="button" onClick={this.handleprofilemenu}>
+                                    <Avatar className="account">
+                                    </Avatar>
+
                                 </IconButton>
+
+
+                                <Popper id={id} open={open} anchorEl={anchorEl}>
+                                    <Paper className="profile-paper">
+                                        <div className="profilepage">
+
+                                            <div>
+                                                <h5>
+                                                    <IconButton>
+                                                        <Avatar className="account" style={{ cursor: "pointer" }}></Avatar>
+                                                    </IconButton>
+                                                </h5>
+                                                <Button className="manageaccount" buttonType="roundedRectangle">
+                                                    Manage your googleAccount
+                                                </Button>
+                                                <Divider type='horizontal'/>
+                                                <div className="account-btn">
+                                                    <div className="account" style={{ display: "flex", marginBottom: "50px" }}>
+                                                        <Button>
+                                                            <div className="accounticon" style={{ marginRight: "10px" }}><PersonAddIcon /></div>
+                                                            <div className="accounttext" title="notes">Add another account</div>
+                                                        </Button>
+                                                    </div>
+                                                    <Divider type='horizontal'/>
+                                                    <div>
+                                                        <Button size="small" color="primary" onClick={this.handlesignout} style={{margineBottom:"40px"}} >
+                                                            Signout
+                                                               </Button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </Paper>
+                                </Popper>
+
                             </Grid>
                         </div>
-                    <DrawerComponent
-                     open={this.state.open} />
-                 </Toolbar>
-                 </AppBar>
-            </div>
+                        <DrawerComponent
+                            open={this.state.open} />
+                    </Toolbar>
+                </AppBar>
+            </div >
         )
     }
 }

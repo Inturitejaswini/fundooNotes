@@ -230,4 +230,15 @@
       margin-right: -43px;
   }
 
-    
+  .makeStyles-root-1 > * {
+    width: 289px;
+    height: 357px;
+    margin: 8px;
+    align-items: 320;
+    margin-left: 508px;
+}
+.profilepage{
+width: 300px;
+height: 400px;
+text-align: center;
+}
