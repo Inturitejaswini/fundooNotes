@@ -32,6 +32,11 @@ const Theme = createMuiTheme({
             height: "3px"
         }
     },
+    MuiButtontextSizeSmall: {
+        padding: "4px 5px",
+        fontsize: "0.8125rem",
+        margintop: "142px",
+      }
 })
 export class Dashboard extends Component {
     constructor(props) {
@@ -66,6 +71,9 @@ export class Dashboard extends Component {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
+    }
+    handlesignout=(event)=>{
+        this.props.history.push('/login')
     }
 
     render() {
@@ -157,21 +165,23 @@ export class Dashboard extends Component {
                                                         <Avatar className="account" style={{ cursor: "pointer" }}></Avatar>
                                                     </IconButton>
                                                 </h5>
-                                                <Button className="manageaccount" buttonType="roundedRectangle">
+                                                <Button className="manageaccount">
                                                     Manage your googleAccount
                                                 </Button>
                                                 <Divider type='horizontal'/>
                                                 <div className="account-btn">
                                                     <div className="account" style={{ display: "flex", marginBottom: "50px" }}>
+
                                                         <Button>
                                                             <div className="accounticon" style={{ marginRight: "10px" }}><PersonAddIcon /></div>
                                                             <div className="accounttext" title="notes">Add another account</div>
                                                         </Button>
+                                               
                                                     </div>
                                                     <Divider type='horizontal'/>
                                                     <div>
-                                                        <Button size="small" color="primary" onClick={this.handlesignout} style={{margineBottom:"40px"}} >
-                                                            Signout
+                                                        <Button size="small" color="primary" onClick={this.handlesignout}  >
+                                                            Sign out
                                                                </Button>
                                                     </div>
                                                 </div>

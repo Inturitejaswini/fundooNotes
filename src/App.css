@@ -34,6 +34,7 @@
   justify-content: center;
   align-items:center ;
   height: 100vh;
+  width: 30px;
 }
 .Registration_Btn{
   justify-content: center;
@@ -52,6 +53,7 @@
 }
 .firstName-text {
   display: flex;
+  width: 250px;
   justify-content: center;
   align-items: center;
   padding-top: 10px;
@@ -64,6 +66,7 @@
   }
   .lastName-text {
     display: flex;
+    width: 300px;
     justify-content: center;
     align-items: center;
     padding-top: 10px;
@@ -76,6 +79,7 @@
     }
     .fullname-text{
       display: flex;
+      width: 250px;
       justify-content: center;
       align-items: center;
       padding-top: 10px;
@@ -84,10 +88,11 @@
       height: 33px;
       border-radius: 4px;
       border: 1px solid;
-      padding-left: 3px;
+      padding-left: 2px;
       }
      .email-text{
        display: flex;
+       width: 250px;
       justify-content: center;
       align-items: center;
       padding-top: 10px;
@@ -98,7 +103,9 @@
       border: 1px solid;
       padding-left: 3px;
        }
-    .password-text{display: flex;
+    .password-text{
+      display: flex;
+      width: 250px;
      justify-content: center;
      align-items: center;
     padding-top: 10px;
@@ -239,6 +246,42 @@
 }
 .profilepage{
 width: 300px;
-height: 400px;
+height: 300px;
 text-align: center;
+}
+.MuiButton-textSizeSmall {
+  padding: 4px 5px;
+  font-size: 0.8125rem;
+  margin-top: 142px;
+  margin-right: 38px;
+}
+
+.MuiButton-root {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform:lowercase;
+}
+.MuiButton-label {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  text-transform: uppercase;
+}
+.MuiButton-text {
+  padding: 6px 8px;
+  text-align: center;
+  margin-left: 49px;
+}
+.MuiButton-label {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  text-align: center;
+  justify-content: inherit;
+  margin-left: 48px;
+  margin-top: 18px;
 }

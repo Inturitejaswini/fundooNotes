@@ -134,7 +134,7 @@ export class Registration extends Component {
                         type="lastName"
                         placeholder="lastName"
                         onChange={this.handlechangeLastName}
-                        style={{ width: "205px", backgroundColor: '#ffe5c9' }} />
+                        style={{ width: "250px", backgroundColor: '#ffe5c9' }} />
                   </div>
                   <div className="fullname-text">
                      <Input className="input-text"

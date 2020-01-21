@@ -42,7 +42,6 @@ export  async function Log(data){
     password:data.password,
     }
     //console.log("data is came",userData)
-    try{
     let response=await fire.auth().signInWithEmailAndPassword(data.email,data.password);
     console.log("sighned",response)
     let currentUser=fire.auth().currentUser.uid
@@ -50,11 +49,7 @@ export  async function Log(data){
     let userdetails= db.collection('users').doc(currentUser);
     console.log("login succes",userdetails)
     return response;
-    }
-    catch(error){
-    console.log(error)
-    return error.message
-    }
+    
     }
  /**
   * 

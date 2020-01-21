@@ -27,14 +27,15 @@ export class Forgotpassword extends Component {
     handlechangeEmail = (event) => {
         this.setState({ email: event.target.value });
     }
-    handleClick = () => {
-        const user = {
-            email: this.state.email
+    handleClick=()=>{
+        const user={
+            email:this.state.email
         }
-        forgot(user).then(() => {
-        }
-        )
+        forgot(user).then(()=>{
+
+        })
     }
+    
     render() {
         return (
                     <div className="login_container">
