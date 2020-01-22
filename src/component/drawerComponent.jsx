@@ -17,7 +17,7 @@ const theme = createMuiTheme({
         MuiDrawer: {
             paperAnchorLeft: {
                 top: "64px",
-                height: "420px",
+                height: "480px",
                 
             }
         }

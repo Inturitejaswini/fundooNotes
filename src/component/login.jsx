@@ -82,7 +82,7 @@ export class Login extends Component {
                  </center>
                 <div className="submit_Btn">
                 <div>
-                <Button onClick={this.handleForgot} className="forgotpassword" variant="contained" color="inherit">
+                <Button onClick={this.handleForgot} className="forgotpassword" variant="contained" style={{backgroundColor: 'pink' }}>
                 forgotpassword
                 </Button>
                  </div>
@@ -90,12 +90,12 @@ export class Login extends Component {
                     <div>
                         <center>
                     <Button  onClick={this.handleRegister}  className="register_Btn" variant="contained"
-                     color="primary" style={{marginRight:"40px", marginTop:"3px"}}>
+                     color="primary" style={{marginRight:"40px", marginTop:"1px"}}>
                        <span>Register</span>
                     </Button>
                      <Button   onClick={this.handleLogin} className="login_Btn" variant="contained" color="primary" 
                      style={{marginTop:"3px",marginLeft:"20px"}}>
-                       <span> login</span>
+                       login
                     </Button>
                     </center>
                     </div>

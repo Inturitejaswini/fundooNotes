@@ -7,7 +7,7 @@ import AppsIcon from '@material-ui/icons/Apps';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from '@material-ui/icons/Search'
 import { createMuiTheme, Paper } from '@material-ui/core';
 import Popper from '@material-ui/core/Popper'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
@@ -17,7 +17,7 @@ import image from '../assets/keep.jpeg';
 import DrawerComponent from '../component/drawerComponent'
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import DrawerMenu from '@material-ui/core/Drawer'
-import { AppBar, Input, Grid, Avatar, Divider, Button } from '@material-ui/core'
+import { AppBar, InputBase, Grid, Avatar, Divider, Button } from '@material-ui/core'
 const Theme = createMuiTheme({
     overrides: {
         MuiAppBar: {
@@ -36,7 +36,7 @@ const Theme = createMuiTheme({
         padding: "4px 5px",
         fontsize: "0.8125rem",
         margintop: "142px",
-      }
+    }
 })
 export class Dashboard extends Component {
     constructor(props) {
@@ -72,7 +72,7 @@ export class Dashboard extends Component {
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
     }
-    handlesignout=(event)=>{
+    handlesignout = (event) => {
         this.props.history.push('/login')
     }
 
@@ -101,15 +101,16 @@ export class Dashboard extends Component {
                             title="Googlekeep">
                             <h3 style={{ cursor: "pointer", marginLeft: "10px", marginDown: "10px" }}>Keep</h3>
                         </Typography>
-
-                        <div className="searchBox" title="searchBox" backgroundColor="E6E6FA">
-                            <Input className="input-text"
-                                type="searchIcon"
-                                placeholder="search.." style={{ marginLeft: "100px" }} />
-                        </div>
-                        <div className="searchIcon" title="search">
-                            <a href="#"> <SearchIcon /><i class="fa fa-search"></i></a>
-                        </div>
+                        <div className="search_box">
+                            <div>
+                                <InputBase className="input-text"
+                                    type="searchIcon"
+                                    placeholder="search.." />
+                            </div>
+                            <div className="searchIcon">
+                                <SearchIcon />
+                                </div>
+                              </div>
                         <div>
                             <IconButton className="refersh"
                                 title="Refresh"
@@ -168,7 +169,7 @@ export class Dashboard extends Component {
                                                 <Button className="manageaccount">
                                                     Manage your googleAccount
                                                 </Button>
-                                                <Divider type='horizontal'/>
+                                                <Divider type='horizontal' />
                                                 <div className="account-btn">
                                                     <div className="account" style={{ display: "flex", marginBottom: "50px" }}>
 
@@ -176,11 +177,11 @@ export class Dashboard extends Component {
                                                             <div className="accounticon" style={{ marginRight: "10px" }}><PersonAddIcon /></div>
                                                             <div className="accounttext" title="notes">Add another account</div>
                                                         </Button>
-                                               
+
                                                     </div>
-                                                    <Divider type='horizontal'/>
+                                                    <Divider type='horizontal' />
                                                     <div>
-                                                        <Button size="small" color="primary" onClick={this.handlesignout}  >
+                                                        <Button size="small" color="primary" onClick={this.handlesignout} >
                                                             Sign out
                                                                </Button>
                                                     </div>
