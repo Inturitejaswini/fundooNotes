@@ -70,7 +70,6 @@ export class Login extends Component {
                 </TextField>
                  <br/>
                  <TextField
-                 
                     id="standard-password-input"
                     label="Password"
                     variant="standard"
@@ -90,11 +89,11 @@ export class Login extends Component {
                     <div>
                         <center>
                     <Button  onClick={this.handleRegister}  className="register_Btn" variant="contained"
-                     color="primary" style={{marginRight:"40px", marginTop:"1px"}}>
-                       <span>Register</span>
+                     color="primary">
+                       REGISTER
                     </Button>
                      <Button   onClick={this.handleLogin} className="login_Btn" variant="contained" color="primary" 
-                     style={{marginTop:"3px",marginLeft:"20px"}}>
+                    >
                        login
                     </Button>
                     </center>

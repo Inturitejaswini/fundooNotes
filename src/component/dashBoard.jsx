@@ -12,6 +12,7 @@ import { createMuiTheme, Paper } from '@material-ui/core';
 import Popper from '@material-ui/core/Popper'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SearchBar from '@material-ui/icons/Search'
+import Notes from '../component/notes'
 import Typography from '@material-ui/core/Typography'
 import image from '../assets/keep.jpeg';
 import DrawerComponent from '../component/drawerComponent'
@@ -75,6 +76,7 @@ export class Dashboard extends Component {
     handlesignout = (event) => {
         this.props.history.push('/login')
     }
+    
 
     render() {
         const { anchorEl } = this.state;
@@ -198,6 +200,7 @@ export class Dashboard extends Component {
                             open={this.state.open} />
                     </Toolbar>
                 </AppBar>
+                <Notes/>
             </div >
         )
     }

@@ -298,3 +298,54 @@ text-align: center;
   margin-left: 34px;
   margin-top: 5px;
 }
+.notescard{
+  background: white;
+  width: 38em;
+  height: 49px;
+  margin-left: 426px;
+  margin-top: 70px;
+  border: 1px solid;
+  border-color: #e0e0e0;
+  border-radius: 40px;
+  }
+  .take_note{
+    color: gray;
+    margin-right: -39px;
+    margin-left: 18px;
+  }
+  .take_title{
+  margin-top: 8px;
+  margin-left: 25px;
+  }
+  .take_Note{
+      color: gray;
+      margin-right: 20px;
+      margin-left: 35px;
+      margin-top: 10px;
+  }
+  .paintIcon{
+    margin-top: -23px;
+    color: silver;
+  }
+  .cropIcon{
+    margin-top: -5px;
+    color: silver;
+  }
+  .MuiButton-text {
+    color: silver;
+    margin-left: 141px;
+  }
+  .icons {
+    display: flex;
+    height: 14px;
+    width: 491px;
+    margin-top: -20px;
+}.notescard2{
+  margin-left: 426px;
+  width: 40em;
+  height: 140px;
+  border-radius: 10px;
+  margin-top: 70px;
+  border: 2px solid rgb(224, 224, 224);
+}
+ 

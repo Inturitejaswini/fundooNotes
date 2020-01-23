@@ -32,6 +32,10 @@ class DrawerComponent extends Component {
 
         }
     }
+    handleNote=()=>{
+        console.log("hello rahul");
+        this.props.history.push('/dashboard')
+        }
     render() {
         return (
             <div>
@@ -44,7 +48,7 @@ class DrawerComponent extends Component {
                         <div className="list" style={{ marginLeft: "15px", marginTop: "30px" }}>
                             <div className="note" style={{ display: "flex", marginBottom: "10px" }}>
                                 <Button>
-                                    <div className="noteicon" style={{ marginRight: "10px" }}><EmojiObjectsOutlinedIcon /></div>
+                                    <div className="noteicon" style={{ marginRight: "10px" }} onClick={this.handleNote}><EmojiObjectsOutlinedIcon /></div>
                                     <div className="notetext" title="notes">Notes</div>
                                 </Button>
                             </div>

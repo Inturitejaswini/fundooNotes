@@ -9,7 +9,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".login_container{\n   display:flex;\n   justify-content: center;\n   align-items:center ;\n   height: 100vh;\n}\n.login_card{\n  width:30em ;\n  height: 60vh;\n  color: rgb(0, 59, 252);\n}\n.submit_Btn{\n  display: flex;\n  justify-content: center;\n  align-items:center ;\n  color:crimson;\n  font-size:small;\n  white-space: nowrap;\n  word-spacing: inherit;\n}\n.forgot_password{\n  justify-content: center;\n  height: \"20px\";\n}\n.login_Btn{\n  justify-content: center;\n  height: 2e;\n  width: 20vh;\n  background-color: lightcoral;\n}\n/**/\n.Registration_container{\n  display:flex;\n  justify-content: center;\n  align-items:center ;\n  height: 100vh;\n}\n.Registration_Btn{\n  justify-content: center;\n  height: 2e;\n  width: 40vh;\n}\n.Registration_card{\n  justify-content: center;\n  width:10em ;\n  height: 60vh;\n}\n.cancel_Btn{\n  justify-content: center;\n  height: 2e;\n  width: 4vh;\n}\n.firstName-text {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding-top: 10px;\n  }\n  .input-text{\n  height: 33px;\n  border-radius: 4px;\n  border: 1px solid;\n  padding-left: 3px;\n  }\n  .lastName-text {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding-top: 10px;\n    }\n    .input-text{\n    height: 33px;\n    border-radius: 6px;\n    border: 2px solid;\n    padding-left: 4px;\n    }\n    .fullname-text{\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      padding-top: 10px;\n      }\n      .input-text{\n      height: 33px;\n      border-radius: 4px;\n      border: 1px solid;\n      padding-left: 3px;\n      }\n     .email-text{\n       display: flex;\n      justify-content: center;\n      align-items: center;\n      padding-top: 10px;\n        }\n     .input-text{\n      height: 33px;\n      border-radius: 4px;\n      border: 1px solid;\n      padding-left: 3px;\n       }\n    .password-text{display: flex;\n     justify-content: center;\n     align-items: center;\n    padding-top: 10px;\n    }\n    .input-text{\n     height: 33px;\n     border-radius: 4px;\n     border: 1px solid;\n     padding-left: 3px;\n     }\n\n     .toolbar {\n      position: fixed;\n      width:100%;\n      background:white;\n      height: 56px;\n      }\n      .toolbar_navigation{\n      display: flex;\n      height: 100;\n      align-items: center;\n      padding: 0 1rem,\n      }\n      .toolbar__logo{\n      margin-left: 1rem;\n      }\n      .toolbar__logo a{\n      color:white;\n      text-decoration: none;\n      font-size: 1.5rem\n      }\n      .spacer{\n      flex: 0.75 1;\n      }\n      .toolbar_navigation-items ul {\n      list-style: none;\n      margin: 0;\n      padding: 0%;\n      display: flex;\n      }\n      .toolbar_navigation-items li{\n      padding: 0 0.5rem;\n      }\n      .toolbar_navigation-items a{\n      color: white;\n      text-decoration: none;\n      }\n      .toolbar_navigation-items a:hover,\n      .toolbar_navigation-items a:active{\n      color: #fa923f;\n      }\n      .toggle-button{\n      display: flex;\n      flex-direction: column;\n      justify-content: space-around;\n      height: 28px;\n      width: 34px;\n      background:transparent;\n      border: none;\n      cursor: pointer;\n      padding: 0;\n      box-sizing: border-box\n      }\n      .toggle-button:focus{\n      outline: none;\n      }\n      .toggle-button_line{\n      width: 20px;\n      height: 4px;\n      background:black;\n      }\n      .fundooimage{\n        width: 4%;\n        height: 40px;\n      }\n      .icons{\n        justify-content: center;\n        width: 100%;\n        height: 50vh;\n      }\n      .search-box{\n        align-items: center;\n        position: absolute;\n        left:50px;\n        height: 30px;\n        width: 100px;\n      }\n      .MuiDrawer-paperAnchorLeft {\n        top: 64px;\n        left: 0;\n        right: auto;\n        height: 350px;\n    }", ""]);
+exports.push([module.i, ".login_container{\n   display:flex;\n   justify-content: center;\n   align-items:center ;\n   height: 100vh;\n}\n.login_card{\n  width:30em ;\n  height: 60vh;\n  color: rgb(0, 59, 252);\n}\n.submit_Btn{\n  display: flex;\n  justify-content: center;\n  align-items:center ;\n  color:crimson;\n  font-size:small;\n  white-space: nowrap;\n  word-spacing: inherit;\n}\n.forgot_password{\n  justify-content: center;\n  height: \"20px\";\n}\n.login_Btn{\n  justify-content: center;\n  height: 2e;\n  width: 20vh;\n  background-color: lightcoral;\n}\n/**/\n.Registration_container{\n  display:flex;\n  justify-content: center;\n  align-items:center ;\n  height: 100vh;\n  width: 30px;\n}\n.Registration_Btn{\n  justify-content: center;\n  height: 2e;\n  width: 20vh;\n}\n.Registration_card{\n  justify-content: center;\n  width:10em ;\n  height: 60vh;\n}\n.cancel_Btn{\n  justify-content: center;\n  height: 2e;\n  width: 4vh;\n}\n.firstName-text {\n  display: flex;\n  width: 250px;\n  justify-content: center;\n  align-items: center;\n  padding-top: 10px;\n  }\n  .input-text{\n  height: 33px;\n  border-radius: 4px;\n  border: 1px solid;\n  padding-left: 3px;\n  }\n  .lastName-text {\n    display: flex;\n    width: 300px;\n    justify-content: center;\n    align-items: center;\n    padding-top: 10px;\n    }\n    .input-text{\n    height: 33px;\n    border-radius: 6px;\n    border: 2px solid;\n    padding-left: 4px;\n    }\n    .fullname-text{\n      display: flex;\n      width: 250px;\n      justify-content: center;\n      align-items: center;\n      padding-top: 10px;\n      }\n      .input-text{\n      height: 33px;\n      border-radius: 4px;\n      border: 1px solid;\n      padding-left: 2px;\n      }\n     .email-text{\n       display: flex;\n       width: 250px;\n      justify-content: center;\n      align-items: center;\n      padding-top: 10px;\n        }\n     .input-text{\n      height: 33px;\n      border-radius: 4px;\n      border: 1px solid;\n      padding-left: 3px;\n       }\n    .password-text{\n      display: flex;\n      width: 250px;\n     justify-content: center;\n     align-items: center;\n    padding-top: 10px;\n    }\n    .input-text{\n     height: 33px;\n     border-radius: 4px;\n     border: 1px solid;\n     padding-left: 3px;\n     }\n\n     .toolbar {\n      position: fixed;\n      width:100%;\n      background:white;\n      height: 56px;\n      }\n      .toolbar_navigation{\n      display: flex;\n      height: 100;\n      align-items: center;\n      padding: 0 1rem,\n      }\n      .toolbar__logo{\n      margin-left: 1rem;\n      }\n      .toolbar__logo a{\n      color:white;\n      text-decoration: none;\n      font-size: 1.5rem\n      }\n      .spacer{\n      flex: 0.75 1;\n      }\n      .toolbar_navigation-items ul {\n      list-style: none;\n      margin: 0;\n      padding: 0%;\n      display: flex;\n      }\n      .toolbar_navigation-items li{\n      padding: 0 0.5rem;\n      }\n      .toolbar_navigation-items a{\n      color: white;\n      text-decoration: none;\n      }\n      .toolbar_navigation-items a:hover,\n      .toolbar_navigation-items a:active{\n      color: #fa923f;\n      }\n      .toggle-button{\n      display: flex;\n      flex-direction: column;\n      justify-content: space-around;\n      height: 28px;\n      width: 34px;\n      background:transparent;\n      border: none;\n      cursor: pointer;\n      padding: 0;\n      box-sizing: border-box\n      }\n      .toggle-button:focus{\n      outline: none;\n      }\n      .toggle-button_line{\n      width: 20px;\n      height: 4px;\n      background:black;\n      }\n      .fundooimage{\n        width: 4%;\n        height: 40px;\n      }\n      .icons{\n        justify-content: center;\n        width: 100%;\n        height: 50vh;\n      }\n      \n      .MuiDrawer-paperAnchorLeft {\n        top: 64px;\n        left: 0;\n        right: auto;\n        height: 350px;\n    }\n    .MuiOutlinedInput-input {\n      padding: 18.5px 14px;\n      width: 500px;\n      height: 3px;\n  }\n  \n  .search_box{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    border: 1px solid;\n    padding: 2px;\n    border-radius: 28px;\n    width: 30em;\n    color: black;\n    margin: 29px;\n    margin-left: 64px;\n    background-color: lightgray;\n    }\n  \n  .searchIcon{\n    color: black;\n  }\n  .MuiInputBase-root {\n    color:white;\n  }\n   .menuButton {\n      margin-left: 10px;\n      margin-right: -43px;\n  }\n\n  .makeStyles-root-1 > * {\n    width: 289px;\n    height: 357px;\n    margin: 8px;\n    align-items: 320;\n    margin-left: 508px;\n}\n.profilepage{\nwidth: 300px;\nheight: 350px;\ntext-align: center;\n}\n.MuiButton-textSizeSmall {\n  padding: 4px 5px;\n  font-size: 0.8125rem;\n  margin-top: 142px;\n  margin-right: 38px;\n}\n\n.MuiButton-root {\n  color: rgba(0, 0, 0, 0.87);\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 500;\n  line-height: 1.75;\n  letter-spacing: 0.02857em;\n  text-transform:lowercase;\n}\n.MuiButton-label {\n  width: 100%;\n  display: inherit;\n  align-items: inherit;\n  justify-content: inherit;\n  text-transform: lowercase;\n}\n.MuiButton-text {\n  padding: 6px 8px;\n  text-align: center;\n  margin-left: 49px;\n}\n.MuiButton-label {\n  width: 100%;\n  display: inherit;\n  align-items: inherit;\n  text-align: center;\n  justify-content: inherit;\n  margin-left: 48px;\n  margin-top: 18px;\n}\n.MuiButton-textPrimary {\n  color: #3f51b5;\n  margin-top: -19px;\n}\n.MuiDrawer-paperAnchorLeft {\n  top: 64px;\n  left: 0;\n  right: auto;\n  height: 420px;\n  width: 346px;\n}\n.element.style {\n  display: flex;\n}\n.input-text{\n  color: black;\n  outline: none;\n   border: none;\n}\n.MuiButton-text {\n  padding: 6px 8px;\n  align-items: center;\n  border: none;\n  margin-left: 34px;\n  margin-top: 5px;\n}\n.notescard{\n  background: white;\n  width: 34em;\n  height: 49px;\n  margin-left: 426px;\n  margin-top: 70px;\n  border: 1px solid;\n  border-color: #e0e0e0;\n  border-radius: 54px;\n  }\n  .take_note{\n    color: gray;\n    margin-right: -39px;\n    margin-left: 18px;\n  }\n  .take_title{\n  margin-top: 8px;\n  margin-left: 25px;\n  }\n  .take_Note{\n  margin-top: 1px;\n  margin-left: 25px;\n  }\n  .paintIcon{\n    margin-top: -23px;\n    color: silver;\n  }\n  .cropIcon{\n    margin-top: -5px;\n    color: silver;\n  }\n  .MuiButton-text {\n    padding: 6px 6px;\n}", ""]);
 
 
 /***/ }),
@@ -95,7 +95,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_forgotPassword__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./component/forgotPassword */ "./src/component/forgotPassword.jsx");
 /* harmony import */ var _component_dashBoard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./component/dashBoard */ "./src/component/dashBoard.jsx");
 /* harmony import */ var _component_drawerComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./component/drawerComponent */ "./src/component/drawerComponent.jsx");
-/* harmony import */ var _component_sample__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./component/sample */ "./src/component/sample.jsx");
+/* harmony import */ var _component_notes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./component/notes */ "./src/component/notes.jsx");
 var _jsxFileName = "/home/user/Desktop/keep/fundoonotes/src/App.js";
 
 
@@ -121,7 +121,8 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-      path: "/login",
+      path: "/",
+      exact: true,
       component: _component_login__WEBPACK_IMPORTED_MODULE_3__["Login"],
       __source: {
         fileName: _jsxFileName,
@@ -129,11 +130,19 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+      path: "/login",
+      component: _component_login__WEBPACK_IMPORTED_MODULE_3__["Login"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
       path: "/registration",
       component: _component_registration__WEBPACK_IMPORTED_MODULE_4__["Registration"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 17
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
@@ -141,7 +150,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       component: _component_forgotPassword__WEBPACK_IMPORTED_MODULE_5__["Forgotpassword"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 18
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
@@ -149,24 +158,23 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       component: _component_dashBoard__WEBPACK_IMPORTED_MODULE_6__["default"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-      exact: true,
-      path: "/",
-      component: _component_drawerComponent__WEBPACK_IMPORTED_MODULE_7__["default"],
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 19
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-      path: "/sample",
-      component: _component_sample__WEBPACK_IMPORTED_MODULE_8__["default"],
+      path: "/drawerComponent",
+      component: _component_drawerComponent__WEBPACK_IMPORTED_MODULE_7__["default"],
       __source: {
         fileName: _jsxFileName,
         lineNumber: 20
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+      path: "/notes",
+      component: _component_notes__WEBPACK_IMPORTED_MODULE_8__["Notes"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
       },
       __self: this
     })));
@@ -215,12 +223,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Search */ "./node_modules/@material-ui/icons/Search.js");
 /* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
-/* harmony import */ var _assets_keep_jpeg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/keep.jpeg */ "./src/assets/keep.jpeg");
-/* harmony import */ var _assets_keep_jpeg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_assets_keep_jpeg__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _component_drawerComponent__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../component/drawerComponent */ "./src/component/drawerComponent.jsx");
-/* harmony import */ var _material_ui_core_Drawer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/Drawer */ "./node_modules/@material-ui/core/esm/Drawer/index.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var _material_ui_core_Popper__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/Popper */ "./node_modules/@material-ui/core/esm/Popper/index.js");
+/* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/icons/AccountCircle */ "./node_modules/@material-ui/icons/AccountCircle.js");
+/* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _component_notes__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../component/notes */ "./src/component/notes.jsx");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _assets_keep_jpeg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../assets/keep.jpeg */ "./src/assets/keep.jpeg");
+/* harmony import */ var _assets_keep_jpeg__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_assets_keep_jpeg__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _component_drawerComponent__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../component/drawerComponent */ "./src/component/drawerComponent.jsx");
+/* harmony import */ var _material_ui_icons_PersonAdd__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @material-ui/icons/PersonAdd */ "./node_modules/@material-ui/icons/PersonAdd.js");
+/* harmony import */ var _material_ui_icons_PersonAdd__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_PersonAdd__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _material_ui_core_Drawer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @material-ui/core/Drawer */ "./node_modules/@material-ui/core/esm/Drawer/index.js");
 var _jsxFileName = "/home/user/Desktop/keep/fundoonotes/src/component/dashBoard.jsx";
 
 
@@ -237,6 +251,32 @@ var _jsxFileName = "/home/user/Desktop/keep/fundoonotes/src/component/dashBoard.
 
 
 
+
+
+
+
+
+
+const Theme = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["createMuiTheme"])({
+  overrides: {
+    MuiAppBar: {
+      colorPrimary: {
+        color: "rgba(0, 0, 0, 0.87)",
+        backgroundColor: " white"
+      }
+    },
+    MuiOutlinedInput: {
+      padding: "18.5px 14px",
+      width: "500px",
+      height: "3px"
+    }
+  },
+  MuiButtontextSizeSmall: {
+    padding: "4px 5px",
+    fontsize: "0.8125rem",
+    margintop: "142px"
+  }
+});
 class Dashboard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
@@ -250,11 +290,26 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       console.log("open log in dashboard", this.state.open);
     };
 
+    this.handlerefreshPage = () => {
+      window.location.reload(false);
+    };
+
+    this.handleprofilemenu = event => {
+      this.setState({
+        anchorEl: this.state.anchorEl ? null : event.currentTarget
+      });
+    };
+
+    this.handlesignout = event => {
+      this.props.history.push('/login');
+    };
+
     this.state = {
       initialState: "Search...",
       currentText: " ",
       anchorEl: null,
-      open: false
+      open: false,
+      profileOpen: false
     };
   }
 
@@ -265,18 +320,21 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
+    const anchorEl = this.state.anchorEl;
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popper' : undefined;
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 86
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__["AppBar"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["AppBar"], {
       position: "static",
       title: "My App",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 88
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -284,13 +342,13 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       title: "mainMenu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 89
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 90
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -301,13 +359,13 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClick: this.handlenavigationbar,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 91
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_8___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 96
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -318,24 +376,24 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 98
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "fundooimage",
-      src: _assets_keep_jpeg__WEBPACK_IMPORTED_MODULE_11___default.a,
+      src: _assets_keep_jpeg__WEBPACK_IMPORTED_MODULE_15___default.a,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 100
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_14__["default"], {
       variant: "title",
-      color: "primary",
+      color: "textPrimary",
       title: "Googlekeep",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 101
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -346,95 +404,91 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 104
       },
       __self: this
     }, "Keep")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      class: "search-box",
-      style: {
-        marginLeft: "200px"
-      },
+      className: "search_box",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 106
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__["TextField"], {
-      id: "outlined-basic",
-      type: "serach_icon",
-      placeholder: "search...",
-      variant: "outlined",
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 107
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["InputBase"], {
+      className: "input-text",
+      type: "searchIcon",
+      placeholder: "search..",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 108
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "searchIcon",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 112
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_9___default.a, {
-      style: {
-        margin: '0 auto',
-        maxWidth: "1000px",
-        marginLeft: "20px"
-      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 113
       },
       __self: this
-    })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 116
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
       className: "refersh",
-      position: "static",
       title: "Refresh",
       color: "default",
       "aria-label": "open drawer",
       style: {
-        marginLeft: "750px"
+        marginLeft: "5px"
       },
+      onClick: this.handlerefreshPage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 117
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Refresh__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 123
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
       className: "gridView",
-      position: "static",
       title: "ListView",
       color: "default",
       "aria-label": "open drawer",
       style: {
-        marginLeft: "10px"
+        marginLeft: "20px"
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 125
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ViewColumn__WEBPACK_IMPORTED_MODULE_7___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90
+        lineNumber: 130
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
       className: "settings",
-      position: "static",
       title: "Settings",
       color: "default",
       "aria-label": "open drawer",
@@ -443,78 +497,220 @@ class Dashboard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 132
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Settings__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 137
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
       className: "googleApps",
-      position: "static",
       title: "googleApps",
       color: "default",
       "aria-label": "open drawer",
+      alignItems: "center",
       style: {
         marginLeft: "40px"
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 139
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Apps__WEBPACK_IMPORTED_MODULE_5___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 145
       },
       __self: this
     }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "acountIcon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 148
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__["Grid"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
       className: "grid",
-      position: "static",
       title: "googleAccount",
-      container: true,
-      justify: "right",
+      "justify-container": "center",
       alignItems: "right",
       style: {
-        marginLeft: "30PX"
+        marginLeft: "20PX"
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 149
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      "aria-describedby": id,
+      type: "button",
+      onClick: this.handleprofilemenu,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 154
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Avatar"], {
+      className: "account",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 155
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Popper__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      id: id,
+      open: open,
+      anchorEl: anchorEl,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 161
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Paper"], {
+      className: "profile-paper",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 162
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "profilepage",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 163
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 165
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 166
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 167
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__["Avatar"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Avatar"], {
       className: "account",
+      style: {
+        cursor: "pointer"
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 168
       },
       __self: this
-    })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_drawerComponent__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      className: "manageaccount",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 171
+      },
+      __self: this
+    }, "Manage your googleAccount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Divider"], {
+      type: "horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 174
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "account-btn",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 175
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "account",
+      style: {
+        display: "flex",
+        marginBottom: "50px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 176
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 178
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "accounticon",
+      style: {
+        marginRight: "10px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 179
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_PersonAdd__WEBPACK_IMPORTED_MODULE_17___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 179
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "accounttext",
+      title: "notes",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 180
+      },
+      __self: this
+    }, "Add another account"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Divider"], {
+      type: "horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 184
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 185
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      size: "small",
+      color: "primary",
+      onClick: this.handlesignout,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 186
+      },
+      __self: this
+    }, "Sign out"))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_drawerComponent__WEBPACK_IMPORTED_MODULE_16__["default"], {
       open: this.state.open,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 199
       },
       __self: this
-    }))));
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_notes__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 203
+      },
+      __self: this
+    }));
   }
 
 }
@@ -560,11 +756,13 @@ var _jsxFileName = "/home/user/Desktop/keep/fundoonotes/src/component/drawerComp
 
 
 
+
 const theme = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["createMuiTheme"])({
   overrides: {
     MuiDrawer: {
       paperAnchorLeft: {
-        top: "64px"
+        top: "64px",
+        height: "480px"
       }
     }
   }
@@ -573,15 +771,27 @@ const theme = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["createMuiTh
 class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
+
+    this.handleNote = () => {
+      console.log("hello rahul");
+      this.props.history.push('/dashboard');
+    };
+
     this.state = {};
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["MuiThemeProvider"], {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["MuiThemeProvider"], {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 42
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Drawer__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -591,7 +801,7 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       overflow: "auto",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 43
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -602,7 +812,7 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 47
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -613,7 +823,7 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 48
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -624,7 +834,13 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 49
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -632,32 +848,40 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       style: {
         marginRight: "10px"
       },
+      onClick: this.handleNote,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 51
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_EmojiObjectsOutlined__WEBPACK_IMPORTED_MODULE_1___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 51
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "notetext",
+      title: "notes",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 52
       },
       __self: this
-    }, "Notes")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Notes"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "remainder",
       style: {
         display: "flex"
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 55
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -667,29 +891,31 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 57
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_NotificationsNoneOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 57
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "remaindertext",
+      title: "remainder",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 58
       },
       __self: this
-    }, "Remainder")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    }, "Remainder"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Divider"], {
+      type: "horizontal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 60
       },
       __self: this
-    }, ".....................................")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "label bar",
       style: {
         marginLeft: "15px",
@@ -697,13 +923,13 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 61
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 62
       },
       __self: this
     }, "LABELS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -714,7 +940,13 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 63
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -724,29 +956,31 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 65
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_EditOutlined__WEBPACK_IMPORTED_MODULE_5___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 65
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "editlabel",
+      title: "edit enables",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 66
       },
       __self: this
-    }, "Edit Lables")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    }, "Edit Lables"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Divider"], {
+      type: "horizontal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 68
       },
       __self: this
-    }, ".....................................")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "archeive and trash",
       style: {
         marginLeft: "15px",
@@ -754,7 +988,7 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 69
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -765,7 +999,13 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 70
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -775,23 +1015,24 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 72
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArchiveOutlined__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 72
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "archeive",
+      title: "archive",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 73
       },
       __self: this
-    }, "Archeive")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Archeive"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "trash",
       style: {
         display: "flex",
@@ -799,7 +1040,13 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 76
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -809,29 +1056,30 @@ class DrawerComponent extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 78
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_DeleteOutlineOutlined__WEBPACK_IMPORTED_MODULE_7___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 78
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "trash",
+      title: "trash",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 79
       },
       __self: this
-    }, "Trash"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Trash")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 83
       },
       __self: this
-    }))));
+    })))));
   }
 
 }
@@ -902,7 +1150,7 @@ class Forgotpassword extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "login_container",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 41
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Card"], {
@@ -912,31 +1160,31 @@ class Forgotpassword extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 42
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 44
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 45
       },
       __self: this
     }, "fundooapp")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 47
       },
       __self: this
     }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["TextField"], {
@@ -948,26 +1196,26 @@ class Forgotpassword extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handlechangeemail,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 47
       },
       __self: this
     }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "submit_btn",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 57
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 59
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 60
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -978,7 +1226,7 @@ class Forgotpassword extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
       },
       __self: this
     }, "submit"))), " ")));
@@ -1056,8 +1304,9 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         password: this.state.password
       };
       console.log("new user dateils", user);
-      Object(_controller_userController__WEBPACK_IMPORTED_MODULE_3__["default"])(user).then(() => {});
-      this.props.history.push('/login');
+      Object(_controller_userController__WEBPACK_IMPORTED_MODULE_3__["default"])(user).then(() => {
+        this.props.history.push('/dashBoard');
+      });
     };
 
     this.state = {
@@ -1071,7 +1320,7 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "login_container",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 56
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Card"], {
@@ -1081,39 +1330,39 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 57
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 58
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 59
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 60
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 60
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("font", {
       color: "#800080",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 60
       },
       __self: this
     }, "FundooLogin")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["TextField"], {
@@ -1125,13 +1374,13 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handleChangeEmail,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 63
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 71
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["TextField"], {
@@ -1143,7 +1392,7 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handleChangePassword,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 72
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
@@ -1169,7 +1418,9 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClick: this.handleForgot,
       className: "forgotpassword",
       variant: "contained",
-      color: "inherit",
+      style: {
+        backgroundColor: 'pink'
+      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 84
@@ -1192,42 +1443,22 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "register_Btn",
       variant: "contained",
       color: "primary",
-      style: {
-        marginRight: "40px",
-        marginTop: "3px"
-      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 91
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 93
-      },
-      __self: this
-    }, "Register")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    }, "REGISTER"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
       onClick: this.handleLogin,
       className: "login_Btn",
       variant: "contained",
       color: "primary",
-      style: {
-        marginTop: "3px",
-        marginLeft: "20px"
-      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 95
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }, " login")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       style: {
         marginLeft: "160px"
       },
@@ -1269,6 +1500,403 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Login));
+
+/***/ }),
+
+/***/ "./src/component/notes.jsx":
+/*!*********************************!*\
+  !*** ./src/component/notes.jsx ***!
+  \*********************************/
+/*! exports provided: Notes, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Notes", function() { return Notes; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var _material_ui_icons_Brush__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Brush */ "./node_modules/@material-ui/icons/Brush.js");
+/* harmony import */ var _material_ui_icons_Brush__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Brush__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_icons_CropOriginal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/CropOriginal */ "./node_modules/@material-ui/icons/CropOriginal.js");
+/* harmony import */ var _material_ui_icons_CropOriginal__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_CropOriginal__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_icons_AddAlert__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/AddAlert */ "./node_modules/@material-ui/icons/AddAlert.js");
+/* harmony import */ var _material_ui_icons_AddAlert__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AddAlert__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_icons_PersonAdd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/PersonAdd */ "./node_modules/@material-ui/icons/PersonAdd.js");
+/* harmony import */ var _material_ui_icons_PersonAdd__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_PersonAdd__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _material_ui_icons_ColorLens__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/ColorLens */ "./node_modules/@material-ui/icons/ColorLens.js");
+/* harmony import */ var _material_ui_icons_ColorLens__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ColorLens__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_icons_Undo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Undo */ "./node_modules/@material-ui/icons/Undo.js");
+/* harmony import */ var _material_ui_icons_Undo__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Undo__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/MoreVert */ "./node_modules/@material-ui/icons/MoreVert.js");
+/* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _material_ui_icons_CheckCircleOutline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/CheckCircleOutline */ "./node_modules/@material-ui/icons/CheckCircleOutline.js");
+/* harmony import */ var _material_ui_icons_CheckCircleOutline__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_CheckCircleOutline__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _material_ui_icons_ArchiveOutlined__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/icons/ArchiveOutlined */ "./node_modules/@material-ui/icons/ArchiveOutlined.js");
+/* harmony import */ var _material_ui_icons_ArchiveOutlined__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ArchiveOutlined__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _material_ui_icons_Redo__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/icons/Redo */ "./node_modules/@material-ui/icons/Redo.js");
+/* harmony import */ var _material_ui_icons_Redo__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Redo__WEBPACK_IMPORTED_MODULE_12__);
+var _jsxFileName = "/home/user/Desktop/keep/fundoonotes/src/component/notes.jsx";
+
+
+
+
+
+
+
+
+
+
+
+ //import { notes } from '../controller/noteController';
+
+
+class Notes extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    this.handleNote = () => {
+      this.setState({
+        open: true
+      });
+    };
+
+    this.state = {
+      open: false
+    };
+  }
+
+  render() {
+    return !this.state.open ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "notecard",
+      style: {
+        marginLeft: "426px",
+        width: "34em",
+        height: "49px",
+        borderRadius: "54px",
+        marginTop: "70px",
+        border: "1px solid",
+        borderColor: "#e0e0e0"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("card", {
+      onClick: this.handleNote,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        display: "flex"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "take_note",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["InputBase"], {
+      style: {
+        color: "black"
+      },
+      placeholder: "Take a note......",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "paint",
+      style: {
+        marginTop: "5px",
+        color: "silver"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "painticon",
+      style: {
+        marginRight: "10px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Brush__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "crop",
+      style: {
+        marginTop: "5px",
+        color: "silver"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "cropicon",
+      style: {
+        marginRight: "10px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_CropOriginal__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    })))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "notescard2",
+      style: {
+        marginLeft: "426px",
+        width: "34em",
+        height: "133px",
+        borderRadius: "17px",
+        marginTop: "70px",
+        border: "1px solid",
+        borderColor: "#e0e0e0"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("card", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "notecard",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "take_title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["InputBase"], {
+      placeholder: "Title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "take_Note",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["InputBase"], {
+      placeholder: "Take a note.......",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "icons",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "alert",
+      style: {
+        color: "gray",
+        marginRight: "-10px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "alert",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_AddAlert__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "personadd",
+      style: {
+        color: "gray",
+        marginRight: "-20px",
+        marginLeft: "-20px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "personAdd",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_PersonAdd__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "colorlens",
+      style: {
+        marginLeft: "0px",
+        color: "gray"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "colorLens",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ColorLens__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "originalicon",
+      style: {
+        color: "gray",
+        marginLeft: "-20px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 75
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "originalIcon",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 76
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_CropOriginal__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 76
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "archeive",
+      style: {
+        color: "gray",
+        marginLeft: "-20px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Archeive",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArchiveOutlined__WEBPACK_IMPORTED_MODULE_11___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "redo",
+      style: {
+        color: "gray"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 83
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "redo",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 84
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Redo__WEBPACK_IMPORTED_MODULE_12___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 84
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 86
+      },
+      __self: this
+    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "trash",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 86
+      },
+      __self: this
+    }, "close"))))));
+  }
+
+}
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Notes));
 
 /***/ }),
 
@@ -1405,8 +2033,12 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       };
       console.log("new user dateils", user);
       Object(_controller_userController__WEBPACK_IMPORTED_MODULE_3__["default"])(user).then(() => {
-        console.log("iuyhgujbnukhbyuhbujk", user);
+        console.log(user);
       }); //this.props.history.push('/login')
+    };
+
+    this.handleLogin = () => {
+      this.props.history.push('/login');
     };
 
     this.state = {
@@ -1426,13 +2058,13 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "registartion_container",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 103
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 104
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Card"], {
@@ -1445,39 +2077,39 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101
+        lineNumber: 105
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 109
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 110
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 111
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 111
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("font", {
       color: "\t#800080",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 111
       },
       __self: this
     }, "Registration"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Snackbar"], {
@@ -1492,20 +2124,20 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         id: "messege-id",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 123
         },
         __self: this
       }, this.state.snackbarMessage),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 115
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "firstName-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122
+        lineNumber: 126
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Input"], {
@@ -1515,14 +2147,14 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handlechangeFirstName,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123
+        lineNumber: 127
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "lastName-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 128
+        lineNumber: 132
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Input"], {
@@ -1531,19 +2163,19 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       placeholder: "lastName",
       onChange: this.handlechangeLastName,
       style: {
-        width: "205px",
+        width: "200px",
         backgroundColor: '#ffe5c9'
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 133
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "fullname-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135
+        lineNumber: 139
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Input"], {
@@ -1553,14 +2185,14 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handlechangeFullName,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136
+        lineNumber: 140
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "email-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141
+        lineNumber: 145
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Input"], {
@@ -1570,14 +2202,14 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handlechangeEmail,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142
+        lineNumber: 146
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "password-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 151
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Input"], {
@@ -1587,14 +2219,14 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handlechangepassword,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 152
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "form-group",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153
+        lineNumber: 157
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -1607,7 +2239,7 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       color: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 154
+        lineNumber: 158
       },
       __self: this
     }, "Register"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -1618,107 +2250,28 @@ class Registration extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157
+        lineNumber: 161
       },
       __self: this
-    }, "Cancel")))));
+    }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 164
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      onClick: this.handleLogin,
+      className: "login",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 165
+      },
+      __self: this
+    }, "login"))))));
   }
 
 }
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Registration));
-
-/***/ }),
-
-/***/ "./src/component/sample.jsx":
-/*!**********************************!*\
-  !*** ./src/component/sample.jsx ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Searchbar; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/home/user/Desktop/keep/fundoonotes/src/component/sample.jsx";
-
-
-class Searchbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(props) {
-    super(props);
-    this.state = {
-      initialState: "Search for movies, shows, actors, etc...",
-      currentText: " "
-    };
-  }
-
-  changeText(currentText) {
-    this.setState({
-      currentText
-    }); //console.log({currentText});
-  }
-
-  render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      class: "theater",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: 'movie_theater3.jpg',
-      alt: "Theater",
-      class: "theater_background",
-      height: "550px",
-      width: "100%",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: this
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      class: "search-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "text",
-      placeholder: this.state.initialState,
-      onChange: this.changeText.bind(this, 'currentText'),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 28
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onClick: this.changeText.bind(this, 'currentText'),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
-    }, "Search"))));
-  }
-
-}
 
 /***/ }),
 
@@ -1772,7 +2325,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const db = firebase__WEBPACK_IMPORTED_MODULE_0___default.a.firestore();
 async function register(data) {
-  console.log("data in controller", data);
+  console.log("data in  in registration", data);
   const user = {
     firstName: data.firstName,
     lastName: data.lastName,
@@ -1786,10 +2339,11 @@ async function register(data) {
     let response = await _config_fire__WEBPACK_IMPORTED_MODULE_1__["default"].auth().createUserWithEmailAndPassword(data.email, data.password);
     console.log("this is firebase", response);
     let currentUser = _config_fire__WEBPACK_IMPORTED_MODULE_1__["default"].auth().currentUser.uid;
-    console.log("current user data", currentUser);
+    console.log("current user data in registration", currentUser);
     let userdetails = db.collection('users').doc(currentUser).set(user);
     console.log("register succes", userdetails);
     let verification = _config_fire__WEBPACK_IMPORTED_MODULE_1__["default"].auth().currentUser.sendEmailVerification();
+    console.log("verification success", verification);
     return response;
   } catch (error) {
     console.log(error);
@@ -1808,18 +2362,13 @@ async function Log(data) {
     password: data.password
   }; //console.log("data is came",userData)
 
-  try {
-    let response = await _config_fire__WEBPACK_IMPORTED_MODULE_1__["default"].auth().signInWithEmailAndPassword(data.email, data.password);
-    console.log("sighned", response);
-    let currentUser = _config_fire__WEBPACK_IMPORTED_MODULE_1__["default"].auth().currentUser.uid;
-    console.log("current user data", currentUser);
-    let userdetails = db.collection('users').doc(currentUser);
-    console.log("login succes", userdetails);
-    return response;
-  } catch (error) {
-    console.log(error);
-    return error.message;
-  }
+  let response = await _config_fire__WEBPACK_IMPORTED_MODULE_1__["default"].auth().signInWithEmailAndPassword(data.email, data.password);
+  console.log("sighned", response);
+  let currentUser = _config_fire__WEBPACK_IMPORTED_MODULE_1__["default"].auth().currentUser.uid;
+  console.log("current user data", currentUser);
+  let userdetails = db.collection('users').doc(currentUser);
+  console.log("login succes", userdetails);
+  return response;
 }
 /**
  * 
@@ -2043,5 +2592,5 @@ module.exports = __webpack_require__(/*! /home/user/Desktop/keep/fundoonotes/src
 
 /***/ })
 
-},[[1,"runtime-main",0]]]);
+},[[1,"runtime-main",1]]]);
 //# sourceMappingURL=main.chunk.js.map
