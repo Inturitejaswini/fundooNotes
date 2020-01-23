@@ -352,3 +352,14 @@ text-align: center;
 .Icons{
   display: flex;
 }
+.alertpage{
+  height: 312px;
+  width: 278px;
+  background-color: #f5f5f5;
+}
+.timing{
+  margin-left: -188px;
+}
+.button{
+  width: 278px;
+}

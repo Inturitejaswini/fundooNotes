@@ -55,6 +55,11 @@ export class Notes extends Component {
         this.setState({ takeNote: event.target.value });
         console.log("taking notes", this.state.takeNote);
     }
+    handlealertmenu = (event) => {
+        this.setState({
+            anchorEl: (this.state.anchorEl ? null : event.currentTarget)
+        })
+    }
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
@@ -97,14 +102,23 @@ export class Notes extends Component {
                             </div>
                             <div className="icons">
                                 <div>
-                                <IconButton className="alert" style={{ color: "gray" }}>
-                                    <div className="alert" title="Remind me"><AddAlertIcon /></div>
-                                </IconButton>
-                                <Popper id={id} open={open} anchorEl={anchorEl}>
-                                    <Paper className="alert-paper">
-                                        <div className="alertpage"> </div>
-                                    </Paper>
-                                </Popper>
+                                    <IconButton className="alert" style={{ color: "gray" }}
+                                        aria-describedby={id} type="button" onClick={this.handlealertmenu}>
+                                        <div className="alert" title="Remind me"><AddAlertIcon /></div>
+                                    </IconButton>
+                                    <Popper id={id} open={open} anchorEl={anchorEl}>
+                                        <Paper className="alert-paper">
+                                            <div className="alertpage">
+                                                Reminder:
+                                            <div clasName="timing">
+                                      <Button className="button" defaultValue="hr:min">
+                                       Later today
+                                      </Button>
+                                      
+                                             </div>
+                                            </div>
+                                        </Paper>
+                                    </Popper>
                                 </div>
                                 <IconButton className="personadd" style={{ color: "gray" }}>
                                     <div className="personAdd" title="collabarator"><PersonAddIcon /></div>
