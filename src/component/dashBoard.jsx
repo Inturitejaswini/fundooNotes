@@ -104,16 +104,18 @@ export class Dashboard extends Component {
                             <h3 style={{ cursor: "pointer", marginLeft: "10px", marginDown: "10px" }}>Keep</h3>
                         </Typography>
                         <div className="search_box">
-                            <div>
+                           
+                            <div className="searchIcon">
+                                <SearchIcon />
+                                </div>
+                                <div>
                                 <InputBase className="input-text"
                                     type="searchIcon"
                                     placeholder="search.." />
                             </div>
-                            <div className="searchIcon">
-                                <SearchIcon />
-                                </div>
+                            
                               </div>
-                        <div>
+                        <div className="Icons" display="flex">
                             <IconButton className="refersh"
                                 title="Refresh"
                                 color="default"

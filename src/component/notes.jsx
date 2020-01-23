@@ -6,17 +6,22 @@ import CropOriginalIcon from '@material-ui/icons/CropOriginal';
 import AddAlertIcon from '@material-ui/icons/AddAlert';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import ColorLensIcon from '@material-ui/icons/ColorLens';
+import IconButton from '@material-ui/core/IconButton'
 import UndoIcon from '@material-ui/icons/Undo';
+import Popper from '@material-ui/core/Popper'
+import { Paper } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import ArchiveOutlinedIcon from '@material-ui/icons/ArchiveOutlined';
-//import { notes } from '../controller/noteController';
+import { notes } from '../controller/noteController';
 import RedoIcon from '@material-ui/icons/Redo';
 export class Notes extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            open: false
+            anchorEl: null,
+            open: false,
+            alertOpen: false
         }
     }
     handleNote = () => {
@@ -24,8 +29,36 @@ export class Notes extends Component {
             open: true
         })
     }
+    handleClose = () => {
+        this.setState({
+            open: false
+        })
+    }
+    handleNotes = () => {
+        const newUser = {
+            title: this.state.title,
+            takeNote: this.state.takeNote
+        }
+        notes(newUser).then(response => {
+            if (response) {
+            }
+        })
+        this.setState({
+            open: false
+        })
+    }
+    handlechangeTitle = (event) => {
+        this.setState({ title: event.target.value });
+        console.log("taking title", this.state.title);
+    }
+    handlechangenote = (event) => {
+        this.setState({ takeNote: event.target.value });
+        console.log("taking notes", this.state.takeNote);
+    }
     render() {
-
+        const { anchorEl } = this.state;
+        const open = Boolean(anchorEl);
+        const id = open ? 'simple-popper' : undefined;
         return (!this.state.open ? (
             <div className="notecard" style={{
                 marginLeft: "426px", width: "30em", height: "49px", borderRadius: "5px",
@@ -36,15 +69,15 @@ export class Notes extends Component {
                         <div className="take_note">
                             <InputBase style={{ color: "black" }} placeholder="Take a note......" />
                         </div>
-                        <Button className="checkCircle" style={{  color: "silver",marginleft: "150px" }}>
+                        <IconButton className="checkCircle" style={{ color: "silver", marginleft: "150px" }}>
                             <div className="checkCircleicon" title="newlist"><CheckCircleOutlineIcon /></div>
-                        </Button>
-                        <Button className="paint" style={{  color: "silver" }}>
-                            <div className="painticon"title='newnote with drawing' ><BrushIcon /></div>
-                        </Button>
-                        <Button className="crop" style={{ color: "silver" }}>
-                            <div className="cropicon"title="newnote with image" ><CropOriginalIcon /></div>
-                        </Button>
+                        </IconButton>
+                        <IconButton className="paint" style={{ color: "silver" }}>
+                            <div className="painticon" title='newnote with drawing' ><BrushIcon /></div>
+                        </IconButton>
+                        <IconButton className="crop" style={{ color: "silver" }}>
+                            <div className="cropicon" title="newnote with image" ><CropOriginalIcon /></div>
+                        </IconButton>
                     </div>
                 </card>
             </div>)
@@ -56,42 +89,48 @@ export class Notes extends Component {
                     <card>
                         <div className="notecard">
                             <div className="take_title">
-                                <InputBase placeholder="Title" />
+                                <InputBase placeholder="Title" onChange={this.handlechangeTitle} />
 
                             </div>
                             <div className="take_Note">
-                                <InputBase placeholder="Take a note......." />
+                                <InputBase placeholder="Take a note......." onChange={this.handlechangenote} />
                             </div>
                             <div className="icons">
-
-                                <Button className="alert" style={{ color: "gray"}}>
+                                <div>
+                                <IconButton className="alert" style={{ color: "gray" }}>
                                     <div className="alert" title="Remind me"><AddAlertIcon /></div>
-                                </Button>
-                                <Button className="personadd" style={{ color: "gray"}}>
+                                </IconButton>
+                                <Popper id={id} open={open} anchorEl={anchorEl}>
+                                    <Paper className="alert-paper">
+                                        <div className="alertpage"> </div>
+                                    </Paper>
+                                </Popper>
+                                </div>
+                                <IconButton className="personadd" style={{ color: "gray" }}>
                                     <div className="personAdd" title="collabarator"><PersonAddIcon /></div>
-                                </Button>
-                                <Button className="colorlens" style={{ color: "gray" }}>
-                                    <div className="colorLens"title="change color" ><ColorLensIcon /></div>
-                                </Button>
+                                </IconButton>
+                                <IconButton className="colorlens" style={{ color: "gray" }}>
+                                    <div className="colorLens" title="change color" ><ColorLensIcon /></div>
+                                </IconButton>
 
 
-                                <Button className="originalicon" style={{ color: "gray" }}>
+                                <IconButton className="originalicon" style={{ color: "gray" }}>
                                     <div className="originalIcon" title="add image"><CropOriginalIcon /></div>
-                                </Button>
-                                <Button className="archeive" style={{ color: "gray"}}>
+                                </IconButton>
+                                <IconButton className="archeive" style={{ color: "gray" }}>
                                     <div className="Archeive" title="Archive"><ArchiveOutlinedIcon /></div>
-                                </Button>
-                                <Button className="morevert" style={{ color: "gray"}}>
+                                </IconButton>
+                                <IconButton className="morevert" style={{ color: "gray" }}>
                                     <div className="moreverticon" title="more"><MoreVertIcon /></div>
-                                </Button>
-                                <Button className="undo" style={{ color: "gray" }}>
+                                </IconButton>
+                                <IconButton className="undo" style={{ color: "gray" }}>
                                     <div className="undo" title="undo"><UndoIcon /></div>
-                                </Button>
+                                </IconButton>
 
-                                <Button className="redo" style={{ color: "gray" }}>
-                                    <div className="redo"title="redo" ><RedoIcon /></div>
-                                </Button>
-                                <Button> <div className="trash">close</div></Button>
+                                <IconButton className="redo" style={{ color: "gray" }}>
+                                    <div className="redo" title="redo" ><RedoIcon /></div>
+                                </IconButton>
+                                <IconButton> <div className="trash" onClick={this.handleNotes}>close</div></IconButton>
 
                             </div>
                         </div>

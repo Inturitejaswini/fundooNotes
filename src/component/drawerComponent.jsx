@@ -33,7 +33,7 @@ class DrawerComponent extends Component {
         }
     }
     handleNote=()=>{
-        console.log("hello rahul");
+        console.log("hello teju");
         this.props.history.push('/dashboard')
         }
     render() {

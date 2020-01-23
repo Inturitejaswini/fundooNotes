@@ -7,7 +7,7 @@
 .login_card{
   width:30em ;
   height: 60vh;
-  color: rgb(0, 59, 252);
+  background-color: rgb(224, 224, 224)
 }
 .submit_Btn{
   display: flex;
@@ -201,11 +201,11 @@
   
   .search_box{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     border: 1px solid;
     padding: 2px;
-    border-radius: 28px;
+    border-radius: 4px;
     width: 30em;
     color: black;
     margin: 29px;
@@ -308,11 +308,12 @@ text-align: center;
   border-color: #e0e0e0;
   border-radius: 40px;
   }
-  .take_note{
+  .take_note {
     color: gray;
     margin-right: -39px;
-    margin-left: 18px;
-  }
+    margin-left: 14px;
+    margin-left: 170px;
+}
   .take_title{
   margin-top: 8px;
   margin-left: 25px;
@@ -320,7 +321,7 @@ text-align: center;
   .take_Note{
       color: gray;
       margin-right: 20px;
-      margin-left: 35px;
+      margin-left: 15px;
       margin-top: 10px;
   }
   .paintIcon{
@@ -339,13 +340,15 @@ text-align: center;
     display: flex;
     height: 14px;
     width: 491px;
-    margin-top: -20px;
+    margin-top: -1px;
 }.notescard2{
-  margin-left: 426px;
-  width: 40em;
-  height: 140px;
-  border-radius: 10px;
-  margin-top: 70px;
-  border: 2px solid rgb(224, 224, 224);
+  margin-left: 429px;
+    width: 36em;
+    height: 133px;
+    border-radius: 8px;
+    margin-top: 79px;
+    border: 1px solid rgb(224, 224, 224);
 }
- 
+.Icons{
+  display: flex;
+}
