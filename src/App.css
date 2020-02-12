@@ -1076,16 +1076,6 @@ height: 0em;
   padding-left: 14px;
 }
 
-/* .deleteicons{
-  visibility: hidden;
-}
-.deleteicons::hover{
-  visibility: visible;
-}
-.delete-notecard-div:hover .deleteicons{
-  visibility: visible;
-} */
-
 
 .note-card-div-label{
   visibility: hidden;
