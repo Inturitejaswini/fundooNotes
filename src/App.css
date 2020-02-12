@@ -1097,23 +1097,7 @@ height: 0em;
   visibility: visible
 }
 
-/* .getnotecomponetnotecard{
-  transition: box-shadow .3s;
-  display: flex;
-    margin: auto;
-    margin-block-start: 75px;
-  width:35em;
-  height:auto;
-  border-radius:5px;
-  border:1px solid;
-  border-color:#e0e0e0
-}
-.getnotecomponetnotecard:hover .note-card-div{
-  visibility: visible;
-}
-.getnotecomponetnotecard:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
-} */
+
 .getcard-div{
   margin-top: 13px;
   transition: box-shadow .3s;
