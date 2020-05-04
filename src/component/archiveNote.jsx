@@ -1,7 +1,6 @@
 /******************************************************************************
 * Execution : 1. default node cmd> node archive.jsx 
 * 2. if nodemon installed cmd> nodemodule archive.jsx
-* 
 * Purpose : create archive page.
 * @description 
 * 
@@ -55,14 +54,12 @@ class Archive extends Component {
         console.log("taking notes", this.state.takeNote);
     }
     handleNote = async (title, takeNote, key) => {
-        //console.log("id in get",key);
         await this.setState({
             title: title,
             open: !this.state.open,
             takeNote: takeNote,
             key: key
         })
-        // console.log("taking title", this.state.title,this.state.takeNote,this.state.key);
     }
 
     handleunArchive = () => {
@@ -72,7 +69,6 @@ class Archive extends Component {
             archive: this.state.archive,
             key: this.state.key
         });
-        //console.log("response is coming to handle delete",this.state.key,this.state.delete)
         let archive1 = {
             archive: this.state.archive,
             key: this.state.key,
@@ -83,7 +79,6 @@ class Archive extends Component {
         })
     }
     handleUpdate = () => {
-        // console.log("gggggg--->",value);
         this.setState({
             // selectedValue: value, 
             open: false,
@@ -91,21 +86,17 @@ class Archive extends Component {
             takeNote: this.state.takeNote,
             key: this.state.key
         });
-        // console.log("response is coming to handle upade",this.state.key)
         let update = {
             title: this.state.title,
             takeNote: this.state.takeNote,
             key: this.state.key
         }
-        //console.log("response is coming to handle upade", update)
         noteUpdate(update).then((res) => {
-            // console.log("data is updated came to in get note component", res)
         })
     };
     componentDidMount = () => {
         getnotes()
             .then(res => {
-                // console.log("dataaaaaaa", res);
                 this.setState({
                     noteArray: res
                 })
