@@ -19,7 +19,7 @@ import AddAlertIcon from '@material-ui/icons/AddAlert';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
 import RedoIcon from '@material-ui/icons/Redo';
-import { Card, InputBase, IconButton} from '@material-ui/core';
+import { Card, InputBase, IconButton } from '@material-ui/core';
 import UndoIcon from '@material-ui/icons/Undo'
 import { noteUpdate } from '../controller/noteController'
 import { unArchiveNotes } from '../controller/noteController'
@@ -136,8 +136,8 @@ class Archive extends Component {
                                 </div>
                                 <div className="dailogue-icons-divcard">
 
-                                <Reminder
-                                            noteId={key.id}></Reminder>
+                                    <Reminder
+                                        noteId={key.id}></Reminder>
                                     <IconButton className="personadd23" >
                                         <div className="personAdd-div" title="collabarator"><PersonAddIcon />
                                         </div>
@@ -152,10 +152,10 @@ class Archive extends Component {
                                         </div>
                                     </IconButton>
                                     <MoreComponent
-                                            noteId={key.id}></MoreComponent>
+                                        noteId={key.id}></MoreComponent>
                                     <IconButton  >
-                                            <img className="pindrop2" src={image1} onClick={this.handlePin}/>
-                                     </IconButton>
+                                        <img className="pindrop2" src={image1} onClick={this.handlePin} />
+                                    </IconButton>
                                 </div>
                             </div>
                         </Card>
@@ -167,8 +167,8 @@ class Archive extends Component {
                                     <InputBase placeholder="title" value={this.state.title} onChange={this.handlechangeTitle}>
                                     </InputBase>
                                     <IconButton  >
-                                            <img className="pindrop2" src={image1} onClick={this.handlePin}/>
-                                     </IconButton>
+                                        <img className="pindrop2" src={image1} onClick={this.handlePin} />
+                                    </IconButton>
                                 </div>
                                 <div className="takeNoteCard">
                                     <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handlechangetakeNote}>
@@ -193,7 +193,7 @@ class Archive extends Component {
                                         </div>
                                     </IconButton>
                                     <MoreComponent
-                                            noteId={key.id}></MoreComponent>
+                                        noteId={key.id}></MoreComponent>
                                     <IconButton className="undo1">
                                         <div className="undo1" ><UndoIcon />
                                         </div>
