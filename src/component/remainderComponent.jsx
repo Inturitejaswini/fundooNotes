@@ -15,29 +15,12 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { getnotes } from '../controller/noteController'
-import CropOriginalIcon from '@material-ui/icons/CropOriginal';
-import AddAlertIcon from '@material-ui/icons/AddAlert';
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import ColorLensIcon from '@material-ui/icons/ColorLens';
-import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
-import RedoIcon from '@material-ui/icons/Redo';
-import Popper from '@material-ui/core/Popper'
+import {CropOriginalIcon,AddAlertIcon,PersonAddIcon,OpenInBrowserIcon,RedoIcon,ArchiveOutlinedIcon,UndoIcon} from '@material-ui/icons';
 import image1 from '../assets/pushpin.jpeg'
-import { Paper } from '@material-ui/core';
-import { Button, InputBase, IconButton } from '@material-ui/core';
-import UndoIcon from '@material-ui/icons/Undo'
-import { updatePin } from '../controller/noteController'
-import { updateunPin } from '../controller/noteController'
-import { deleteNotes } from '../controller/noteController';
-import { noteUpdate } from '../controller/noteController'
-import { unArchiveNotes } from '../controller/noteController'
-import { ArchiveNotes } from '../controller/noteController'
+import { InputBase, IconButton ,Dialog} from '@material-ui/core';
+import { updatePin ,updateunPin,deleteNotes,noteUpdate,unArchiveNotes,ArchiveNotes,getlabelscard} from '../controller/noteController'
 import AppBar1 from '../component/appBar'
-import Dialog from '@material-ui/core/Dialog';
-import MoreVertIcon from '@material-ui/icons/MoreVert'
-import { getlabelscard } from '../controller/noteController'
 import Reminder from '../component/reminder'
-import ArchiveOutlinedIcon from '@material-ui/icons/ArchiveOutlined';
 import MoreComponent from '../component/moreComponent';
 import Notes from '../component/notes'
 import ColorComponent from './colorComponent'
@@ -58,7 +41,6 @@ class remainderComponent extends Component {
     }
   }
   handleDelete = () => {
-    console.log("data come to delete function");
     this.setState({
       open: false,
       delete: this.state.delete,
@@ -66,42 +48,33 @@ class remainderComponent extends Component {
       takeNote: this.state.takeNote,
       key: this.state.key
     });
-    console.log("response is coming to handle delete", this.state.key, this.state.delete)
     let delete1 = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
       delete: this.state.delete
     }
-    console.log("response is coming to handle delete", delete1)
     deleteNotes(delete1).then((res) => {
-      console.log("data is deleted came to in get note component", res)
     })
   }
   handlePin = (title, takeNote, key) => {
-    console.log("gggggg--->");
     this.setState({
-      // selectedValue: value, 
       open: false,
       pin: this.state.pin,
       title: title,
       takeNote: takeNote,
       key: key
     });
-    console.log("response is coming to handle pin", this.state.pin)
     let pin = {
       pin: this.state.pin,
       title: title,
       takeNote: takeNote,
       key: key
     }
-    //console.log("response is coming to handle pin", pin.pin)
     updatePin(pin).then((res) => {
-      console.log("data is updated came to in get note component", res)
     })
   }
   handleArchive = () => {
-    console.log("data come to delete function");
     this.setState({
       open: false,
       delete: this.state.delete,
@@ -110,7 +83,6 @@ class remainderComponent extends Component {
       key: this.state.key,
       archive: this.state.archive
     });
-    console.log("response is coming to handle delete", this.state.key, this.state.delete)
     let archive1 = {
       title: this.state.title,
       takeNote: this.state.takeNote,
@@ -118,22 +90,17 @@ class remainderComponent extends Component {
       delete: this.state.delete,
       archive: this.state.archive
     }
-    console.log("response is coming to handle delete")
     ArchiveNotes(archive1).then((res) => {
-      console.log("data is archived came to in get note component", res)
     })
   }
   changehandleunPin = (key, title, takeNote) => {
-    console.log("gggggg--->changing");
     this.setState({
-      // selectedValue: value, 
       open: false,
       pin: this.state.pin,
       title: title,
       takeNote: takeNote,
       key: key
     });
-    console.log("response is coming to handle pin", this.state.pin, title, takeNote, key)
 
     let pin = {
       title: title,
@@ -141,33 +108,26 @@ class remainderComponent extends Component {
       takeNote: takeNote,
       key: key
     }
-    console.log("response is coming to handle pin", pin.pin, pin.title, pin.takeNote)
     updateunPin(pin).then((res) => {
-      console.log("data is updated came to in get note component", res)
     })
   }
   handlechangeTitle = (event) => {
     this.setState({
       title: event.target.value,
     });
-    // console.log("taking title", this.state.title);
   }
   handlechangetakeNote = (event) => {
     this.setState({ takeNote: event.target.value });
-    // console.log("taking notes",this.state.takeNote);
   }
   handleNote = async (title, takeNote, key) => {
-    //console.log("id in get",key);
     await this.setState({
       title: title,
       open: !this.state.open,
       takeNote: takeNote,
       key: key
     })
-    // console.log("taking title", this.state.title,this.state.takeNote,this.state.key);
   }
   handleunArchive = () => {
-    console.log("data come to delete function");
     this.setState({
       open: false,
       archive: this.state.archive,
@@ -175,36 +135,28 @@ class remainderComponent extends Component {
       takeNote: this.state.takeNote,
       key: this.state.key
     });
-    //console.log("response is coming to handle delete",this.state.key,this.state.delete)
     let archive1 = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       archive: this.state.archive,
       key: this.state.key,
     }
-    console.log("response is coming to handle unarchive", archive1.archive)
     unArchiveNotes(archive1).then((res) => {
-      console.log("data is unarchived came to in get note component", res)
     })
   }
   handleUpdate = () => {
-    // console.log("gggggg--->",value);
     this.setState({
-      // selectedValue: value, 
       open: false,
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key
     });
-    // console.log("response is coming to handle upade",this.state.key)
     let update = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key
     }
-    //console.log("response is coming to handle upade", update)
     noteUpdate(update).then((res) => {
-      // console.log("data is updated came to in get note component", res)
     })
   };
   componentDidMount = () => {
@@ -217,7 +169,6 @@ class remainderComponent extends Component {
         this.setState({
           noteArray: res
         })
-        console.log("noteData", this.state.noteArray)
         this.state.noteArray.map((key) => {
         })
       })
@@ -228,11 +179,9 @@ class remainderComponent extends Component {
   getAllLables = () => {
     getlabelscard()
       .then(res => {
-        console.log("dataaaaaaa for labels", res);
         this.setState({
           noteArray1: res
         })
-        console.log("noteData", this.state.noteArray1)
       })
 
   }
@@ -242,7 +191,6 @@ class remainderComponent extends Component {
     })
   }
   handleArchive = () => {
-    console.log("data come to delete function");
     this.setState({
       open: false,
       delete: this.state.delete,
@@ -251,7 +199,6 @@ class remainderComponent extends Component {
       key: this.state.key,
       archive: this.state.archive
     });
-    console.log("response is coming to handle delete", this.state.key, this.state.delete)
     let archive1 = {
       title: this.state.title,
       takeNote: this.state.takeNote,
@@ -259,9 +206,7 @@ class remainderComponent extends Component {
       delete: this.state.delete,
       archive: this.state.archive
     }
-    console.log("response is coming to handle delete")
     ArchiveNotes(archive1).then((res) => {
-      console.log("data is archived came to in get note component", res)
     })
   }
   render() {
@@ -269,7 +214,6 @@ class remainderComponent extends Component {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popper' : undefined;
     var noteData = this.state.noteArray.map(key => {
-      console.log("dataaaaa-in key----->", key.id, key.data().title, key.data().delete);
       if (key.data().remainder !== "") {
         return (
           <div>
@@ -311,7 +255,6 @@ class remainderComponent extends Component {
                 </div>
               </card>
             </div>
-
             <Dialog aria-labelledby="simple-dialog-title" open={this.state.open}>
               <div className="card_getNote">
 
@@ -336,7 +279,6 @@ class remainderComponent extends Component {
                     </div>
                   </IconButton>
                   <ColorComponent noteId={key.id}></ColorComponent>
-
                   <IconButton className="originalicon1" >
                     <div className="originalIcon1" ><CropOriginalIcon />
                     </div>

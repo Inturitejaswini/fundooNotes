@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import Popper from '@material-ui/core/Popper'
-import { Paper, Button } from '@material-ui/core';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import { Paper, Button ,Popper,TextField,ClickAwayListener} from '@material-ui/core';
 import 'date-fns';
 import { remainder } from '../controller/noteController'
-import TextField from '@material-ui/core/TextField';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 export class Setdateandtime extends Component {
     constructor(props) {
@@ -43,13 +40,10 @@ export class Setdateandtime extends Component {
             timeDate: this.state.timeDate,
             key: this.props.remainderId
         }
-        console.log("response is coming to handle update date component", this.props.remainderId)
         remainder(timeDetails).then((res) => {
-            console.log("data is updated came to in date component", res)
         })
     }
     render() {
-        console.log("key in date and time component", this.props.remainderId)
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
