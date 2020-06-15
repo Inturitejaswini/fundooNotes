@@ -13,16 +13,9 @@
 ******************************************************************************/
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { getnotes } from '../controller/noteController'
-import CropOriginalIcon from '@material-ui/icons/CropOriginal';
-import AddAlertIcon from '@material-ui/icons/AddAlert';
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
-import RedoIcon from '@material-ui/icons/Redo';
+import { getnotes, noteUpdate, unArchiveNotes, } from '../controller/noteController'
+import { CropOriginalIcon, AddAlertIcon, PersonAddIcon, OpenInBrowserIcon, RedoIcon, UndoIcon, } from '@material-ui/icons';
 import { Card, InputBase, IconButton } from '@material-ui/core';
-import UndoIcon from '@material-ui/icons/Undo'
-import { noteUpdate } from '../controller/noteController'
-import { unArchiveNotes } from '../controller/noteController'
 import Dialog from '@material-ui/core/Dialog';
 import image1 from '../assets/pushpin.jpeg'
 import ColorComponent from '../component/colorComponent'
@@ -47,11 +40,9 @@ class Archive extends Component {
         this.setState({
             title: event.target.value,
         });
-        console.log("taking title", this.state.title);
     }
     handlechangetakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
-        console.log("taking notes", this.state.takeNote);
     }
     handleNote = async (title, takeNote, key) => {
         await this.setState({
@@ -63,7 +54,6 @@ class Archive extends Component {
     }
 
     handleunArchive = () => {
-        console.log("data come to delete function");
         this.setState({
             open: false,
             archive: this.state.archive,
@@ -73,14 +63,11 @@ class Archive extends Component {
             archive: this.state.archive,
             key: this.state.key,
         }
-        console.log("response is coming to handle unarchive", archive1.archive)
         unArchiveNotes(archive1).then((res) => {
-            console.log("data is unarchived came to in get note component", res)
         })
     }
     handleUpdate = () => {
         this.setState({
-            // selectedValue: value, 
             open: false,
             title: this.state.title,
             takeNote: this.state.takeNote,
@@ -100,9 +87,7 @@ class Archive extends Component {
                 this.setState({
                     noteArray: res
                 })
-                // console.log("noteData", this.state.noteArray)
                 this.state.noteArray.map((key) => {
-                    //console.log(key.title,key.delete, "title is coming")
                 })
             })
         this.setState({
@@ -119,7 +104,6 @@ class Archive extends Component {
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
         var noteData = this.state.noteArray.map(key => {
-            console.log("dataaaaa-in key----->", key.id, key.data().title, key.data().archive);
             if (key.data().archive == true) {
                 return (
                     <div className="archive-notecard-div">
