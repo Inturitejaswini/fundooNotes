@@ -16,12 +16,9 @@
 
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import Popper from '@material-ui/core/Popper'
-import IconButton from '@material-ui/core/IconButton'
-import { Paper } from '@material-ui/core';
+import {Popper,IconButton,Paper,ClickAwayListener} from '@material-ui/core'
 import ColorLensIcon from '@material-ui/icons/ColorLens';
 import {Updatecolors} from '../controller/noteController'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 const colors = [
     { name: "violet", hexcode: "#E6E6FA" },
     { name: "orange", hexcode: "#F47E3F" },
@@ -65,21 +62,15 @@ export class ColorComponent extends Component {
         })
     }
     handleColor = (event) => {
-        console.log("data come to delete function", this.props.noteId);
         this.setState({
             color: event.target.value,
             key: this.props.noteId
         });
-        console.log("response is coming to handle delete", this.props.noteId, this.state.color)
         let noteColor = {
             key: this.props.noteId,
             color: event.target.value
         }
-        console.log("response is coming to handle delete", noteColor.key, noteColor.color)
         Updatecolors(noteColor).then((res) => {
-            console.log("data is deleted came to in get note component", res)
-            // console.log("this.props",this.props)
-            // this.props.colorStatus(true);
         })
     }
     render() {
