@@ -14,7 +14,7 @@ import Archive from './component/archiveNote'
 import Trash from './component/deleteNote'
 import Setdateandtime from './component/setDateAndTime'
 import { AppBar1 } from './component/appBar';
-import Editlabel from './component/editLable';
+import Editlabel from './component/lable';
 import Editlabels from './component/editLables';
 import Getlabels from './component/getLables';
 import ColorComponent from './component/colorComponent'
@@ -39,7 +39,7 @@ export class App extends Component {
           <Route path='/deleteNote' component={Trash}></Route>
           <Route path='/setDateAndTime'component={Setdateandtime}></Route>
           <Route path='/appBar' component={AppBar1}></Route>
-          <Route path='/editLable' component={Editlabel}></Route>
+          <Route path='/lable' component={Editlabel}></Route>
           <Route path='/editLables' component={Editlabels}></Route>
           <Route path='/getLables' component={Getlabels}></Route>
           <Route path='/colorComponent' component={ColorComponent}></Route>
