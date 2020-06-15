@@ -32,7 +32,6 @@ export class Forgotpassword extends Component {
             email: this.state.email
         }
         forgot(user).then(() => {
-
         })
     }
 
