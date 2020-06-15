@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { getnotes } from '../controller/noteController'
-import { Card, InputBase, IconButton } from '@material-ui/core';
-import { restoreNotes } from '../controller/noteController'
-import { deleteNotesPermenently } from '../controller/noteController'
-import Dialog from '@material-ui/core/Dialog'
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import RestoreFromTrashIcon from '@material-ui/icons/RestoreFromTrash';
+import { getnotes ,restoreNotes,deleteNotesPermenently} from '../controller/noteController'
+import { Card, InputBase, IconButton ,Dialog} from '@material-ui/core';
+import {DeleteForeverIcon,RestoreFromTrashIcon} from '@material-ui/icons';
 import AppBar1 from '../component/appBar'
 class Trash extends Component {
     constructor(props) {
@@ -27,40 +23,31 @@ class Trash extends Component {
         this.setState({
             title: event.target.value,
         });
-        // console.log("taking title", this.state.title);
     }
     handlechangetakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
-        // console.log("taking notes",this.state.takeNote);
     }
-    handleNote = async (title, takeNote, key) => {
-        //console.log("id in get",key);
-        await this.setState({
+    handleNote =(title, takeNote, key) => {
+         this.setState({
             title: title,
             open: !this.state.open,
             takeNote: takeNote,
             key: key
         })
-        // console.log("taking title", this.state.title,this.state.takeNote,this.state.key);
     }
     handlepermenentDelete = (key) => {
-        console.log("data come to delete function", key);
         this.setState({
             open: false,
             key: key,
         });
-        console.log("response is coming", this.state.key)
         let delete1 = {
             key: key,
         }
-        console.log("response is coming to handle delete", delete1, this.state.key)
         deleteNotesPermenently(delete1).then((res) => {
-            console.log("data is deleted came to in get note component", res)
         })
     }
 
     handleDelete = async (key) => {
-        console.log("data come to delete function", this.state.key);
         await this.setState({
             open: false,
             delete: !this.state.delete,
@@ -68,28 +55,22 @@ class Trash extends Component {
             takeNote: this.state.takeNote,
             key: key,
         });
-        console.log("response is coming to handle delete------->", this.state.key, this.state.delete)
         let delete1 = {
             title: this.state.title,
             takeNote: this.state.takeNote,
             key:key,
             delete: this.state.delete,
         }
-        console.log("response is coming to handle delete", delete1)
         restoreNotes(delete1).then((res) => {
-            console.log("data is deleted came to in get note component", res)
         })
     }
     componentDidMount = () => {
         getnotes()
             .then(res => {
-                // console.log("dataaaaaaa", res);
                 this.setState({
                     noteArray: res
                 })
-                // console.log("noteData", this.state.noteArray)
                 this.state.noteArray.map((key) => {
-                    //console.log(key.title,key.delete, "title is coming")
                 })
             })
         this.setState({
@@ -106,7 +87,6 @@ class Trash extends Component {
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
         var noteData = this.state.noteArray.map(key => {
-            console.log("dataaaaa-in key----->", key.id, key.data().title, key.data().delete);
             if ((key.data().delete == true) && (key.data().archive == false)) {
                 return (
                     <div className="delete-notecard-div">
