@@ -14,15 +14,9 @@
  *  @since          :16-1-2019
  ******************************************************************************/
 import React, { Component } from 'react';
-import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
-import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
-import Drawer from '@material-ui/core/Drawer';
-import { createMuiTheme } from '@material-ui/core';
-import { MuiThemeProvider } from '@material-ui/core';
-import ArchiveOutlinedIcon from '@material-ui/icons/ArchiveOutlined';
-import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined';
 import { withRouter } from 'react-router-dom';
-import { Button, Divider } from '@material-ui/core'
+import { EmojiObjectsOutlinedIcon, NotificationsNoneOutlinedIcon, ArchiveOutlinedIcon, DeleteOutlineOutlinedIcon, } from '@material-ui/icons';
+import { Drawer, createMuiTheme, MuiThemeProvider, Button, Divider } from '@material-ui/core';
 import Editlabels from '../component/editLables'
 import Getlabels from '../component/getLables'
 const theme = createMuiTheme({
@@ -50,12 +44,11 @@ class DrawerComponent extends Component {
     }
     handleArchive = () => {
         this.props.history.push('/archiveNote')
-        console.log("enerd into archivecomponnte")
     }
     handleDelete = () => {
         this.props.history.push('/deleteNote')
     }
-    handleRemainder=()=>{
+    handleRemainder = () => {
         this.props.history.push('/remainderComponent')
     }
     render() {
@@ -81,14 +74,13 @@ class DrawerComponent extends Component {
                                     </Button>
                                 </div><Divider type='horizontal' /></div>
                             <div className="label bar" >
-                               <div id="name"><h5>LABELS</h5></div> 
+                                <div id="name"><h5>LABELS</h5></div>
                                 <div className="edit lables" >
-                                    
-                                    <Getlabels/>
+                                    <Getlabels />
                                     <Editlabels ></Editlabels>
-                                    </div>
-                                   <div><Divider type='horizontal'/></div> 
-                                    </div>
+                                </div>
+                                <div><Divider type='horizontal' /></div>
+                            </div>
                             <div className="archeive and trash" >
                                 <div className="archeive" >
                                     <Button id="archivicon-btn" onClick={this.handleArchive}>
@@ -97,7 +89,7 @@ class DrawerComponent extends Component {
                                     </Button>
                                 </div>
                                 <div className="trash" >
-                                    <Button id="trashicon-btn"  onClick={this.handleDelete}>
+                                    <Button id="trashicon-btn" onClick={this.handleDelete}>
                                         <div className="trashicon"  ><DeleteOutlineOutlinedIcon /></div>
                                         <div className="trashtext" title="trash">Trash</div>
                                     </Button>
@@ -106,7 +98,7 @@ class DrawerComponent extends Component {
                             <div>
                             </div>
                         </div>
-                       
+
                     </Drawer>
                 </MuiThemeProvider>
             </div>
