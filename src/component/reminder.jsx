@@ -15,12 +15,9 @@
 ******************************************************************************/
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import Popper from '@material-ui/core/Popper'
-import IconButton from '@material-ui/core/IconButton'
-import { Paper} from '@material-ui/core';
+import { Popper, IconButton, Paper, Button } from '@material-ui/core'
 import { Setdateandtime } from '../component/setDateAndTime'
 import 'date-fns';
-import { Button } from '@material-ui/core';
 import AddAlertIcon from '@material-ui/icons/AddAlert';
 export class Reminder extends Component {
     constructor(props) {
@@ -33,11 +30,9 @@ export class Reminder extends Component {
     }
     handleDateChange = (event) => {
         this.setState({ selectedDate: event.target.value });
-        console.log("date", this.state.selectedDate);
     };
     handleTimeChange = (event) => {
         this.setState({ selectedTime: event.target.value });
-        console.log("time", this.state.selectedTime);
     };
     handleremindermenu = (event) => {
         this.setState({
@@ -56,7 +51,6 @@ export class Reminder extends Component {
         }
     }
     render() {
-        console.log("ytgfcycvtyhftyhfvy", this.props.noteId)
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
@@ -66,24 +60,16 @@ export class Reminder extends Component {
                     aria-describedby={id} type="button" onClick={this.handleremindermenu}>
                     <div className="AddAlertIcon" title="more"><AddAlertIcon /></div>
                 </IconButton>
-                <Popper id={id} open={open} anchorEl={anchorEl} style={{zIndex:"9999"}}>
+                <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
                     <Paper className="reminder-paper">
-
                         <div className="reminder-div">
                             Reminder:
                             </div>
-                            <div id="remainder-div-btns">
-                        {/* <Button id="button1">
-                            <div className="today">
-                                Later today</div>
-                        </Button>
-                        <Button id="button1">
-                            <div className="Tomarrow1">
-                                Tomarrow</div>
-                        </Button> */}
-                        <Setdateandtime
-                            remainderId={this.props.noteId}></Setdateandtime>
-                            </div>
+                        <div id="remainder-div-btns">
+                            <Setdateandtime
+                                remainderId={this.props.noteId}>
+                            </Setdateandtime>
+                        </div>
                     </Paper>
                 </Popper>
             </div>
