@@ -15,22 +15,10 @@
  ******************************************************************************/
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { InputBase, Button} from '@material-ui/core';
-import BrushIcon from '@material-ui/icons/Brush';
-import CropOriginalIcon from '@material-ui/icons/CropOriginal';
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import ColorLensIcon from '@material-ui/icons/ColorLens';
-import IconButton from '@material-ui/core/IconButton'
-import UndoIcon from '@material-ui/icons/Undo';
-import Popper from '@material-ui/core/Popper'
-import { Paper } from '@material-ui/core';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-import ArchiveOutlinedIcon from '@material-ui/icons/ArchiveOutlined';
+import { InputBase, Button, IconButton, Popper, Paper, ClickAwayListener } from '@material-ui/core';
+import { BrushIcon, CropOriginalIcon, PersonAddIcon, ColorLensIcon, UndoIcon, MoreVertIcon, CheckCircleOutlineIcon, ArchiveOutlinedIcon, RedoIcon } from '@material-ui/icons';
 import { notes } from '../controller/noteController';
-import {Reminder} from './reminder'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import RedoIcon from '@material-ui/icons/Redo';
+import { Reminder } from './reminder'
 export class Notes extends Component {
     constructor(props) {
         super(props)
@@ -41,12 +29,12 @@ export class Notes extends Component {
             title: "",
             takeNote: "",
             id: "",
-            key:"",
-            pin:false,
-            archive:false,
-            remainder:"",
-            delete:false,
-            note:false,
+            key: "",
+            pin: false,
+            archive: false,
+            remainder: "",
+            delete: false,
+            note: false,
         }
     }
     handleNote = () => {
@@ -63,12 +51,12 @@ export class Notes extends Component {
         const newUser = {
             title: this.state.title,
             takeNote: this.state.takeNote,
-            archive:this.state.archive,
-            delete:this.state.delete,
-            pin:this.state.pin,
-            key:this.state.key,
-            remainder:this.state.remainder,
-            note:this.state.note
+            archive: this.state.archive,
+            delete: this.state.delete,
+            pin: this.state.pin,
+            key: this.state.key,
+            remainder: this.state.remainder,
+            note: this.state.note
         }
         notes(newUser).then(response => {
             if (response) {
@@ -80,11 +68,9 @@ export class Notes extends Component {
     }
     handlechangeTitle = (event) => {
         this.setState({ title: event.target.value });
-        console.log("taking title", this.state.title);
     }
     handlechangenote = (event) => {
         this.setState({ takeNote: event.target.value });
-        console.log("taking notes", this.state.takeNote);
     }
     handlemoremenu = (event) => {
         this.setState({
@@ -154,23 +140,23 @@ export class Notes extends Component {
                                     <div className="moreverticon" title="more"><MoreVertIcon /></div>
                                 </IconButton>
                                 <Popper id={id} open={open} anchorEl={anchorEl} >
-                                <ClickAwayListener onClickAway={this.handleClickAway}>
-                                    <Paper className="more-paper1">
-                                        <div className="notemore-div">
-                                        <Button id="lablebutton-btn1">
-                                            <div className="labeladd">
-                                                Add lable</div>
-                                        </Button>
-                                        <Button id="lablebutton-btn2">
-                                            <div className="adddrawing">
-                                                Add drawing</div>
-                                        </Button>
-                                        <Button id="lablebutton-btn3">
-                                            <div className="showtick">
-                                                Show tick boxes</div>
-                                        </Button>
-                                        </div>
-                                    </Paper>
+                                    <ClickAwayListener onClickAway={this.handleClickAway}>
+                                        <Paper className="more-paper1">
+                                            <div className="notemore-div">
+                                                <Button id="lablebutton-btn1">
+                                                    <div className="labeladd">
+                                                        Add lable</div>
+                                                </Button>
+                                                <Button id="lablebutton-btn2">
+                                                    <div className="adddrawing">
+                                                        Add drawing</div>
+                                                </Button>
+                                                <Button id="lablebutton-btn3">
+                                                    <div className="showtick">
+                                                        Show tick boxes</div>
+                                                </Button>
+                                            </div>
+                                        </Paper>
                                     </ClickAwayListener>
                                 </Popper>
                                 <IconButton className="undo" >
