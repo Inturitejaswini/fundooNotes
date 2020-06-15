@@ -175,5 +175,6 @@ export class Registration extends Component {
             </center>
          </div>
       )
-   }}
+   }
+}
 export default withRouter(Registration);
