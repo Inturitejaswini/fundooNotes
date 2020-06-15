@@ -15,26 +15,15 @@
 
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import Toolbar from '@material-ui/core/Toolbar';
-import RefreshIcon from '@material-ui/icons/Refresh'
-import IconButton from '@material-ui/core/IconButton'
-import AppsIcon from '@material-ui/icons/Apps';
-import SettingsIcon from '@material-ui/icons/Settings';
-import ViewColumnIcon from '@material-ui/icons/ViewColumn';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search'
-import { createMuiTheme, Paper } from '@material-ui/core';
-import Popper from '@material-ui/core/Popper'
+import {
+    Toolbar, IconButton, createMuiTheme, Paper, Popper, MuiThemeProvider,
+    AppBar, InputBase, Grid, Avatar, Divider, Button, Typography, ClickAwayListener
+} from '@material-ui/core';
+import { RefreshIcon, AppsIcon, SettingsIcon, ViewColumnIcon, MenuIcon, SearchIcon, ViewStreamRoundedIcon, PersonAddIcon } from '@material-ui/icons'
 import Notes from '../component/notes'
 import Getnotes from '../component/getNote'
-import { MuiThemeProvider } from '@material-ui/core';
-import ViewStreamRoundedIcon from '@material-ui/icons/ViewStreamRounded';
-import Typography from '@material-ui/core/Typography'
 import image from '../assets/keep.jpeg';
 import DrawerComponent from '../component/drawerComponent'
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import { AppBar, InputBase, Grid, Avatar, Divider, Button } from '@material-ui/core'
 const theme = createMuiTheme({
     overrides: {
         MuiAppBar: {
@@ -43,16 +32,6 @@ const theme = createMuiTheme({
                 backgroundColor: " white"
             }
         },
-        // MuiAppBar: {
-        //     root: {
-        //         width: "169 %",
-        //         display: "flex",
-        //         zindex: "1100",
-        //         boxsizing: "border- box",
-        //         flexshrink: "0",
-        //         flexdirection: "column",
-        //     }
-        // },
         MuiIconButton: {
             root: {
                 padding: "6PX",
@@ -65,11 +44,6 @@ const theme = createMuiTheme({
             height: "3px"
         }
     },
-    // MuiButtontextSizeSmall: {
-    //     padding: "4px 5px",
-    //     fontsize: "0.8125rem",
-    //     margintop: "142px",
-    // }
 })
 export class Dashboard extends Component {
     constructor(props) {
@@ -96,16 +70,11 @@ export class Dashboard extends Component {
 
     changeText(currentText) {
         this.setState({ currentText });
-        //console.log({currentText});
     }
     handlenavigationbar = () => {
-        console.log("enter into navigation bar")
-        // this.props.history.push('/drawerComponent')
         this.setState({
             open: !this.state.open
         })
-        console.log("open log in dashboard", this.state.open);
-
     }
     handlerefreshPage = () => {
         window.location.reload(false);
@@ -141,13 +110,12 @@ export class Dashboard extends Component {
                                     onClick={this.handlenavigationbar} >
                                     <MenuIcon />
                                 </IconButton>
-                                <h3 style={{ cursor: "pointer", marginLeft: "10px", margin: "5px" }}></h3>
                             </div>
                             <img className="fundooimage" src={image} />
                             <Typography variant="title"
                                 color="textPrimary"
                                 title="Fundoonotes">
-                                <h3 style={{ cursor: "pointer", marginLeft: "10px", marginDown: "10px" }}>FundooNote</h3>
+                                <h3>FundooNote</h3>
                             </Typography>
                             <div className="search_box">
                                 <div className="searchIcon">
