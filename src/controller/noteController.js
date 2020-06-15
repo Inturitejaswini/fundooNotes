@@ -7,7 +7,7 @@ import fire from '../config/fire'
 import jwt_decode from 'jwt-decode'
 const db = firebase.firestore();
 export async function notes(data) {
-  
+
   let userData = {
     title: data.title,
     takeNote: data.takeNote,
@@ -120,7 +120,7 @@ export async function unArchiveNotes(data) {
     userData.archive = false
   }
   let response = await serviceConstant.firestore.collection('notes').doc(data.key).update(userData);
-return (response)
+  return (response)
 }
 
 export async function deleteNotesPermenently(data) {
@@ -128,7 +128,7 @@ export async function deleteNotesPermenently(data) {
     key: data.key,
   }
   let response1 = await serviceConstant.firestore.collection('notes').doc(data.key).delete();
-return response1;
+  return response1;
 }
 
 export async function restoreNotes(data) {
@@ -145,7 +145,7 @@ export async function restoreNotes(data) {
     userData.delete = false
   }
   let response1 = await serviceConstant.firestore.collection('notes').doc(data.key).update(userData);
-return response1;
+  return response1;
 }
 
 
@@ -163,7 +163,7 @@ export async function updatePin(data) {
     userData.pin = false
   }
   let response = await serviceConstant.firestore.collection('notes').doc(data.key).update(userData);
-return (response)
+  return (response)
 }
 
 export async function updateunPin(data) {
@@ -180,7 +180,7 @@ export async function updateunPin(data) {
     userData.pin = false
   }
   let response = await serviceConstant.firestore.collection('notes').doc(data.key).update(userData);
-return response
+  return response
 }
 
 export async function remainder(data) {
@@ -266,7 +266,7 @@ export async function updateLabel(data) {
   let userData = {
     key: data.key,
     label: data.label
-}
+  }
   let response = await serviceConstant.firestore.collection('labels').doc(data.key).update(userData);
   return (response)
 }
@@ -275,7 +275,7 @@ export async function Updatecolors(data) {
   let noteColor = {
     key: data.key,
     color: data.color
-}
+  }
   let response = await serviceConstant.firestore.collection('notes').doc(data.key).update(noteColor);
   return (response)
 }
