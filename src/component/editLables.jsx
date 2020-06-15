@@ -14,17 +14,9 @@
 ******************************************************************************/
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import IconButton from '@material-ui/core/IconButton'
-import { InputBase, TextField } from '@material-ui/core';
-import { Button } from '@material-ui/core';
-import Dialog from '@material-ui/core/Dialog';
-import LabelIcon from '@material-ui/icons/Label';
-import ClearIcon from '@material-ui/icons/Clear';
-import DoneIcon from '@material-ui/icons/Done';
-import CreateIcon from '@material-ui/icons/Create';
-import {updateLabel} from '../controller/noteController'
-import { getlabelscard } from '../controller/noteController'
-import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
+import { InputBase, TextField, IconButton, Button, Dialog, } from '@material-ui/core';
+import { LabelIcon, ClearIcon, DoneIcon, CreateIcon, EditOutlinedIcon } from '@material-ui/icons';
+import { updateLabel, getlabelscard } from '../controller/noteController'
 class Editlabels extends Component {
     constructor(props) {
         super(props)
@@ -47,13 +39,10 @@ class Editlabels extends Component {
     getAllLables = () => {
         getlabelscard()
             .then(res => {
-                console.log("dataaaaaaa for labels", res);
                 this.setState({
                     noteArray: res
                 })
-                console.log("noteData", this.state.noteArray)
             })
-
     }
     handleClear = () => {
         this.setState({
@@ -62,7 +51,6 @@ class Editlabels extends Component {
     }
     handleLabel = (event) => {
         this.setState({ label: event.target.value });
-        console.log('JGVBHVYHygvh', this.state.label)
     }
     handleClose = () => {
         this.setState({
@@ -70,21 +58,16 @@ class Editlabels extends Component {
         })
     }
     handleupdate = (key) => {
-        // console.log("gggggg--->", value);
         this.setState({
-            // selectedValue: value, 
             open: false,
             label: this.state.label,
             key: key
         });
-        console.log("response is coming to handle upade", this.state.label,this.state.key)
         let userData = {
             label: this.state.label,
             key: key
         }
-        console.log("response is coming to handle upade", userData)
         updateLabel(userData).then((res) => {
-            console.log("data is updated came to in get note component", res)
         })
     }
     render() {
@@ -101,7 +84,6 @@ class Editlabels extends Component {
                     <div className="ghig">
                         <h3>Edit labels</h3>
                         <div><IconButton title="cancel"><ClearIcon onClick={this.handleClear}></ClearIcon></IconButton>
-
                             <TextField placeholder="create new label"></TextField>
                             <IconButton><DoneIcon title="create label"></DoneIcon></IconButton>
                         </div>
@@ -110,16 +92,16 @@ class Editlabels extends Component {
                                 return (
                                     <div className="filled_label_icon">
                                         <div>
-                                            <IconButton><LabelIcon/></IconButton>
+                                            <IconButton><LabelIcon /></IconButton>
                                             <InputBase className="filled_label_icon2"
-                                             defaultValue={key.data().label} 
-                                             onChange={this.handleLabel}>
+                                                defaultValue={key.data().label}
+                                                onChange={this.handleLabel}>
                                             </InputBase></div>
-                                        <div><IconButton onClick={() => this.handleupdate(key.id)}><CreateIcon/></IconButton></div>
+                                        <div><IconButton onClick={() => this.handleupdate(key.id)}><CreateIcon /></IconButton></div>
                                     </div>
                                 )
                             })}</div>
-                       <Button> <div onClick={this.handleClose}>Close</div> </Button></div>
+                        <Button> <div onClick={this.handleClose}>Close</div> </Button></div>
                 </Dialog>
             </div>
         )
