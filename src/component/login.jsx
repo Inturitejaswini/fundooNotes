@@ -16,8 +16,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { TextField, Card, Button, Avatar } from '@material-ui/core'
 import { Log } from '../controller/userController'
-import image2  from '../assets/maxresdefault.jpg'
-let imgUrl = 'assets/maxresdefault.jpg'; 
+import image2 from '../assets/maxresdefault.jpg'
+let imgUrl = 'assets/maxresdefault.jpg';
 export class Login extends Component {
     constructor() {
         super();
@@ -29,13 +29,10 @@ export class Login extends Component {
     }
     handleChangeEmail = event => {
         this.setState({ email: event.target.value });
-        console.log("email", this.state.email);
     };
     handleChangePassword = event => {
         this.setState({ password: event.target.value });
-        console.log("password", this.state.password);
     };
-
     handleRegister = () => {
         this.props.history.push('/registration')
     }
@@ -47,7 +44,6 @@ export class Login extends Component {
             email: this.state.email,
             password: this.state.password,
         }
-        console.log("new user dateils", user);
         Log(user).then(response => {
             if (response) {
                 this.props.history.push('/dashBoard')
@@ -56,11 +52,9 @@ export class Login extends Component {
         )
     }
     render() {
-
         return (
-
             <div className="login_container">
-                <Card className="login_card-div" style={{ backgroundColor: "lightpink",backgroundImage:"../assets/maxresdefault.jpg"}} >
+                <Card className="login_card-div" style={{ backgroundColor: "lightpink", backgroundImage: "../assets/maxresdefault.jpg" }} >
                     <div id="acnt-icon">
                         <Avatar className="account">
                         </Avatar>
@@ -86,11 +80,7 @@ export class Login extends Component {
                             value={this.state.password}
                             onChange={this.handleChangePassword}>
                         </TextField>
-
                         <br />
-                        {/* <div style={{ marginLeft: "160px" }}>
-                        <Checkbox value="remeber" />Remember Me
-                    </div> */}
                         <div >
                             <Button type="submit" onClick={this.handleLogin} Id="btn" variant="contained" >
                                 <div className="login">
@@ -106,11 +96,9 @@ export class Login extends Component {
                             </Button>
                         </div>
                         <div>
-                            {/* <Button onClick={this.handleForgot} variant="contained" id="forgot-btn"> */}
                             <div className="forgot-div" onClick={this.handleForgot} style={{ cursor: "pointer" }}>
                                 forgotpassword?
-                                    </div>
-                            {/* </Button> */}
+                            </div>
                         </div>
                     </div>
                 </Card>
