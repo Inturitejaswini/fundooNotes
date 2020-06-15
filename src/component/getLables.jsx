@@ -14,8 +14,7 @@
 ******************************************************************************/
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import { InputBase } from '@material-ui/core';
-import { Button } from '@material-ui/core';
+import { InputBase,Button } from '@material-ui/core';
 import LabelOutlinedIcon from '@material-ui/icons/LabelOutlined';
 import { getlabelscard } from '../controller/noteController'
 class Getlabels extends Component {
@@ -36,11 +35,9 @@ class Getlabels extends Component {
     getAllLables = () => {
         getlabelscard()
             .then(res => {
-                console.log("dataaaaaaa for labels", res);
                 this.setState({
                     noteArray: res
                 })
-                console.log("noteData", this.state.noteArray)
             })
 
     }
@@ -50,11 +47,9 @@ class Getlabels extends Component {
     }
     render() {
         var pinData = this.state.noteArray.map(key1 => {
-            console.log("to get labels in get note component", key1.data().label, key1.data().checkBox)
             return (
                 <div className="getting_labels_inDrawercomponent">
                     <Button id="abcd1" onClick={this.handlegetnotes}> 
-                    {/* <div id="getlabel-div"> */}
                      <LabelOutlinedIcon className="labelbtnicon"/>
                     <InputBase id="labelssize1" value={key1.data().label} onClick={() =>this.handleComponet(key1.data().label)} />
                     </Button>
@@ -62,8 +57,7 @@ class Getlabels extends Component {
             )
         })
         return (
-            <div>
-                {pinData}</div>
+            <div>{pinData}</div>
         )
     }
 }
