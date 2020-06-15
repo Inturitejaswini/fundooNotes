@@ -63,8 +63,7 @@ export class Setdateandtime extends Component {
                                     type="datetime-local"
                                     format="MM/dd/yyyy,hr:min"
                                     value={this.state.timeDate}
-                                    onChange={this.handleDateChange}
-                                />
+                                    onChange={this.handleDateChange}/>
                                 <div className="btns-div">
                                     <Button className="cancel-btn1">
                                         <div className="mnb" onClick={this.handleclose1}>
