@@ -14,14 +14,8 @@
 ******************************************************************************/
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import Popper from '@material-ui/core/Popper'
-import { Paper } from '@material-ui/core';
-import { createlabelnotes } from '../controller/noteController'
-import { getlabels } from '../controller/noteController'
-import Checkbox from '@material-ui/core/Checkbox';
-import { checkbox } from '../controller/noteController'
-import { Button, InputBase } from '@material-ui/core';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import { Popper, Paper, Checkbox, Button, InputBase, ClickAwayListener } from '@material-ui/core'
+import { createlabelnotes, getlabels, checkbox } from '../controller/noteController'
 class Editlabel extends Component {
     constructor(props) {
         super(props)
@@ -41,41 +35,31 @@ class Editlabel extends Component {
         })
     }
     handlechangetakeNote = (event) => {
-        console.log("taking notes", event);
-
         this.setState({ takeNote: event.target.value });
-        // console.log("taking notes",this.state.takeNote);
     }
     componentDidMount = () => {
         let details = {
             key: this.props.editlabel
         }
-        getlabels(details)
-            // console.log("key is coming in edit label", details.key)
-            .then(res => {
-                console.log("dataaaaaaa", res);
-                this.setState({
-                    noteArray: res
-                })
-                console.log("noteData", this.state.noteArray)
-                this.state.noteArray.map((key) => {
-                    console.log(key.label, "labels are coming",key)
-                })
+        getlabels(details).then(res => {
+            this.setState({
+                noteArray: res
             })
+            this.state.noteArray.map((key) => {
+            })
+        })
         this.setState({
             open: false
         })
     }
-    handleLabels = async (title, takeNote, key, id) => {
-        //console.log("id in get",key);
-        await this.setState({
+    handleLabels = (title, takeNote, key, id) => {
+        this.setState({
             title: title,
             open: !this.state.open,
             takeNote: takeNote,
             key: key,
             labelkey: id
         })
-        // console.log("taking title", this.state.title,this.state.takeNote,this.state.key);
     }
     handleCheckbox = (label, key, id) => {
         this.setState({
@@ -83,34 +67,26 @@ class Editlabel extends Component {
             key: this.props.editlabel,
             labelkey: id
         });
-        console.log("response is coming to handle checkbox", this.props.editlabel, this.state.checkBox)
-        //this.props.labelProps()
         let createcheckbox = {
             checkBox: this.state.checkBox,
             key: this.props.editlabel,
             labelkey: id
         }
-        console.log("response is coming to handle checkbox", this.state.checkBox)
         checkbox(createcheckbox).then((res) => {
-            console.log("data is updated came to in get note component", res)
         })
     }
     handleLabelnote = () => {
-        console.log("gggggg--->");
         this.setState({
             takeNote: this.state.takeNote,
             key: this.props.editlabel,
             checkBox: this.state.checkBox
         });
-        console.log("response is coming to handle editlabel note", this.props.editlabel, this.state.takeNote)
         let createlabel = {
             takeNote: this.state.takeNote,
             key: this.props.editlabel,
             checkBox: this.state.checkBox
         }
-        console.log("response is coming to handle upade", createlabel.key)
         createlabelnotes(createlabel).then((res) => {
-            console.log("data is updated came to in get note component", res)
         })
         this.setState({
             open: false
@@ -120,15 +96,13 @@ class Editlabel extends Component {
         this.setState({
             anchorEl: null
         })
-    }    
+    }
 
     render() {
-        console.log("key is coming in edit label", this.props.editlabel)
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
         var pinData = this.state.noteArray.map(key => {
-            console.log("dataaaaa-in key----->", key.id, key.data().label);
             return (
                 <div>
                     <div className="labelComponent">
@@ -149,12 +123,12 @@ class Editlabel extends Component {
                         aria-describedby={id} type="button">
                         <div className="editLabelComponent1" title="editLabel" onClick={this.handlemoremenu}>add label</div></Button>
                     <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
-                    <ClickAwayListener onClickAway={this.handleClickAway}>
-                        <Paper className="more-paper1">
-                            <h6>edit label</h6>
-                            <InputBase placeholder="enter label name" value={this.state.takeNote} onChange={this.handlechangetakeNote} ></InputBase>
-                            <button onClick={this.handleLabelnote}>close</button>
-                        </Paper>
+                        <ClickAwayListener onClickAway={this.handleClickAway}>
+                            <Paper className="more-paper1">
+                                <h6>edit label</h6>
+                                <InputBase placeholder="enter label name" value={this.state.takeNote} onChange={this.handlechangetakeNote} ></InputBase>
+                                <button onClick={this.handleLabelnote}>close</button>
+                            </Paper>
                         </ClickAwayListener>
                     </Popper>
                 </div>
