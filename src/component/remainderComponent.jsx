@@ -15,10 +15,10 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { getnotes } from '../controller/noteController'
-import {CropOriginalIcon,AddAlertIcon,PersonAddIcon,OpenInBrowserIcon,RedoIcon,ArchiveOutlinedIcon,UndoIcon} from '@material-ui/icons';
+import { CropOriginalIcon, AddAlertIcon, PersonAddIcon, OpenInBrowserIcon, RedoIcon, ArchiveOutlinedIcon, UndoIcon } from '@material-ui/icons';
 import image1 from '../assets/pushpin.jpeg'
-import { InputBase, IconButton ,Dialog} from '@material-ui/core';
-import { updatePin ,updateunPin,deleteNotes,noteUpdate,unArchiveNotes,ArchiveNotes,getlabelscard} from '../controller/noteController'
+import { InputBase, IconButton, Dialog } from '@material-ui/core';
+import { updatePin, updateunPin, deleteNotes, noteUpdate, unArchiveNotes, ArchiveNotes, getlabelscard } from '../controller/noteController'
 import AppBar1 from '../component/appBar'
 import Reminder from '../component/reminder'
 import MoreComponent from '../component/moreComponent';
@@ -119,8 +119,8 @@ class remainderComponent extends Component {
   handlechangetakeNote = (event) => {
     this.setState({ takeNote: event.target.value });
   }
-  handleNote = async (title, takeNote, key) => {
-    await this.setState({
+  handleNote = (title, takeNote, key) => {
+    this.setState({
       title: title,
       open: !this.state.open,
       takeNote: takeNote,
