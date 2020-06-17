@@ -29,22 +29,22 @@ export class App extends Component {
           <Route path='/login' pages={Login}></Route>
           <Route path='/registration' pages={Registration}></Route>
           <Route path='/forgotPassword' pages={ForgotPassword}></Route>
-          <Route path='/DashBoard' component={DashBoard}></Route>
-          <Route path='/drawer' component={DrawerComponent}></Route>
-          <Route path='/notes' component={Notes}></Route>
-          <Route path='/getNote' component={GetNotes}></Route>
-          <Route path='/moreComponent' component={MoreComponent}></Route>
-          <Route path='/reminder' component={Reminder}></Route>
-          <Route path='/archiveNote' component={Archive}></Route>
-          <Route path='/deleteNote' component={Trash}></Route>
-          <Route path='/setDateAndTime' component={SetDateAndTime}></Route>
-          <Route path='/appBar' component={AppBar1}></Route>
-          <Route path='/drawerLable' component={EditLabel}></Route>
-          <Route path='/editLables' component={EditLabels}></Route>
-          <Route path='/getLables' component={GetLabels}></Route>
-          <Route path='/color' component={ColorComponent}></Route>
-          <Route path='/remainderComponent' component={RemainderComponent}></Route>
-          <Route path='/label' component={LabelComponent}></Route>
+          <Route path='/DashBoard' components={DashBoard}></Route>
+          <Route path='/drawer' components={DrawerComponent}></Route>
+          <Route path='/notes' components={Notes}></Route>
+          <Route path='/getNote' components={GetNotes}></Route>
+          <Route path='/moreComponent' components={MoreComponent}></Route>
+          <Route path='/reminder' components={Reminder}></Route>
+          <Route path='/archiveNote' components={Archive}></Route>
+          <Route path='/deleteNote' components={Trash}></Route>
+          <Route path='/setDateAndTime' components={SetDateAndTime}></Route>
+          <Route path='/appBar' components={AppBar1}></Route>
+          <Route path='/drawerLable' components={EditLabel}></Route>
+          <Route path='/editLables' components={EditLabels}></Route>
+          <Route path='/getLables' components={GetLabels}></Route>
+          <Route path='/color' components={ColorComponent}></Route>
+          <Route path='/remainderComponent' components={RemainderComponent}></Route>
+          <Route path='/label' components={LabelComponent}></Route>
         </Switch>
       </Router>
     )
