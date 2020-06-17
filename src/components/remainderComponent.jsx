@@ -271,20 +271,20 @@ class RemainderComponent extends Component {
                 </div>
                 <div className="getnoteicons">
                   <IconButton className="alert1" >
-                    <div className="alert1" ><AddAlertIcon />
+                    <div className="alert" ><AddAlertIcon />
                     </div>
                   </IconButton>
                   <IconButton className="personadd1" >
-                    <div className="personAdd1"><PersonAddIcon />
+                    <div className="personAdd"><PersonAddIcon />
                     </div>
                   </IconButton>
                   <ColorComponent noteId={key.id}></ColorComponent>
                   <IconButton className="originalicon1" >
-                    <div className="originalIcon1" ><CropOriginalIcon />
+                    <div className="originalIcon" ><CropOriginalIcon />
                     </div>
                   </IconButton>
                   <IconButton className="unarcheive1" title="unArchive" onClick={this.handleUnArchive}>
-                    <div className="unArcheive1" ><OpenInBrowserIcon />
+                    <div className="unArcheive" ><OpenInBrowserIcon />
                     </div>
                   </IconButton>
                   <div>
@@ -292,11 +292,11 @@ class RemainderComponent extends Component {
                       noteId={this.state.key}></MoreComponent>
                   </div>
                   <IconButton className="undo1">
-                    <div className="undo1" ><UndoIcon />
+                    <div className="undo" ><UndoIcon />
                     </div>
                   </IconButton>
                   <IconButton className="redo1" >
-                    <div className="redo1" ><RedoIcon />
+                    <div className="redo" ><RedoIcon />
                     </div>
                   </IconButton>
                   <IconButton className="close1" onClick={this.handleUpdate}>
