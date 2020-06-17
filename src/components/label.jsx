@@ -257,29 +257,29 @@ class LabelComponent extends Component {
                                                     <Reminder
                                                         noteId={key.id}></Reminder>
                                                     <IconButton className="personadd1" >
-                                                        <div className="personAdd1"><PersonAddIcon />
+                                                        <div className="personAdd"><PersonAddIcon />
                                                         </div>
                                                     </IconButton>
                                                     <IconButton className="Colorlens1" >
-                                                        <div className="ColorLens1" ><ColorLensIcon />
+                                                        <div className="ColorLens" ><ColorLensIcon />
                                                         </div>
                                                     </IconButton>
                                                     <IconButton className="originalicon1" >
-                                                        <div className="originalIcon1" ><CropOriginalIcon />
+                                                        <div className="originalIcon" ><CropOriginalIcon />
                                                         </div>
                                                     </IconButton>
                                                     <IconButton className="archeive1" onClick={() => this.handleArchive(key.data().title, key.data().takeNote, this.state.key)} >
-                                                        <div className="Archeive1" ><ArchiveOutlinedIcon />
+                                                        <div className="Archeive" ><ArchiveOutlinedIcon />
                                                         </div>
                                                     </IconButton>
                                                     <MoreComponent
                                                         noteId={key.id}></MoreComponent>
                                                     <IconButton className="undo1">
-                                                        <div className="undo1" ><UndoIcon />
+                                                        <div className="undo" ><UndoIcon />
                                                         </div>
                                                     </IconButton>
                                                     <IconButton className="redo1" >
-                                                        <div className="redo1" ><RedoIcon />
+                                                        <div className="redo" ><RedoIcon />
                                                         </div>
                                                     </IconButton>
                                                     <IconButton className="close1" onClick={this.handleUpdate}>
