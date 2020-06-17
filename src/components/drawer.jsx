@@ -16,8 +16,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { EmojiObjectsOutlinedIcon, NotificationsNoneOutlinedIcon, ArchiveOutlinedIcon, DeleteOutlineOutlinedIcon, } from '@material-ui/icons';
 import { Drawer, createMuiTheme, MuiThemeProvider, Button, Divider } from '@material-ui/core';
-import Editlabels from '../component/editLables'
-import Getlabels from '../component/getLables'
+import Editlabels from '../components/editLables'
+import Getlabels from '../components/getLables'
 const theme = createMuiTheme({
     overrides: {
         MuiDrawer: {
