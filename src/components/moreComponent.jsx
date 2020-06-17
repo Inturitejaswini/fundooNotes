@@ -31,7 +31,7 @@ export class MoreComponent extends Component {
             key: ""
         }
     }
-    handlemoremenu = (event) => {
+    handleMoreMenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
