@@ -66,13 +66,13 @@ export class Notes extends Component {
             open: false
         })
     }
-    handlechangeTitle = (event) => {
+    handleChangeTitle = (event) => {
         this.setState({ title: event.target.value });
     }
-    handlechangenote = (event) => {
+    handleChangeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
-    handlemoremenu = (event) => {
+    handleMoreMenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
@@ -113,11 +113,11 @@ export class Notes extends Component {
                     <card>
                         <div className="card">
                             <div className="take_title">
-                                <InputBase placeholder="Title" onChange={this.handlechangeTitle} />
+                                <InputBase placeholder="Title" onChange={this.handleChangeTitle} />
 
                             </div>
                             <div className="take_Note">
-                                <InputBase placeholder="Take a note......." onChange={this.handlechangenote} />
+                                <InputBase placeholder="Take a note......." onChange={this.handleChangeNote} />
                             </div>
                             <div className="icons">
                                 <div>
@@ -136,7 +136,7 @@ export class Notes extends Component {
                                     <div className="Archeive" title="Archive"><ArchiveOutlinedIcon /></div>
                                 </IconButton>
                                 <IconButton className="morevert"
-                                    aria-describedby={id} type="button" onClick={this.handlemoremenu}>
+                                    aria-describedby={id} type="button" onClick={this.handleMoreMenu}>
                                     <div className="moreverticon" title="more"><MoreVertIcon /></div>
                                 </IconButton>
                                 <Popper id={id} open={open} anchorEl={anchorEl} >
@@ -159,11 +159,11 @@ export class Notes extends Component {
                                         </Paper>
                                     </ClickAwayListener>
                                 </Popper>
-                                <IconButton className="undo" >
+                                <IconButton className="undo-btn" >
                                     <div className="undo" title="undo"><UndoIcon /></div>
                                 </IconButton>
 
-                                <IconButton className="redo" >
+                                <IconButton className="redo-btn" >
                                     <div className="redo" title="redo" ><RedoIcon /></div>
                                 </IconButton>
                                 <IconButton className="trash-btn">
