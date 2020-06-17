@@ -17,7 +17,7 @@ import { AppBar1 } from './component/appBar';
 import Editlabel from './component/drawerLable';
 import Editlabels from './component/editLables';
 import Getlabels from './component/getLables';
-import ColorComponent from './component/colorComponent'
+import ColorComponent from './component/color'
 import remainderComponent from './component/remainderComponent'
 import Labelcomponent from './component/labelComponent'
 export class App extends Component {
@@ -42,7 +42,7 @@ export class App extends Component {
           <Route path='/drawerLable' component={Editlabel}></Route>
           <Route path='/editLables' component={Editlabels}></Route>
           <Route path='/getLables' component={Getlabels}></Route>
-          <Route path='/colorComponent' component={ColorComponent}></Route>
+          <Route path='/color' component={ColorComponent}></Route>
           <Route path='/remainderComponent' component={remainderComponent}></Route>
           <Route path='/labelComponent' component={Labelcomponent}></Route>
         </Switch>
