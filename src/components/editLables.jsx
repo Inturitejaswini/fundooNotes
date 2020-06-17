@@ -16,7 +16,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { InputBase, TextField, IconButton, Button, Dialog, } from '@material-ui/core';
 import { LabelIcon, ClearIcon, DoneIcon, CreateIcon, EditOutlinedIcon } from '@material-ui/icons';
-import { updateLabel, getlabelscard } from '../controller/noteController'
+import { updateLabel, getLabelsCard } from '../controller/noteController'
 class Editlabels extends Component {
     constructor(props) {
         super(props)
@@ -37,7 +37,7 @@ class Editlabels extends Component {
     }
 
     getAllLables = () => {
-        getlabelscard()
+        getLabelsCard()
             .then(res => {
                 this.setState({
                     noteArray: res
@@ -57,7 +57,7 @@ class Editlabels extends Component {
             open: false
         })
     }
-    handleupdate = (key) => {
+    handleUpdate = (key) => {
         this.setState({
             open: false,
             label: this.state.label,
@@ -97,7 +97,7 @@ class Editlabels extends Component {
                                                 defaultValue={key.data().label}
                                                 onChange={this.handleLabel}>
                                             </InputBase></div>
-                                        <div><IconButton onClick={() => this.handleupdate(key.id)}><CreateIcon /></IconButton></div>
+                                        <div><IconButton onClick={() => this.handleUpdate(key.id)}><CreateIcon /></IconButton></div>
                                     </div>
                                 )
                             })}</div>
