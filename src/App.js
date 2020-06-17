@@ -25,10 +25,10 @@ export class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path='/' exact component={Login}></Route>
-          <Route path='/login' component={Login}></Route>
-          <Route path='/registration' component={Registration}></Route>
-          <Route path='/forgotPassword' component={ForgotPassword}></Route>
+          <Route path='/' exact pages={Login}></Route>
+          <Route path='/login' pages={Login}></Route>
+          <Route path='/registration' pages={Registration}></Route>
+          <Route path='/forgotPassword' pages={ForgotPassword}></Route>
           <Route path='/DashBoard' component={DashBoard}></Route>
           <Route path='/drawer' component={DrawerComponent}></Route>
           <Route path='/notes' component={Notes}></Route>
