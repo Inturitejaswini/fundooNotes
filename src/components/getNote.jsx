@@ -268,27 +268,27 @@ class GetNotes extends Component {
                                         <Reminder
                                             noteId={key.id}></Reminder>
                                         <IconButton className="personadd1" >
-                                            <div className="personAdd1" title="collabarator"><PersonAddIcon />
+                                            <div className="personAdd" title="collabarator"><PersonAddIcon />
                                             </div>
                                         </IconButton>
                                         <ColorComponent noteId={key.id}></ColorComponent>
                                         <IconButton className="originalicon1" >
-                                            <div className="originalIcon1" title="add image" ><CropOriginalIcon />
+                                            <div className="originalIcon" title="add image" ><CropOriginalIcon />
                                             </div>
                                         </IconButton>
                                         <IconButton className="archeive1" onClick={this.handleArchive} >
-                                            <div className="Archeive1" title="Archive"><ArchiveOutlinedIcon />
+                                            <div className="Archeive" title="Archive"><ArchiveOutlinedIcon />
                                             </div>
                                         </IconButton>
                                         <MoreComponent
                                             noteId={key.id}></MoreComponent>
                                         <IconButton className="undo1">
-                                            <div className="undo1" title="redo"><UndoIcon />
+                                            <div className="undo" title="redo"><UndoIcon />
                                             </div>
                                         </IconButton>
 
                                         <IconButton className="redo1" >
-                                            <div className="redo1" ><RedoIcon />
+                                            <div className="redo" ><RedoIcon />
                                             </div>
                                         </IconButton>
                                         <IconButton className="close1" onClick={this.handleClose} >
@@ -360,7 +360,7 @@ class GetNotes extends Component {
                                             </div>
                                         </IconButton>
                                         <IconButton className="archeive1" onClick={this.handleArchive} >
-                                            <div className="Archeive1" title="Archive"><ArchiveOutlinedIcon />
+                                            <div className="Archeive" title="Archive"><ArchiveOutlinedIcon />
                                             </div>
                                         </IconButton>
                                         <MoreComponent
@@ -390,30 +390,30 @@ class GetNotes extends Component {
                                         <Reminder
                                             noteId={this.state.key}></Reminder>
                                         <IconButton className="personadd1" >
-                                            <div className="personAdd1" title="collabarator"><PersonAddIcon />
+                                            <div className="personAdd" title="collabarator"><PersonAddIcon />
                                             </div>
                                         </IconButton>
                                         <ColorComponent noteId={key.id}></ColorComponent>
                                         <IconButton className="originalicon1" >
-                                            <div className="originalIcon1" title="add image" ><CropOriginalIcon />
+                                            <div className="originalIcon" title="add image" ><CropOriginalIcon />
                                             </div>
                                         </IconButton>
                                         <IconButton className="archeive1" onClick={this.handleArchive} >
-                                            <div className="Archeive1" title="Archive"><ArchiveOutlinedIcon />
+                                            <div className="Archeive" title="Archive"><ArchiveOutlinedIcon />
                                             </div>
                                         </IconButton>
                                         <MoreComponent
                                             noteId={this.state.key}></MoreComponent>
                                         <IconButton className="undo1">
-                                            <div className="undo1" title="redo"><UndoIcon />
+                                            <div className="undo" title="redo"><UndoIcon />
                                             </div>
                                         </IconButton>
 
                                         <IconButton className="redo1" >
-                                            <div className="redo1" ><RedoIcon />
+                                            <div className="redo" ><RedoIcon />
                                             </div>
                                         </IconButton>
-                                        <IconButton className="close1" onClick={this.handleClose} >
+                                        <IconButton className="close" onClick={this.handleClose} >
                                             close
                                    </IconButton>
 
