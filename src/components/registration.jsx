@@ -36,7 +36,7 @@ export class Registration extends Component {
    onChange = (event) => {
       this.setState({ [event.target.name]: event.target.value })
    }
-   handlechangeFirstName = (event) => {
+   handleChangeFirstName = (event) => {
       if (event.target.value.match("^[a-zA-z ]*$") != null) {
          this.setState({ firstName: event.target.value });
       }
@@ -44,7 +44,7 @@ export class Registration extends Component {
          this.setState({ snackbarOpen: true, snackbarMessage: " *first name should contain only characters" })
       }
    }
-   handlechangeLastName = (event) => {
+   handleChangeLastName = (event) => {
       if (event.target.value.match("^[a-zA-z ]*$") != null) {
          this.setState({ lastName: event.target.value });
       }
@@ -52,7 +52,7 @@ export class Registration extends Component {
          this.setState({ snackbarOpen: true, snackbarMessage: " *last name should contain only characters" })
       }
    }
-   handlechangeFullName = (event) => {
+   handleChangeFullName = (event) => {
       if (event.target.value.match("^[a-zA-z ]*$") != null) {
          this.setState({ fullName: event.target.value });
       }
@@ -60,7 +60,7 @@ export class Registration extends Component {
          this.setState({ snackbarOpen: true, snackbarMessage: "*full name should contain only characters" })
       }
    }
-   handlechangeEmail = (event) => {
+   handleChangeEmail = (event) => {
       if (event.target.value.match("^([a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z])*$") != null) {
          this.setState({ email: event.target.value })
       }
@@ -68,7 +68,7 @@ export class Registration extends Component {
          this.setState({ snackbarOpen: true, snackbarMessage: " *enter valid email" })
       }
    }
-   handlechangepassword = (event) => {
+   handleChangePassword = (event) => {
       if (event.target.value.match("^[a-z0-9 ]*$") != null) {
          this.setState({ password: event.target.value });
       }
@@ -76,7 +76,7 @@ export class Registration extends Component {
          this.setState({ snackbarOpen: true, snackbarMessage: " *password should minimum 6 character" })
       }
    }
-   handleregister = () => {
+   handleRegister = () => {
       const user = {
          firstName: this.state.firstName,
          lastName: this.state.lastName,
@@ -122,7 +122,7 @@ export class Registration extends Component {
                            id="outlined-basic"
                            type="firstName"
                            placeholder="firstName"
-                           onChange={this.handlechangeFirstName} />
+                           onChange={this.handleChangeFirstName} />
                      </div >
                      <div id="registration_modules">
                         <TextField
@@ -130,7 +130,7 @@ export class Registration extends Component {
                            variant="outlined"
                            id="outlined-basic"
                            placeholder="lastName"
-                           onChange={this.handlechangeLastName}
+                           onChange={this.handleChangeLastName}
                         />
                      </div>
                      <div id="registration_modules">
@@ -139,7 +139,7 @@ export class Registration extends Component {
                            id="outlined-basic"
                            variant="outlined"
                            placeholder="fullName"
-                           onChange={this.handlechangeFullName} />
+                           onChange={this.handleChangeFullName} />
                      </div>
                      <div id="registration_modules">
                         <TextField
@@ -147,7 +147,7 @@ export class Registration extends Component {
                            id="outlined-basic"
                            variant="outlined"
                            placeholder="email"
-                           onChange={this.handlechangeEmail} />
+                           onChange={this.handleChangeEmail} />
                      </div>
                      <div id="registration_modules">
                         <TextField
@@ -155,11 +155,11 @@ export class Registration extends Component {
                            id="outlined-basic"
                            variant="outlined"
                            placeholder="password"
-                           onChange={this.handlechangepassword} />
+                           onChange={this.handleChangePassword} />
                      </div>
                   </div>
                   <div className="form-group">
-                     <Button onClick={this.handleregister} type="submit" id="registor_id" >
+                     <Button onClick={this.handleRegister} type="submit" id="registor_id" >
                         <div className="register-divtag">
                            Register
                         </div>
