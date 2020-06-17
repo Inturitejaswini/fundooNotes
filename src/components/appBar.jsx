@@ -71,7 +71,7 @@ export class AppBar1 extends Component {
         })
     }
     handlesignout = (event) => {
-        this.props.history.push('/login')
+        this.props.history.push('/pages/login')
     }
 
     handleClickAway = () => {
