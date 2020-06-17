@@ -131,9 +131,8 @@ class Archive extends Component {
                                         <div className="originalIcon-div" title="add image" ><CropOriginalIcon />
                                         </div>
                                     </IconButton>
-                                    <IconButton className="unarcheive1" title="unArchive" onClick={this.handleunArchive}>
-                                        <div className="unArcheive1" ><OpenInBrowserIcon />
-                                        </div>
+                                    <IconButton className="unarcheive1" title="unArchive" onClick={this.handleUnArchive}>
+                                            <OpenInBrowserIcon />
                                     </IconButton>
                                     <MoreComponent
                                         noteId={key.id}></MoreComponent>
@@ -160,31 +159,25 @@ class Archive extends Component {
                                 </div>
                                 <div className="getnoteicons">
                                     <IconButton className="alert1" >
-                                        <div className="alert1" ><AddAlertIcon />
-                                        </div>
+                                       <AddAlertIcon />
                                     </IconButton>
                                     <IconButton className="personadd1" >
-                                        <div className="personAdd1"><PersonAddIcon />
-                                        </div>
+                                            <PersonAddIcon />
                                     </IconButton>
                                     <ColorComponent noteId={key.id}></ColorComponent>
                                     <IconButton className="originalicon1" >
-                                        <div className="originalIcon1" ><CropOriginalIcon />
-                                        </div>
+                                            <CropOriginalIcon />
                                     </IconButton>
                                     <IconButton className="unarcheive1" title="unArchive" onClick={this.handleUnArchive}>
-                                        <div className="unArcheive1" ><OpenInBrowserIcon />
-                                        </div>
+                                            <OpenInBrowserIcon />
                                     </IconButton>
                                     <MoreComponent
                                         noteId={key.id}></MoreComponent>
                                     <IconButton className="undo1">
-                                        <div className="undo1" ><UndoIcon />
-                                        </div>
+                                            <UndoIcon />
                                     </IconButton>
                                     <IconButton className="redo1" >
-                                        <div className="redo1" ><RedoIcon />
-                                        </div>
+                                            <RedoIcon />
                                     </IconButton>
                                     <IconButton className="close1" onClick={this.handleUpdate}>
                                         close
