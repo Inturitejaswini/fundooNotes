@@ -21,7 +21,7 @@ import {
 } from '@material-ui/core';
 import { RefreshIcon, AppsIcon, SettingsIcon, ViewColumnIcon, MenuIcon, SearchIcon, ViewStreamRoundedIcon, PersonAddIcon } from '@material-ui/icons'
 import Notes from '../components/notes'
-import Getnotes from '../components/getNote'
+import GetNotes from '../components/getNote'
 import image from '../assets/keep.jpeg';
 import DrawerComponent from '../components/drawer'
 const theme = createMuiTheme({
@@ -228,8 +228,8 @@ const theme = createMuiTheme({
                         </Toolbar>
                     </AppBar>
                     <Notes />
-                    <Getnotes listId={this.state.openn} className="getnote-divcard">
-                    </Getnotes>
+                    <GetNotes listId={this.state.openn} className="getnote-divcard">
+                    </GetNotes>
                 </MuiThemeProvider>
             </div >
         )

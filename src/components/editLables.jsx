@@ -17,7 +17,7 @@ import { withRouter } from 'react-router-dom';
 import { InputBase, TextField, IconButton, Button, Dialog, } from '@material-ui/core';
 import { LabelIcon, ClearIcon, DoneIcon, CreateIcon, EditOutlinedIcon } from '@material-ui/icons';
 import { updateLabel, getLabelsCard } from '../controller/noteController'
-class Editlabels extends Component {
+class EditLabels extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -107,4 +107,4 @@ class Editlabels extends Component {
         )
     }
 }
-export default withRouter(Editlabels)
+export default withRouter(EditLabels)

@@ -17,7 +17,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { Card, TextField, Button } from '@material-ui/core'
 import forgot from '../controller/userController'
-export class Forgotpassword extends Component {
+export class ForgotPassword extends Component {
     constructor() {
         super()
         this.state = {
@@ -63,4 +63,4 @@ export class Forgotpassword extends Component {
     }
 }
 
-export default withRouter(Forgotpassword)
+export default withRouter(ForgotPassword)

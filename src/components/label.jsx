@@ -22,7 +22,7 @@ import AppBar1 from '../components/appBar'
 import MoreComponent from '../components/moreComponent';
 import Reminder from '../components/reminder'
 import Color from '../components/color'
-class Labelcomponent extends Component {
+class LabelComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -303,4 +303,4 @@ class Labelcomponent extends Component {
         )
     }
 }
-export default withRouter(Labelcomponent)
+export default withRouter(LabelComponent)

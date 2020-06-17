@@ -77,7 +77,7 @@ class Trash extends Component {
             open: false
         })
     }
-    handleMoremenu = (event) => {
+    handleMoreMenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })

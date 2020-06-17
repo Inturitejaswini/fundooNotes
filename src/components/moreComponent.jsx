@@ -19,7 +19,7 @@ import { withRouter } from 'react-router-dom';
 import { Popper, IconButton, Paper, Button } from '@material-ui/core'
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { deleteNotes } from '../controller/noteController'
-import Editlabel from './drawerLable'
+import EditLabel from './drawerLable'
 export class MoreComponent extends Component {
     constructor(props) {
         super(props)
@@ -65,8 +65,8 @@ export class MoreComponent extends Component {
                             <div className="delete" onClick={this.handleDelete}>
                                 Delete note</div>
                         </Button>
-                        <Editlabel
-                            editlabel={this.props.noteId}></Editlabel>
+                        <EditLabel
+                            editlabel={this.props.noteId}></EditLabel>
                         <Button id="lablebutton3">
                             <div className="adddrawing">
                                 Add drawing</div>
