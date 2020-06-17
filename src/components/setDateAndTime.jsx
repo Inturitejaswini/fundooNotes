@@ -4,7 +4,7 @@ import { Paper, Button, Popper, TextField, ClickAwayListener } from '@material-u
 import 'date-fns';
 import { remainder } from '../controller/noteController'
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
-export class Setdateandtime extends Component {
+export class SetDateAndTime extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -26,7 +26,7 @@ export class Setdateandtime extends Component {
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
     }
-    handleclose1 = () => {
+    handleClose1 = () => {
         this.setState({
             open: false
         })
@@ -65,7 +65,7 @@ export class Setdateandtime extends Component {
                                     onChange={this.handleDateChange} />
                                 <div className="btns-div">
                                     <Button className="cancel-btn1">
-                                        <div className="mnb" onClick={this.handleclose1}>
+                                        <div className="mnb" onClick={this.handleClose1}>
                                             Cancel
                                         </div>
                                     </Button>
@@ -84,4 +84,4 @@ export class Setdateandtime extends Component {
     }
 }
 
-export default withRouter(Setdateandtime)
+export default withRouter(SetDateAndTime)
