@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Login } from './component/login';
-import { Registration } from './component/registration'
-import { ForgotPassword } from './component/forgotPassword'
+import { Login } from './pages/login';
+import { Registration } from './pages/registration'
+import { ForgotPassword } from './pages/forgotPassword'
 import DashBoard from './component/dashBoard'
 import DrawerComponent from './component/drawer'
 import { Notes } from './component/notes';
