@@ -16,7 +16,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { Popper, IconButton, Paper, Button } from '@material-ui/core'
-import { Setdateandtime } from '../component/setDateAndTime'
+import { Setdateandtime } from '../components/setDateAndTime'
 import 'date-fns';
 import AddAlertIcon from '@material-ui/icons/AddAlert';
 export class Reminder extends Component {
@@ -34,7 +34,7 @@ export class Reminder extends Component {
     handleTimeChange = (event) => {
         this.setState({ selectedTime: event.target.value });
     };
-    handleremindermenu = (event) => {
+    handleReminderMenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
@@ -57,7 +57,7 @@ export class Reminder extends Component {
         return (
             <div>
                 <IconButton className="AddAlert"
-                    aria-describedby={id} type="button" onClick={this.handleremindermenu}>
+                    aria-describedby={id} type="button" onClick={this.handleReminderMenu}>
                     <div className="AddAlertIcon" title="more"><AddAlertIcon /></div>
                 </IconButton>
                 <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
