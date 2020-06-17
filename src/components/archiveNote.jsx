@@ -13,7 +13,7 @@
 ******************************************************************************/
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { getnotes, noteUpdate, unArchiveNotes, } from '../controller/noteController'
+import { getNotes, noteUpdate, unArchiveNotes, } from '../controller/noteController'
 import { CropOriginalIcon, AddAlertIcon, PersonAddIcon, OpenInBrowserIcon, RedoIcon, UndoIcon, } from '@material-ui/icons';
 import { Card, InputBase, IconButton } from '@material-ui/core';
 import Dialog from '@material-ui/core/Dialog';
@@ -36,12 +36,12 @@ class Archive extends Component {
             anchorEl: null
         }
     }
-    handlechangeTitle = (event) => {
+    handleChangeTitle = (event) => {
         this.setState({
             title: event.target.value,
         });
     }
-    handlechangetakeNote = (event) => {
+    handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
     handleNote = async (title, takeNote, key) => {
@@ -53,7 +53,7 @@ class Archive extends Component {
         })
     }
 
-    handleunArchive = () => {
+    handleUnArchive = () => {
         this.setState({
             open: false,
             archive: this.state.archive,
@@ -82,7 +82,7 @@ class Archive extends Component {
         })
     };
     componentDidMount = () => {
-        getnotes()
+        getNotes()
             .then(res => {
                 this.setState({
                     noteArray: res
@@ -94,7 +94,7 @@ class Archive extends Component {
             open: false
         })
     }
-    handlemoremenu = (event) => {
+    handleMoreMenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
@@ -148,14 +148,14 @@ class Archive extends Component {
                             <div className="card_getNote123">
 
                                 <div id="getNotes-align">
-                                    <InputBase placeholder="title" value={this.state.title} onChange={this.handlechangeTitle}>
+                                    <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                                     </InputBase>
                                     <IconButton  >
                                         <img className="pindrop2" src={image1} onClick={this.handlePin} />
                                     </IconButton>
                                 </div>
                                 <div className="takeNoteCard">
-                                    <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handlechangetakeNote}>
+                                    <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handleChangeTakeNote}>
                                     </InputBase>
                                 </div>
                                 <div className="getnoteicons">
@@ -172,7 +172,7 @@ class Archive extends Component {
                                         <div className="originalIcon1" ><CropOriginalIcon />
                                         </div>
                                     </IconButton>
-                                    <IconButton className="unarcheive1" title="unArchive" onClick={this.handleunArchive}>
+                                    <IconButton className="unarcheive1" title="unArchive" onClick={this.handleUnArchive}>
                                         <div className="unArcheive1" ><OpenInBrowserIcon />
                                         </div>
                                     </IconButton>
