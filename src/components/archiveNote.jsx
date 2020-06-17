@@ -44,8 +44,8 @@ class Archive extends Component {
     handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
-    handleNote = async (title, takeNote, key) => {
-        await this.setState({
+    handleNote = (title, takeNote, key) => {
+        this.setState({
             title: title,
             open: !this.state.open,
             takeNote: takeNote,
