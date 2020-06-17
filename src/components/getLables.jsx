@@ -17,7 +17,7 @@ import { withRouter } from 'react-router-dom';
 import { InputBase,Button } from '@material-ui/core';
 import LabelOutlinedIcon from '@material-ui/icons/LabelOutlined';
 import { getLabelsCard } from '../controller/noteController'
-class Getlabels extends Component {
+class GetLabels extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -61,4 +61,4 @@ class Getlabels extends Component {
         )
     }
 }
-export default withRouter(Getlabels)
+export default withRouter(GetLabels)
