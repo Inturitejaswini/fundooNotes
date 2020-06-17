@@ -25,7 +25,7 @@ export async function notes(data) {
 /**
  * get notes 
  */
-export async function getnotes() {
+export async function getNotes() {
   try {
     let note = []
     let response = await db.collection("notes").get()
@@ -87,7 +87,7 @@ export async function ArchiveNotes(data) {
   return (response)
 
 }
-export async function ArchiveNotescreate(data) {
+export async function ArchiveNotesCreate(data) {
   const token = localStorage.usertoken
   const decodedJwt = jwt_decode(token)
   let currentuser = fire.auth().currentUser.email;
@@ -166,7 +166,7 @@ export async function updatePin(data) {
   return (response)
 }
 
-export async function updateunPin(data) {
+export async function updateUnPin(data) {
   let userData = {
     title: data.title,
     takeNote: data.takeNote,
@@ -192,7 +192,7 @@ export async function remainder(data) {
   return response
 }
 
-export async function checkbox(data) {
+export async function checkBox(data) {
   let userData = {
     checkBox: data.checkBox,
     labelkey: data.labelkey
@@ -208,7 +208,7 @@ export async function checkbox(data) {
 }
 
 
-export async function getlabelscard() {
+export async function getLabelsCard() {
   try {
     const token = localStorage.usertoken
     const decodedJwt = jwt_decode(token)
@@ -226,7 +226,7 @@ export async function getlabelscard() {
 }
 
 
-export async function createlabelnotes(data) {
+export async function createLabelNotes(data) {
   const token = localStorage.usertoken
   const decodedJwt = jwt_decode(token)
   let currentuser = fire.auth().currentUser.email;
@@ -244,7 +244,7 @@ export async function createlabelnotes(data) {
   return response;
 }
 
-export async function getlabels(data) {
+export async function getLabels(data) {
   try {
 
     let userData = {
@@ -271,7 +271,7 @@ export async function updateLabel(data) {
   return (response)
 }
 
-export async function Updatecolors(data) {
+export async function UpdateColors(data) {
   let noteColor = {
     key: data.key,
     color: data.color
