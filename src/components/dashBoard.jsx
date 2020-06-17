@@ -1,4 +1,3 @@
-
 /******************************************************************************
  *  Execution       :   1. default node         cmd> node dashBoard.jsx 
  *                      2. if nodemon installed cmd> nodemodule dashBoard.jsx
@@ -17,12 +16,14 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import {
-    Toolbar, IconButton, MuiThemeProvider, createMuiTheme, Paper, Popper, ClickAwayListener,
-    AppBar, InputBase, Grid, Avatar, Divider, Button, Typography
+    Toolbar, IconButton, createMuiTheme, Paper, Popper, MuiThemeProvider,
+    AppBar, InputBase, Grid, Avatar, Divider, Button, Typography, ClickAwayListener
 } from '@material-ui/core';
 import { RefreshIcon, AppsIcon, SettingsIcon, ViewColumnIcon, MenuIcon, SearchIcon, ViewStreamRoundedIcon, PersonAddIcon } from '@material-ui/icons'
+import Notes from '../components/notes'
+import Getnotes from '../components/getNote'
 import image from '../assets/keep.jpeg';
-import DrawerComponent from '../component/drawerComponent'
+import DrawerComponent from '../components/drawer'
 const theme = createMuiTheme({
     overrides: {
         MuiAppBar: {
@@ -30,15 +31,21 @@ const theme = createMuiTheme({
                 color: "rgba(0, 0, 0, 0.87)",
                 backgroundColor: " white"
             }
+        },
+        MuiIconButton: {
+            root: {
+                padding: "6PX",
+                fontSize: "0.5em"
+            }
+        },
+        MuiOutlinedInput: {
+            padding: "18.5px 14px",
+            width: "px",
+            height: "3px"
         }
     },
-    MuiButtontextSizeSmall: {
-        padding: "4px 5px",
-        fontsize: "0.8125rem",
-        margintop: "142px",
-    }
 })
-export class AppBar1 extends Component {
+ class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -46,35 +53,9 @@ export class AppBar1 extends Component {
             currentText: " ",
             anchorEl: null,
             open: false,
+            openn: false,
             profileOpen: false
         }
-    }
-
-
-    changeText(currentText) {
-        this.setState({ currentText });
-    }
-    handlenavigationbar = () => {
-        this.setState({
-            open: !this.state.open
-        })
-    }
-    handlerefreshPage = () => {
-        window.location.reload(false);
-    }
-    handleprofilemenu = (event) => {
-        this.setState({
-            anchorEl: (this.state.anchorEl ? null : event.currentTarget)
-        })
-    }
-    handlesignout = (event) => {
-        this.props.history.push('/login')
-    }
-
-    handleClickAway = () => {
-        this.setState({
-            anchorEl: null
-        })
     }
     handleLabel = () => {
         this.setState({
@@ -86,21 +67,47 @@ export class AppBar1 extends Component {
             openn: false
         })
     }
+
+    changeText(currentText) {
+        this.setState({ currentText });
+    }
+    handleNavigationbar = () => {
+        this.setState({
+            open: !this.state.open
+        })
+    }
+    handleRefreshPage = () => {
+        window.location.reload(false);
+    }
+    handleProfilemenu = (event) => {
+        this.setState({
+            anchorEl: (this.state.anchorEl ? null : event.currentTarget)
+        })
+    }
+    handleSignout = () => {
+        this.props.history.push('/login')
+    }
+    handleClickAway = () => {
+        this.setState({
+            anchorEl: null
+        })
+    }
+
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
         return (
-            <div>
+            <div id="dashboard-appbar">
                 <MuiThemeProvider theme={theme}>
-                    <AppBar position="static" title="My App">
+                    <AppBar position="static" title="My App" className="appbar-class">
                         <Toolbar className="toolbar" title="mainMenu">
                             <div>
                                 <IconButton edge="start"
                                     className="menuButton"
                                     color="primary"
                                     aria-label="menu"
-                                    onClick={this.handlenavigationbar} >
+                                    onClick={this.handleNavigationbar} >
                                     <MenuIcon />
                                 </IconButton>
                             </div>
@@ -108,7 +115,7 @@ export class AppBar1 extends Component {
                             <Typography variant="title"
                                 color="textPrimary"
                                 title="Fundoonotes">
-                                <h3 className="fundooText">FundooNote</h3>
+                                <h3>FundooNote</h3>
                             </Typography>
                             <div className="search_box">
                                 <div className="searchIcon">
@@ -126,7 +133,7 @@ export class AppBar1 extends Component {
                                     color="default"
                                     aria-label="open drawer"
                                     style={{ marginLeft: "5px" }}
-                                    onClick={this.handlerefreshPage}>
+                                    onClick={this.handleRefreshPage}>
                                     <RefreshIcon />
                                 </IconButton>
                                 {!this.state.openn ? (
@@ -152,7 +159,7 @@ export class AppBar1 extends Component {
                                     title="Settings"
                                     color="default"
                                     aria-label="open drawer"
-                                >
+                                    style={{ marginLeft: "40px" }}>
                                     <SettingsIcon />
                                 </IconButton>
                                 <IconButton className="googleApps"
@@ -160,7 +167,7 @@ export class AppBar1 extends Component {
                                     color="default"
                                     aria-label="open drawer"
                                     alignItems="center"
-                                >
+                                    style={{ marginLeft: "40px" }}>
                                     <AppsIcon />
                                 </IconButton>
                             </div>
@@ -170,7 +177,7 @@ export class AppBar1 extends Component {
                                     justify-container="center"
                                     alignItems="right"
                                     style={{ marginLeft: "20PX" }}>
-                                    <IconButton aria-describedby={id} type="button" onClick={this.handleprofilemenu}>
+                                    <IconButton aria-describedby={id} type="button" onClick={this.handleProfilemenu}>
                                         <Avatar className="account">
                                         </Avatar>
                                     </IconButton>
@@ -200,10 +207,10 @@ export class AppBar1 extends Component {
                                                             </div>
                                                             <Divider type='horizontal' />
                                                             <div>
-                                                                <Button size="small" color="primary" onClick={this.handlesignout} id="signout-btn">
+                                                                <Button size="small" color="primary" onClick={this.handleSignout} id="signout-btn">
                                                                     <div id="div-sign">
                                                                         Sign out
-                                                                    </div>
+                                                            </div>
                                                                 </Button>
                                                             </div>
                                                         </div>
@@ -213,15 +220,19 @@ export class AppBar1 extends Component {
                                             </Paper>
                                         </ClickAwayListener>
                                     </Popper>
+
                                 </Grid>
                             </div>
                             <DrawerComponent className="adcgd"
                                 open={this.state.open} />
                         </Toolbar>
                     </AppBar>
+                    <Notes />
+                    <Getnotes listId={this.state.openn} className="getnote-divcard">
+                    </Getnotes>
                 </MuiThemeProvider>
             </div >
         )
     }
 }
-export default withRouter(AppBar1)
+export default withRouter(Dashboard)

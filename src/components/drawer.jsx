@@ -47,7 +47,7 @@ class DrawerComponent extends Component {
         this.props.history.push('/deleteNote')
     }
     handleRemainder = () => {
-        this.props.history.push('/remainderComponent')
+        this.props.history.push('/remainder')
     }
     render() {
         return (

@@ -19,11 +19,11 @@ import { CropOriginalIcon, AddAlertIcon, PersonAddIcon, OpenInBrowserIcon, RedoI
 import image1 from '../assets/pushpin.jpeg'
 import { InputBase, IconButton, Dialog } from '@material-ui/core';
 import { updatePin, updateunPin, deleteNotes, noteUpdate, unArchiveNotes, ArchiveNotes, getlabelscard } from '../controller/noteController'
-import AppBar1 from '../component/appBar'
-import Reminder from '../component/reminder'
-import MoreComponent from '../component/moreComponent';
-import Notes from '../component/notes'
-import ColorComponent from './colorComponent'
+import AppBar1 from './appBar'
+import Reminder from './reminder'
+import MoreComponent from './moreComponent';
+import Notes from './notes'
+import ColorComponent from './color'
 class remainderComponent extends Component {
   constructor(props) {
     super(props)

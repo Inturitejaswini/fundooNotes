@@ -18,8 +18,8 @@ import { CropOriginalIcon, AddAlertIcon, PersonAddIcon, OpenInBrowserIcon, RedoI
 import { Card, InputBase, IconButton } from '@material-ui/core';
 import Dialog from '@material-ui/core/Dialog';
 import image1 from '../assets/pushpin.jpeg'
-import ColorComponent from '../component/colorComponent'
-import MoreComponent from '../component/moreComponent'
+import ColorComponent from '../components/color'
+import MoreComponent from '../components/moreComponent'
 import { AppBar1 } from './appBar';
 import { Reminder } from './reminder'
 class Archive extends Component {

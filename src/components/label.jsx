@@ -21,7 +21,7 @@ import { CropOriginalIcon, PersonAddIcon, ColorLensIcon, ArchiveOutlinedIcon, Re
 import AppBar1 from '../component/appBar'
 import MoreComponent from '../component/moreComponent';
 import Reminder from '../component/reminder'
-import Color from '../component/colorComponent'
+import Color from '../component/color'
 class Labelcomponent extends Component {
     constructor(props) {
         super(props)

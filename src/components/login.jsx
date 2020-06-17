@@ -17,7 +17,7 @@ import { withRouter } from 'react-router-dom';
 import { TextField, Card, Button, Avatar } from '@material-ui/core'
 import { Log } from '../controller/userController'
 import image2 from '../assets/maxresdefault.jpg'
-let imgUrl = 'assets/maxresdefault.jpg';
+let  imgUrl = 'assets/maxresdefault.jpg';
 export class Login extends Component {
     constructor() {
         super();

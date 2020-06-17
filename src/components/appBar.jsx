@@ -1,3 +1,4 @@
+
 /******************************************************************************
  *  Execution       :   1. default node         cmd> node dashBoard.jsx 
  *                      2. if nodemon installed cmd> nodemodule dashBoard.jsx
@@ -16,14 +17,12 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import {
-    Toolbar, IconButton, createMuiTheme, Paper, Popper, MuiThemeProvider,
-    AppBar, InputBase, Grid, Avatar, Divider, Button, Typography, ClickAwayListener
+    Toolbar, IconButton, MuiThemeProvider, createMuiTheme, Paper, Popper, ClickAwayListener,
+    AppBar, InputBase, Grid, Avatar, Divider, Button, Typography
 } from '@material-ui/core';
 import { RefreshIcon, AppsIcon, SettingsIcon, ViewColumnIcon, MenuIcon, SearchIcon, ViewStreamRoundedIcon, PersonAddIcon } from '@material-ui/icons'
-import Notes from '../component/notes'
-import Getnotes from '../component/getNote'
 import image from '../assets/keep.jpeg';
-import DrawerComponent from '../component/drawerComponent'
+import DrawerComponent from '../component/drawer'
 const theme = createMuiTheme({
     overrides: {
         MuiAppBar: {
@@ -31,21 +30,15 @@ const theme = createMuiTheme({
                 color: "rgba(0, 0, 0, 0.87)",
                 backgroundColor: " white"
             }
-        },
-        MuiIconButton: {
-            root: {
-                padding: "6PX",
-                fontSize: "0.5em"
-            }
-        },
-        MuiOutlinedInput: {
-            padding: "18.5px 14px",
-            width: "px",
-            height: "3px"
         }
     },
+    MuiButtontextSizeSmall: {
+        padding: "4px 5px",
+        fontsize: "0.8125rem",
+        margintop: "142px",
+    }
 })
-export class Dashboard extends Component {
+export class AppBar1 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -53,20 +46,10 @@ export class Dashboard extends Component {
             currentText: " ",
             anchorEl: null,
             open: false,
-            openn: false,
             profileOpen: false
         }
     }
-    handleLabel = () => {
-        this.setState({
-            openn: true
-        })
-    }
-    handleLabels = () => {
-        this.setState({
-            openn: false
-        })
-    }
+
 
     changeText(currentText) {
         this.setState({ currentText });
@@ -87,20 +70,30 @@ export class Dashboard extends Component {
     handlesignout = (event) => {
         this.props.history.push('/login')
     }
+
     handleClickAway = () => {
         this.setState({
             anchorEl: null
         })
     }
-
+    handleLabel = () => {
+        this.setState({
+            openn: true
+        })
+    }
+    handleLabels = () => {
+        this.setState({
+            openn: false
+        })
+    }
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
         return (
-            <div id="dashboard-appbar">
+            <div>
                 <MuiThemeProvider theme={theme}>
-                    <AppBar position="static" title="My App" className="appbar-class">
+                    <AppBar position="static" title="My App">
                         <Toolbar className="toolbar" title="mainMenu">
                             <div>
                                 <IconButton edge="start"
@@ -115,7 +108,7 @@ export class Dashboard extends Component {
                             <Typography variant="title"
                                 color="textPrimary"
                                 title="Fundoonotes">
-                                <h3>FundooNote</h3>
+                                <h3 className="fundooText">FundooNote</h3>
                             </Typography>
                             <div className="search_box">
                                 <div className="searchIcon">
@@ -159,7 +152,7 @@ export class Dashboard extends Component {
                                     title="Settings"
                                     color="default"
                                     aria-label="open drawer"
-                                    style={{ marginLeft: "40px" }}>
+                                >
                                     <SettingsIcon />
                                 </IconButton>
                                 <IconButton className="googleApps"
@@ -167,7 +160,7 @@ export class Dashboard extends Component {
                                     color="default"
                                     aria-label="open drawer"
                                     alignItems="center"
-                                    style={{ marginLeft: "40px" }}>
+                                >
                                     <AppsIcon />
                                 </IconButton>
                             </div>
@@ -210,7 +203,7 @@ export class Dashboard extends Component {
                                                                 <Button size="small" color="primary" onClick={this.handlesignout} id="signout-btn">
                                                                     <div id="div-sign">
                                                                         Sign out
-                                                            </div>
+                                                                    </div>
                                                                 </Button>
                                                             </div>
                                                         </div>
@@ -220,19 +213,15 @@ export class Dashboard extends Component {
                                             </Paper>
                                         </ClickAwayListener>
                                     </Popper>
-
                                 </Grid>
                             </div>
                             <DrawerComponent className="adcgd"
                                 open={this.state.open} />
                         </Toolbar>
                     </AppBar>
-                    <Notes />
-                    <Getnotes listId={this.state.openn} className="getnote-divcard">
-                    </Getnotes>
                 </MuiThemeProvider>
             </div >
         )
     }
 }
-export default withRouter(Dashboard)
+export default withRouter(AppBar1)

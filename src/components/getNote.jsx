@@ -20,7 +20,7 @@ import MoreComponent from '../component/moreComponent'
 import { CropOriginalIcon, UndoIcon, ArchiveOutlinedIcon, RedoIcon, PersonAddIcon } from '@material-ui/icons';
 import { IconButton, Dialog, InputBase, createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import { Reminder } from './reminder'
-import ColorComponent from './colorComponent'
+import ColorComponent from './color'
 import image1 from '../assets/pushpin.jpeg'
 const theme = createMuiTheme({
     overrides: {
