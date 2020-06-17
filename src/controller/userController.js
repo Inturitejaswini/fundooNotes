@@ -22,7 +22,6 @@ export default async function register(data) {
     return response;
   }
   catch (error) {
-    console.log(error)
     return error.message
   }
 }
