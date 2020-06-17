@@ -15,13 +15,13 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { InputBase, Button, IconButton, Card, Dialog } from '@material-ui/core';
-import { getnotes, getlabelscard, noteUpdate, ArchiveNotes, updatePin, updateunPin, deleteNotes } from '../controller/noteController'
+import { getNotes, getLabelsCard, noteUpdate, ArchiveNotes, updatePin, updateUnPin, deleteNotes } from '../controller/noteController'
 import image1 from '../assets/pushpin.jpeg'
 import { CropOriginalIcon, PersonAddIcon, ColorLensIcon, ArchiveOutlinedIcon, RedoIcon, UndoIcon, } from '@material-ui/icons';
-import AppBar1 from '../component/appBar'
-import MoreComponent from '../component/moreComponent';
-import Reminder from '../component/reminder'
-import Color from '../component/color'
+import AppBar1 from '../components/appBar'
+import MoreComponent from '../components/moreComponent';
+import Reminder from '../components/reminder'
+import Color from '../components/color'
 class Labelcomponent extends Component {
     constructor(props) {
         super(props)
@@ -34,12 +34,12 @@ class Labelcomponent extends Component {
             key: ""
         }
     }
-    handlechangeTitle = (event) => {
+    handleChangeTitle = (event) => {
         this.setState({
             title: event.target.value,
         });
     }
-    handlechangetakeNote = (event) => {
+    handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
     handleNote = async (title, takeNote, key) => {
@@ -84,7 +84,7 @@ class Labelcomponent extends Component {
         updatePin(pin).then((res) => {
         })
     }
-    changehandleunPin = (key, title, takeNote) => {
+    changeHandleUnPin = (key, title, takeNote) => {
         this.setState({
             open: false,
             pin: this.state.pin,
@@ -98,7 +98,7 @@ class Labelcomponent extends Component {
             takeNote: takeNote,
             key: key
         }
-        updateunPin(pin).then((res) => {
+        updateUnPin(pin).then((res) => {
         })
     }
     handleArchive = (title, takeNote, key) => {
@@ -140,7 +140,7 @@ class Labelcomponent extends Component {
         this.getAllLables();
     }
     getAllNotes = () => {
-        getnotes()
+        getNotes()
             .then(res => {
                 this.setState({
                     noteArray: res
@@ -153,7 +153,7 @@ class Labelcomponent extends Component {
         })
     }
     getAllLables = () => {
-        getlabelscard()
+        getLabelsCard()
             .then(res => {
                 this.setState({
                     noteArray1: res
@@ -161,7 +161,7 @@ class Labelcomponent extends Component {
             })
 
     }
-    handlemoremenu = (event) => {
+    handleMoreMenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
@@ -177,7 +177,7 @@ class Labelcomponent extends Component {
         var pinData = this.state.noteArray1.map(key1 => {
             if (this.props.location.state == key1.data().label) {
                 return (
-                    <div className="getting_labels_inDrawercomponent_inlabelComponent">
+                    <div className="labelComponent">
                         {this.state.noteArray.map(key => {
                             if (key.id == key1.data().key) {
                                 return (
@@ -244,13 +244,13 @@ class Labelcomponent extends Component {
                                         <Dialog aria-labelledby="simple-dialog-title" open={this.state.open}>
                                             <div className="card_getNote">
                                                 <div id="getNotes-align">
-                                                    <InputBase placeholder="title" value={this.state.title} onChange={this.handlechangeTitle}>
+                                                    <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                                                     </InputBase> <IconButton className="gettnote_img_img">
                                                         <img className="pindrop2" src={image1} onClick={this.handlePin} />
                                                     </IconButton>
                                                 </div>
                                                 <div className="takeNoteCard">
-                                                    <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handlechangetakeNote}>
+                                                    <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handleChangeTakeNote}>
                                                     </InputBase>
                                                 </div>
                                                 <div className="getnoteicons">
