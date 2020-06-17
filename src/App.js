@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Login } from './component/login';
 import { Registration } from './component/registration'
-import {Forgotpassword} from './component/forgotPassword'
+import { Forgotpassword } from './component/forgotPassword'
 import DashBoard from './component/dashBoard'
 import DrawerComponent from './component/drawer'
 import { Notes } from './component/notes';
@@ -18,7 +18,7 @@ import Editlabel from './component/drawerLable';
 import Editlabels from './component/editLables';
 import Getlabels from './component/getLables';
 import ColorComponent from './component/color'
-import remainderComponent from './component/remainder'
+import remainderComponent from './component/remainderComponent'
 import Labelcomponent from './component/label'
 export class App extends Component {
   render() {
@@ -37,13 +37,13 @@ export class App extends Component {
           <Route path='/reminder' component={Reminder}></Route>
           <Route path='/archiveNote' component={Archive}></Route>
           <Route path='/deleteNote' component={Trash}></Route>
-          <Route path='/setDateAndTime'component={Setdateandtime}></Route>
+          <Route path='/setDateAndTime' component={Setdateandtime}></Route>
           <Route path='/appBar' component={AppBar1}></Route>
           <Route path='/drawerLable' component={Editlabel}></Route>
           <Route path='/editLables' component={Editlabels}></Route>
           <Route path='/getLables' component={Getlabels}></Route>
           <Route path='/color' component={ColorComponent}></Route>
-          <Route path='/remainder' component={remainderComponent}></Route>
+          <Route path='/remainderComponent' component={remainderComponent}></Route>
           <Route path='/label' component={Labelcomponent}></Route>
         </Switch>
       </Router>
