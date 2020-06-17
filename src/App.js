@@ -5,7 +5,7 @@ import { Login } from './component/login';
 import { Registration } from './component/registration'
 import {Forgotpassword} from './component/forgotPassword'
 import DashBoard from './component/dashBoard'
-import DrawerComponent from './component/drawerComponent'
+import DrawerComponent from './component/drawer'
 import { Notes } from './component/notes';
 import Getnotes from './component/getNote'
 import MoreComponent from './component/moreComponent'
@@ -30,7 +30,7 @@ export class App extends Component {
           <Route path='/registration' component={Registration}></Route>
           <Route path='/forgotPassword' component={Forgotpassword}></Route>
           <Route path='/DashBoard' component={DashBoard}></Route>
-          <Route path='/drawerComponent' component={DrawerComponent}></Route>
+          <Route path='/drawer' component={DrawerComponent}></Route>
           <Route path='/notes' component={Notes}></Route>
           <Route path='/getNote' component={Getnotes}></Route>
           <Route path='/moreComponent' component={MoreComponent}></Route>

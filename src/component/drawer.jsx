@@ -1,4 +1,3 @@
-
 /******************************************************************************
  *  Execution       :   1. default node         cmd> node drawerComponent.jsx 
  *                      2. if nodemon installed cmd> nodemodule drawerComponent.jsx
@@ -39,7 +38,6 @@ class DrawerComponent extends Component {
         }
     }
     handleNote = () => {
-        console.log("hello teju");
         this.props.history.push('/dashboard')
     }
     handleArchive = () => {
