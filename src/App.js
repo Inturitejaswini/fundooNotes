@@ -19,7 +19,7 @@ import Editlabels from './component/editLables';
 import Getlabels from './component/getLables';
 import ColorComponent from './component/color'
 import remainderComponent from './component/remainderComponent'
-import Labelcomponent from './component/labelComponent'
+import Labelcomponent from './component/label'
 export class App extends Component {
   render() {
     return (
@@ -44,7 +44,7 @@ export class App extends Component {
           <Route path='/getLables' component={Getlabels}></Route>
           <Route path='/color' component={ColorComponent}></Route>
           <Route path='/remainderComponent' component={remainderComponent}></Route>
-          <Route path='/labelComponent' component={Labelcomponent}></Route>
+          <Route path='/label' component={Labelcomponent}></Route>
         </Switch>
       </Router>
     )
