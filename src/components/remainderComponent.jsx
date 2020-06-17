@@ -18,13 +18,13 @@ import { getnotes } from '../controller/noteController'
 import { CropOriginalIcon, AddAlertIcon, PersonAddIcon, OpenInBrowserIcon, RedoIcon, ArchiveOutlinedIcon, UndoIcon } from '@material-ui/icons';
 import image1 from '../assets/pushpin.jpeg'
 import { InputBase, IconButton, Dialog } from '@material-ui/core';
-import { updatePin, updateunPin, deleteNotes, noteUpdate, unArchiveNotes, ArchiveNotes, getlabelscard } from '../controller/noteController'
+import { updatePin, updateUnPin, deleteNotes, noteUpdate, unArchiveNotes, ArchiveNotes, getLabelsCard } from '../controller/noteController'
 import AppBar1 from './appBar'
 import Reminder from './reminder'
 import MoreComponent from './moreComponent';
 import Notes from './notes'
 import ColorComponent from './color'
-class remainderComponent extends Component {
+class RemainderComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -93,7 +93,7 @@ class remainderComponent extends Component {
     ArchiveNotes(archive1).then((res) => {
     })
   }
-  changehandleunPin = (key, title, takeNote) => {
+  changeHandleUnPin = (key, title, takeNote) => {
     this.setState({
       open: false,
       pin: this.state.pin,
@@ -108,15 +108,15 @@ class remainderComponent extends Component {
       takeNote: takeNote,
       key: key
     }
-    updateunPin(pin).then((res) => {
+    updateUnPin(pin).then((res) => {
     })
   }
-  handlechangeTitle = (event) => {
+  handleChangeTitle = (event) => {
     this.setState({
       title: event.target.value,
     });
   }
-  handlechangetakeNote = (event) => {
+  handleChangeTakeNote = (event) => {
     this.setState({ takeNote: event.target.value });
   }
   handleNote = (title, takeNote, key) => {
@@ -127,7 +127,7 @@ class remainderComponent extends Component {
       key: key
     })
   }
-  handleunArchive = () => {
+  handleUnArchive = () => {
     this.setState({
       open: false,
       archive: this.state.archive,
@@ -164,7 +164,7 @@ class remainderComponent extends Component {
     this.getAllLables();
   }
   getAllNotes = () => {
-    getnotes()
+    getNotes()
       .then(res => {
         this.setState({
           noteArray: res
@@ -177,7 +177,7 @@ class remainderComponent extends Component {
     })
   }
   getAllLables = () => {
-    getlabelscard()
+    getLabelsCard()
       .then(res => {
         this.setState({
           noteArray1: res
@@ -259,14 +259,14 @@ class remainderComponent extends Component {
               <div className="card_getNote">
 
                 <div id="getNotes-align">
-                  <InputBase placeholder="title" value={this.state.title} onChange={this.handlechangeTitle}>
+                  <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                   </InputBase>
                   <IconButton  >
                     <img className="pindrop2" src={image1} onClick={this.handlePin} />
                   </IconButton>
                 </div>
                 <div className="takeNoteCard">
-                  <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handlechangetakeNote}>
+                  <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handleChangeTakeNote}>
                   </InputBase>
                 </div>
                 <div className="getnoteicons">
@@ -283,7 +283,7 @@ class remainderComponent extends Component {
                     <div className="originalIcon1" ><CropOriginalIcon />
                     </div>
                   </IconButton>
-                  <IconButton className="unarcheive1" title="unArchive" onClick={this.handleunArchive}>
+                  <IconButton className="unarcheive1" title="unArchive" onClick={this.handleUnArchive}>
                     <div className="unArcheive1" ><OpenInBrowserIcon />
                     </div>
                   </IconButton>
@@ -318,4 +318,4 @@ class remainderComponent extends Component {
     )
   }
 }
-export default withRouter(remainderComponent)
+export default withRouter(RemainderComponent)
