@@ -24,7 +24,7 @@ export class Forgotpassword extends Component {
             email: this.email
         }
     }
-    handlechangeEmail = (event) => {
+    handleChangeEmail = (event) => {
         this.setState({ email: event.target.value });
     }
     handleClick = () => {
@@ -48,7 +48,7 @@ export class Forgotpassword extends Component {
                         value={this.state.email}
                         label="email"
                         variant="outlined"
-                        onChange={this.handlechangeemail}  />
+                        onChange={this.handleChangeEmail}  />
                     </div>
                         <div className="hfgh" >
                             <Button onClick={this.handleClick} >
