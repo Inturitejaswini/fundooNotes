@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { getnotes ,restoreNotes,deleteNotesPermenently} from '../controller/noteController'
 import { Card, InputBase, IconButton ,Dialog} from '@material-ui/core';
 import {DeleteForeverIcon,RestoreFromTrashIcon} from '@material-ui/icons';
-import AppBar1 from '../component/appBar'
+import AppBar1 from '../components/appBar'
 class Trash extends Component {
     constructor(props) {
         super(props)
@@ -19,12 +19,12 @@ class Trash extends Component {
             anchorEl: null
         }
     }
-    handlechangeTitle = (event) => {
+    handleChangeTitle = (event) => {
         this.setState({
             title: event.target.value,
         });
     }
-    handlechangetakeNote = (event) => {
+    handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
     handleNote =(title, takeNote, key) => {
@@ -35,7 +35,7 @@ class Trash extends Component {
             key: key
         })
     }
-    handlepermenentDelete = (key) => {
+    handlePermenentDelete = (key) => {
         this.setState({
             open: false,
             key: key,
@@ -77,7 +77,7 @@ class Trash extends Component {
             open: false
         })
     }
-    handlemoremenu = (event) => {
+    handleMoremenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
@@ -106,7 +106,7 @@ class Trash extends Component {
                                     <IconButton className="DeleteForever1" >
                                         <div className="DeleteForeverIcon1"
                                             title="deleteforever"
-                                            onClick={() => this.handlepermenentDelete(key.id)}>
+                                            onClick={() => this.handlePermenentDelete(key.id)}>
                                             <DeleteForeverIcon />
                                         </div>
                                     </IconButton>
@@ -127,18 +127,18 @@ class Trash extends Component {
                                 <div id="getNotes-align1">
                                     <InputBase placeholder="title" 
                                     value={this.state.title} 
-                                    onChange={this.handlechangeTitle}>
+                                    onChange={this.handleChangeTitle}>
                                     </InputBase>
                                 </div>
                                 <div className="takeNoteCard1">
                                     <InputBase placeholder="take a note" 
                                     value={this.state.takeNote} 
-                                    onChange={this.handlechangetakeNote}>
+                                    onChange={this.handleChangeTakeNote}>
                                     </InputBase>
                                 </div>
                                 <div className="getnoteicons12">
                                     <IconButton className="DeleteForever"
-                                     onClick={() => this.handlepermenentDelete(key.id)}>
+                                     onClick={() => this.handlePermenentDelete(key.id)}>
                                         <div className="DeleteForeverIcon" 
                                         title="deleteforever" >
                                             <DeleteForeverIcon />
