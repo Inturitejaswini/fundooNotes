@@ -15,7 +15,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { Popper, Paper, Checkbox, Button, InputBase, ClickAwayListener } from '@material-ui/core'
-import { createlabelnotes, getlabels, checkbox } from '../controller/noteController'
+import { createLabelNotes, getLabels, checkBox } from '../controller/noteController'
 class Editlabel extends Component {
     constructor(props) {
         super(props)
@@ -29,19 +29,19 @@ class Editlabel extends Component {
             label: "",
         }
     }
-    handlemoremenu = (event) => {
+    handleMoreMenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
     }
-    handlechangetakeNote = (event) => {
+    handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
     componentDidMount = () => {
         let details = {
             key: this.props.editlabel
         }
-        getlabels(details).then(res => {
+        getLabels(details).then(res => {
             this.setState({
                 noteArray: res
             })
@@ -61,7 +61,7 @@ class Editlabel extends Component {
             labelkey: id
         })
     }
-    handleCheckbox = (label, key, id) => {
+    handleCheckBox = (label, key, id) => {
         this.setState({
             checkBox: this.state.checkBox,
             key: this.props.editlabel,
@@ -72,10 +72,10 @@ class Editlabel extends Component {
             key: this.props.editlabel,
             labelkey: id
         }
-        checkbox(createcheckbox).then((res) => {
+        checkBox(createcheckbox).then((res) => {
         })
     }
-    handleLabelnote = () => {
+    handleLabelNote = () => {
         this.setState({
             takeNote: this.state.takeNote,
             key: this.props.editlabel,
@@ -86,7 +86,7 @@ class Editlabel extends Component {
             key: this.props.editlabel,
             checkBox: this.state.checkBox
         }
-        createlabelnotes(createlabel).then((res) => {
+        createLabelNotes(createLabel).then((res) => {
         })
         this.setState({
             open: false
@@ -108,7 +108,7 @@ class Editlabel extends Component {
                     <div className="labelComponent">
                         <card>
                             <div id="label_note" onClick={() => this.handleLabels}>
-                                <Checkbox onClick={() => this.handleCheckbox(key.data().label, key.data().key, key.id)} />
+                                <Checkbox onClick={() => this.handleCheckBox(key.data().label, key.data().key, key.id)} />
                                 <InputBase placeholder="title" value={key.data().label} />
                             </div>
                         </card>
@@ -121,13 +121,13 @@ class Editlabel extends Component {
                 <div>
                     <Button className="editLabelComponent"
                         aria-describedby={id} type="button">
-                        <div className="editLabelComponent1" title="editLabel" onClick={this.handlemoremenu}>add label</div></Button>
+                        <div className="editLabelComponent1" title="editLabel" onClick={this.handleMoreMenu}>add label</div></Button>
                     <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
                         <ClickAwayListener onClickAway={this.handleClickAway}>
                             <Paper className="more-paper1">
                                 <h6>edit label</h6>
-                                <InputBase placeholder="enter label name" value={this.state.takeNote} onChange={this.handlechangetakeNote} ></InputBase>
-                                <button onClick={this.handleLabelnote}>close</button>
+                                <InputBase placeholder="enter label name" value={this.state.takeNote} onChange={this.handleChangeTakeNote} ></InputBase>
+                                <button onClick={this.handleLabelNote}>close</button>
                             </Paper>
                         </ClickAwayListener>
                     </Popper>
