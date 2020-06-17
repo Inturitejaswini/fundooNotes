@@ -15,8 +15,8 @@
 
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { getnotes, ArchiveNotes, updatePin, updateunPin, noteUpdate, deleteNotes, getlabelscard } from '../controller/noteController'
-import MoreComponent from '../component/moreComponent'
+import { getNotes, ArchiveNotes, updatePin, updateUnPin, noteUpdate, deleteNotes, getLabelsCard } from '../controller/noteController'
+import MoreComponent from '../components/moreComponent'
 import { CropOriginalIcon, UndoIcon, ArchiveOutlinedIcon, RedoIcon, PersonAddIcon } from '@material-ui/icons';
 import { IconButton, Dialog, InputBase, createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import { Reminder } from './reminder'
@@ -37,7 +37,7 @@ const theme = createMuiTheme({
         }
     }
 })
-class Getnotes extends Component {
+class GetNotes extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -78,17 +78,17 @@ class Getnotes extends Component {
         noteUpdate(update).then((res) => {
         })
     }
-    handlemoremenu = (event) => {
+    handleMoreMenu = (event) => {
         this.setState({
             anchorEl: (this.state.anchorEl ? null : event.currentTarget)
         })
     }
-    handlechangeTitle = (event) => {
+    handleChangeTitle = (event) => {
         this.setState({
             title: event.target.value,
         });
     }
-    handlechangetakeNote = (event) => {
+    handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
     handleDelete = () => {
@@ -144,7 +144,7 @@ class Getnotes extends Component {
         ArchiveNotes(archive1).then((res) => {
         })
     }
-    changehandleunPin = (key, title, takeNote) => {
+    changeHandleUnPin = (key, title, takeNote) => {
         this.setState({
             open: false,
             pin: this.state.pin,
@@ -158,7 +158,7 @@ class Getnotes extends Component {
             takeNote: takeNote,
             key: key
         }
-        updateunPin(pin).then((res) => {
+        updateUnPin(pin).then((res) => {
         })
     }
     componentDidMount = () => {
@@ -166,7 +166,7 @@ class Getnotes extends Component {
         this.getAllLables();
     }
     getAllNotes = () => {
-        getnotes()
+        getNotes()
             .then(res => {
                 this.setState({
                     noteArray: res
@@ -179,7 +179,7 @@ class Getnotes extends Component {
         })
     }
     getAllLables = () => {
-        getlabelscard()
+        getLabelsCard()
             .then(res => {
                 this.setState({
                     noteArray1: res
@@ -242,7 +242,7 @@ class Getnotes extends Component {
                                         <MoreComponent
                                             noteId={key.id}></MoreComponent>
                                         <IconButton  >
-                                            <img className="pushpin" src={image1} onClick={() => this.changehandleunPin(key.id, key.data().title, key.data().takeNote)} />
+                                            <img className="pushpin" src={image1} onClick={() => this.changeHandleUnPin(key.id, key.data().title, key.data().takeNote)} />
                                         </IconButton>
                                     </div>
 
@@ -253,14 +253,14 @@ class Getnotes extends Component {
                             <Dialog aria-labelledby="simple-dialog-title" open={this.state.open} style={{ background: "whitesmoke" }}>
                                 <div className="card_getNote">
                                     <div id="getNotes-align">
-                                        <InputBase placeholder="title" value={this.state.title} onChange={this.handlechangeTitle}>
+                                        <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                                         </InputBase>
                                         <IconButton  >
-                                            <img className="pindrop2" src={image1} onClick={() => this.changehandleunPin(this.state.title, this.state.takeNote, this.state.key)} />
+                                            <img className="pindrop2" src={image1} onClick={() => this.changeHandleUnPin(this.state.title, this.state.takeNote, this.state.key)} />
                                         </IconButton>
                                     </div>
                                     <div className="takeNoteCard">
-                                        <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handlechangetakeNote}>
+                                        <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handleChangeTakeNote}>
                                         </InputBase>
 
                                     </div>
@@ -376,14 +376,14 @@ class Getnotes extends Component {
                             <Dialog aria-labelledby="simple-dialog-title" open={this.state.open} style={{ background: "white" }}>
                                 <div className="card_getNote">
                                     <div id="getNotes-align">
-                                        <InputBase placeholder="title" value={this.state.title} onChange={this.handlechangeTitle}>
+                                        <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                                         </InputBase>
                                         <IconButton  >
                                             <img className="pindrop2" src={image1} onClick={() => this.handlePin(this.state.title, this.state.takeNote, this.state.key)} />
                                         </IconButton>
                                     </div>
                                     <div className="takeNoteCard">
-                                        <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handlechangetakeNote}>
+                                        <InputBase placeholder="take a note" value={this.state.takeNote} onChange={this.handleChangeTakeNote}>
                                         </InputBase>
                                     </div>
                                     <div className="dailogue-icons">
@@ -433,4 +433,4 @@ class Getnotes extends Component {
         )
     }
 }
-export default withRouter(Getnotes)
+export default withRouter(GetNotes)
