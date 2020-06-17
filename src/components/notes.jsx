@@ -123,16 +123,16 @@ export class Notes extends Component {
                                 <div>
                                     <Reminder></Reminder>
                                 </div>
-                                <IconButton className="personadd" >
+                                <IconButton className="personadd1" >
                                     <div className="personAdd" title="collabarator"><PersonAddIcon /></div>
                                 </IconButton>
-                                <IconButton className="colorlens" >
+                                <IconButton className="colorlens1" >
                                     <div className="colorLens" title="change color" ><ColorLensIcon /></div>
                                 </IconButton>
-                                <IconButton className="originalicon" >
+                                <IconButton className="originalicon1" >
                                     <div className="originalIcon" title="add image"><CropOriginalIcon /></div>
                                 </IconButton>
-                                <IconButton className="archeive" >
+                                <IconButton className="archeive1" >
                                     <div className="Archeive" title="Archive"><ArchiveOutlinedIcon /></div>
                                 </IconButton>
                                 <IconButton className="morevert"
