@@ -179,7 +179,7 @@ class LabelComponent extends Component {
     handleAddLabel = (event) => {
     }
     render() {
-        var pinData = this.state.noteArray1.map(key1 => {
+        let pinData = this.state.noteArray1.map(key1 => {
             if (this.props.location.state == key1.data().label) {
                 return (
                     <div className="labelComponent">

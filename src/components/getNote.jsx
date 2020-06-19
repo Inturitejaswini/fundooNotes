@@ -91,7 +91,7 @@ class GetNotes extends Component {
     }
     handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
-        
+
     }
     handleDelete = () => {
         this.setState({
@@ -101,13 +101,13 @@ class GetNotes extends Component {
             takeNote: this.state.takeNote,
             key: this.state.key
         });
-        let delete1 = {
+        let deleteData = {
             title: this.state.title,
             takeNote: this.state.takeNote,
             key: this.state.key,
             delete: this.state.delete
         }
-        deleteNotes(delete1).then((res) => {
+        deleteNotes(deleteData).then((res) => {
             return res
         })
     }
