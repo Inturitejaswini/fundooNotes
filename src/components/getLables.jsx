@@ -42,11 +42,11 @@ class GetLabels extends Component {
 
     }
     handleComponet = (label) => {
-        this.props.history.push('/labelt',label)
+        this.props.history.push('/label',label)
 
     }
     render() {
-        var pinData = this.state.noteArray.map(key1 => {
+        let pinData = this.state.noteArray.map(key1 => {
             return (
                 <div className="getting_labels_inDrawercomponent">
                     <Button id="abcd1" onClick={this.handleGetNotes}> 
