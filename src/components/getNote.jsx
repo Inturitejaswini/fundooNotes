@@ -56,7 +56,7 @@ class GetNotes extends Component {
         }
     }
     handleNote = (title, takeNote, id) => {
-         this.setState({
+        this.setState({
             title: title,
             open: true,
             takeNote: takeNote,
@@ -91,6 +91,7 @@ class GetNotes extends Component {
     }
     handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
+        
     }
     handleDelete = () => {
         this.setState({
