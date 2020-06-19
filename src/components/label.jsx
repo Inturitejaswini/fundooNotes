@@ -18,7 +18,7 @@ import { InputBase, Button, IconButton, Card, Dialog } from '@material-ui/core';
 import { getNotes, getLabelsCard, noteUpdate, ArchiveNotes, updatePin, updateUnPin, deleteNotes } from '../controller/noteController'
 import image1 from '../assets/pushpin.jpeg'
 import { CropOriginalIcon, PersonAddIcon, ColorLensIcon, ArchiveOutlinedIcon, RedoIcon, UndoIcon, } from '@material-ui/icons';
-import AppBar1 from '../components/appBar'
+import AppBarComponent from '../components/appBar'
 import MoreComponent from '../components/moreComponent';
 import Reminder from '../components/reminder'
 import Color from '../components/color'
@@ -42,8 +42,8 @@ class LabelComponent extends Component {
     handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
-    handleNote = async (title, takeNote, key) => {
-        await this.setState({
+    handleNote = (title, takeNote, key) => {
+         this.setState({
             title: title,
             open: !this.state.open,
             takeNote: takeNote,
@@ -65,6 +65,7 @@ class LabelComponent extends Component {
             delete: this.state.delete
         }
         deleteNotes(delete1).then((res) => {
+            return res
         })
     }
     handlePin = () => {
@@ -82,6 +83,7 @@ class LabelComponent extends Component {
             key: this.state.key
         }
         updatePin(pin).then((res) => {
+            return res
         })
     }
     changeHandleUnPin = (key, title, takeNote) => {
@@ -99,6 +101,7 @@ class LabelComponent extends Component {
             key: key
         }
         updateUnPin(pin).then((res) => {
+            return res
         })
     }
     handleArchive = (title, takeNote, key) => {
@@ -118,6 +121,7 @@ class LabelComponent extends Component {
             archive: this.state.archive
         }
         ArchiveNotes(archive1).then((res) => {
+            return res
         })
     }
     handleUpdate = () => {
@@ -133,6 +137,7 @@ class LabelComponent extends Component {
             key: this.state.key
         }
         noteUpdate(update).then((res) => {
+            return res
         })
     };
     componentDidMount = () => {
@@ -298,7 +303,7 @@ class LabelComponent extends Component {
         })
         return (
             <div>
-                <AppBar1 />
+                <AppBarComponent />
                 {pinData}</div>
         )
     }
