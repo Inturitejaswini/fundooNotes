@@ -55,8 +55,8 @@ class GetNotes extends Component {
             delete: false
         }
     }
-    handleNote = async (title, takeNote, id) => {
-        await this.setState({
+    handleNote = (title, takeNote, id) => {
+         this.setState({
             title: title,
             open: true,
             takeNote: takeNote,
@@ -76,6 +76,7 @@ class GetNotes extends Component {
             key: this.state.key
         }
         noteUpdate(update).then((res) => {
+            return res
         })
     }
     handleMoreMenu = (event) => {
@@ -106,6 +107,7 @@ class GetNotes extends Component {
             delete: this.state.delete
         }
         deleteNotes(delete1).then((res) => {
+            return res
         })
     }
     handlePin = (title, takeNote, key) => {
@@ -123,6 +125,7 @@ class GetNotes extends Component {
             key: key
         }
         updatePin(pin).then((res) => {
+            return res
         })
     }
     handleArchive = () => {
@@ -142,6 +145,7 @@ class GetNotes extends Component {
             archive: this.state.archive
         }
         ArchiveNotes(archive1).then((res) => {
+            return res
         })
     }
     changeHandleUnPin = (key, title, takeNote) => {
@@ -159,6 +163,7 @@ class GetNotes extends Component {
             key: key
         }
         updateUnPin(pin).then((res) => {
+            return res
         })
     }
     componentDidMount = () => {
