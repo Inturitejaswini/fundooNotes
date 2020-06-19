@@ -40,6 +40,7 @@ export class SetDateAndTime extends Component {
             key: this.props.remainderId
         }
         remainder(timeDetails).then((res) => {
+            return res
         })
     }
     render() {
