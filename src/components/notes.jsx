@@ -60,6 +60,7 @@ export class Notes extends Component {
         }
         notes(newUser).then(response => {
             if (response) {
+                return response;
             }
         })
         this.setState({
