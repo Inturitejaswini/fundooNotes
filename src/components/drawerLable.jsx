@@ -45,8 +45,6 @@ class Editlabel extends Component {
             this.setState({
                 noteArray: res
             })
-            this.state.noteArray.map((key) => {
-            })
         })
         this.setState({
             open: false
@@ -73,6 +71,7 @@ class Editlabel extends Component {
             labelkey: id
         }
         checkBox(createcheckbox).then((res) => {
+            return res
         })
     }
     handleLabelNote = () => {
@@ -81,12 +80,13 @@ class Editlabel extends Component {
             key: this.props.editlabel,
             checkBox: this.state.checkBox
         });
-        let createlabel = {
+        let createLabel = {
             takeNote: this.state.takeNote,
             key: this.props.editlabel,
             checkBox: this.state.checkBox
         }
         createLabelNotes(createLabel).then((res) => {
+        return res
         })
         this.setState({
             open: false
@@ -101,8 +101,8 @@ class Editlabel extends Component {
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
-        const id = open ? 'simple-popper' : undefined;
-        var pinData = this.state.noteArray.map(key => {
+        const drawerId = open ? 'simple-popper' : undefined;
+        let pinData = this.state.noteArray.map(key => {
             return (
                 <div>
                     <div className="labelComponent">
@@ -122,7 +122,7 @@ class Editlabel extends Component {
                     <Button className="editLabelComponent"
                         aria-describedby={id} type="button">
                         <div className="editLabelComponent1" title="editLabel" onClick={this.handleMoreMenu}>add label</div></Button>
-                    <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
+                    <Popper id={drawerId} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
                         <ClickAwayListener onClickAway={this.handleClickAway}>
                             <Paper className="more-paper1">
                                 <h6>edit label</h6>
