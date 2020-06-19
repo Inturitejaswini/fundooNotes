@@ -68,6 +68,7 @@ class EditLabels extends Component {
             key: key
         }
         updateLabel(userData).then((res) => {
+            return res
         })
     }
     render() {
