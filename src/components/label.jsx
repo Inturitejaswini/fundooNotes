@@ -43,7 +43,7 @@ class LabelComponent extends Component {
         this.setState({ takeNote: event.target.value });
     }
     handleNote = (title, takeNote, key) => {
-         this.setState({
+        this.setState({
             title: title,
             open: !this.state.open,
             takeNote: takeNote,
@@ -138,7 +138,7 @@ class LabelComponent extends Component {
         }
         noteUpdate(update).then((res) => {
             return res
-        })
+        },1000)
     };
     componentDidMount = () => {
         this.getAllNotes();
