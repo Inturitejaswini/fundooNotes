@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { getnotes ,restoreNotes,deleteNotesPermenently} from '../controller/noteController'
-import { Card, InputBase, IconButton ,Dialog} from '@material-ui/core';
-import {DeleteForeverIcon,RestoreFromTrashIcon} from '@material-ui/icons';
-import AppBar1 from '../components/appBar'
+import { getnotes, restoreNotes, deleteNotesPermenently } from '../controller/noteController'
+import { Card, InputBase, IconButton, Dialog } from '@material-ui/core';
+import { DeleteForeverIcon, RestoreFromTrashIcon } from '@material-ui/icons';
+import AppBarComponent from '../components/appBar'
 class Trash extends Component {
     constructor(props) {
         super(props)
@@ -27,8 +27,8 @@ class Trash extends Component {
     handleChangeTakeNote = (event) => {
         this.setState({ takeNote: event.target.value });
     }
-    handleNote =(title, takeNote, key) => {
-         this.setState({
+    handleNote = (title, takeNote, key) => {
+        this.setState({
             title: title,
             open: !this.state.open,
             takeNote: takeNote,
@@ -40,15 +40,16 @@ class Trash extends Component {
             open: false,
             key: key,
         });
-        let delete1 = {
+        let deleteData = {
             key: key,
         }
-        deleteNotesPermenently(delete1).then((res) => {
+        deleteNotesPermenently(deleteData).then((res) => {
+            return res
         })
     }
 
-    handleDelete = async (key) => {
-        await this.setState({
+    handleDelete = (key) => {
+        this.setState({
             open: false,
             delete: !this.state.delete,
             title: this.state.title,
@@ -58,10 +59,11 @@ class Trash extends Component {
         let delete1 = {
             title: this.state.title,
             takeNote: this.state.takeNote,
-            key:key,
+            key: key,
             delete: this.state.delete,
         }
         restoreNotes(delete1).then((res) => {
+            return res
         })
     }
     componentDidMount = () => {
@@ -70,23 +72,13 @@ class Trash extends Component {
                 this.setState({
                     noteArray: res
                 })
-                this.state.noteArray.map((key) => {
-                })
             })
         this.setState({
             open: false
         })
     }
-    handleMoreMenu = (event) => {
-        this.setState({
-            anchorEl: (this.state.anchorEl ? null : event.currentTarget)
-        })
-    }
     render() {
-        const { anchorEl } = this.state;
-        const open = Boolean(anchorEl);
-        const id = open ? 'simple-popper' : undefined;
-        var noteData = this.state.noteArray.map(key => {
+        let noteData = this.state.noteArray.map(key => {
             if ((key.data().delete == true) && (key.data().archive == false)) {
                 return (
                     <div className="delete-notecard-div">
@@ -113,7 +105,7 @@ class Trash extends Component {
                                     <IconButton className="RestoreFromTrash1" >
                                         <div className="RestoreFromTrashIcon1"
                                             title="restore"
-                                            onClick={() =>this.handleDelete(key.id)}>
+                                            onClick={() => this.handleDelete(key.id)}>
                                             <RestoreFromTrashIcon />
                                         </div>
                                     </IconButton>
@@ -125,29 +117,29 @@ class Trash extends Component {
                             <div className="card_getNote">
 
                                 <div id="getNotes-align1">
-                                    <InputBase placeholder="title" 
-                                    value={this.state.title} 
-                                    onChange={this.handleChangeTitle}>
+                                    <InputBase placeholder="title"
+                                        value={this.state.title}
+                                        onChange={this.handleChangeTitle}>
                                     </InputBase>
                                 </div>
                                 <div className="takeNoteCard1">
-                                    <InputBase placeholder="take a note" 
-                                    value={this.state.takeNote} 
-                                    onChange={this.handleChangeTakeNote}>
+                                    <InputBase placeholder="take a note"
+                                        value={this.state.takeNote}
+                                        onChange={this.handleChangeTakeNote}>
                                     </InputBase>
                                 </div>
                                 <div className="getnoteicons12">
                                     <IconButton className="DeleteForever"
-                                     onClick={() => this.handlePermenentDelete(key.id)}>
-                                        <div className="DeleteForeverIcon" 
-                                        title="deleteforever" >
+                                        onClick={() => this.handlePermenentDelete(key.id)}>
+                                        <div className="DeleteForeverIcon"
+                                            title="deleteforever" >
                                             <DeleteForeverIcon />
                                         </div>
                                     </IconButton>
                                     <IconButton className="RestoreFromTrash">
                                         <div className="RestoreFromTrashIcon"
-                                         title="restore"
-                                         onClick={() =>this.handleDelete(this.state.key)}><RestoreFromTrashIcon />
+                                            title="restore"
+                                            onClick={() => this.handleDelete(this.state.key)}><RestoreFromTrashIcon />
                                         </div>
                                     </IconButton>
                                 </div>
@@ -159,7 +151,7 @@ class Trash extends Component {
         })
         return (
             <div>
-                <AppBar1 />
+                <AppBarComponent />
                 {noteData}
             </div>
         )
