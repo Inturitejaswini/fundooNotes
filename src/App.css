@@ -829,6 +829,9 @@ height: 0em;
 .reminder-poper-paper{
   z-index: 9999;
 }
+.more-poper-Paper{
+  z-index: 9999;
+}
 .noteCard-div{
   display: "flex" 
 }

@@ -52,14 +52,14 @@ export class MoreComponent extends Component {
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
-        const id = open ? 'simple-popper' : undefined;
+        const moreComponentId = open ? 'simple-popper' : undefined;
         return (
             <div>
                 <IconButton className="morevert"
                     aria-describedby={id} type="button" onClick={this.handlemoremenu}>
                     <div className="moreverticon" title="more"><MoreVertIcon /></div>
                 </IconButton>
-                <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
+                <Popper id={moreComponentId} open={open} anchorEl={anchorEl} className="more-poper-Paper">
                     <Paper className="more-paper">
                         <Button id="lablebutton1">
                             <div className="delete" onClick={this.handleDelete}>
