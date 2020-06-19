@@ -20,7 +20,7 @@ import Dialog from '@material-ui/core/Dialog';
 import image1 from '../assets/pushpin.jpeg'
 import ColorComponent from '../components/color'
 import MoreComponent from '../components/moreComponent'
-import { AppBar1 } from './appBar';
+import { AppBarComponent } from './appBar';
 import { Reminder } from './reminder'
 class Archive extends Component {
     constructor(props) {
@@ -64,6 +64,7 @@ class Archive extends Component {
             key: this.state.key,
         }
         unArchiveNotes(archive1).then((res) => {
+            return res
         })
     }
     handleUpdate = () => {
@@ -79,6 +80,7 @@ class Archive extends Component {
             key: this.state.key
         }
         noteUpdate(update).then((res) => {
+            return res
         })
     };
     componentDidMount = () => {
@@ -86,8 +88,6 @@ class Archive extends Component {
             .then(res => {
                 this.setState({
                     noteArray: res
-                })
-                this.state.noteArray.map((key) => {
                 })
             })
         this.setState({
@@ -103,7 +103,7 @@ class Archive extends Component {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
-        var noteData = this.state.noteArray.map(key => {
+        let noteData = this.state.noteArray.map(key => {
             if (key.data().archive == true) {
                 return (
                     <div className="archive-notecard-div">
@@ -191,7 +191,7 @@ class Archive extends Component {
         })
         return (
             <div>
-                <AppBar1></AppBar1>
+                <AppBarComponent/>
                 {noteData}
             </div>
         )
