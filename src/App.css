@@ -840,7 +840,9 @@ height: 0em;
 /**
 *reminder app.css
 */
-
+.reminder-poper-paper{
+  z-index: 9999;
+}
 .datepaper {
   height: 110px;
   width: 218px;
