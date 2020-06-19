@@ -85,7 +85,7 @@ const theme = createMuiTheme({
         })
     }
     handleSignout = () => {
-        this.props.history.push('/pages/login')
+        this.props.history.push('/login')
     }
     handleClickAway = () => {
         this.setState({
@@ -96,7 +96,7 @@ const theme = createMuiTheme({
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
-        const id = open ? 'simple-popper' : undefined;
+        const dashboardId = open ? 'simple-popper' : undefined;
         return (
             <div id="dashboard-appbar">
                 <MuiThemeProvider theme={theme}>
@@ -181,7 +181,7 @@ const theme = createMuiTheme({
                                         <Avatar className="account">
                                         </Avatar>
                                     </IconButton>
-                                    <Popper id={id} open={open} anchorEl={anchorEl}>
+                                    <Popper id={dashboardId} open={open} anchorEl={anchorEl}>
                                         <ClickAwayListener onClickAway={this.handleClickAway}>
                                             <Paper className="profile-paper">
                                                 <div className="profilepage">
