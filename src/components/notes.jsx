@@ -87,11 +87,11 @@ export class Notes extends Component {
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
-        const id = open ? 'simple-popper' : undefined;
+        const notesId = open ? 'simple-popper' : undefined;
         return (!this.state.open ? (
             <div className="notecard" >
                 <card onClick={this.handleNote}>
-                    <div style={{ display: "flex" }}>
+                    <div className="noteCard-div">
                         <div className="take_note">
                             <InputBase placeholder="Take a note......" value="" />
                         </div>
@@ -140,7 +140,7 @@ export class Notes extends Component {
                                     aria-describedby={id} type="button" onClick={this.handleMoreMenu}>
                                     <div className="moreverticon" title="more"><MoreVertIcon /></div>
                                 </IconButton>
-                                <Popper id={id} open={open} anchorEl={anchorEl} >
+                                <Popper id={notesId} open={open} anchorEl={anchorEl} >
                                     <ClickAwayListener onClickAway={this.handleClickAway}>
                                         <Paper className="more-paper1">
                                             <div className="notemore-div">
