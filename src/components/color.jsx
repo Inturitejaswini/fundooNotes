@@ -16,9 +16,9 @@
 
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
-import {Popper,IconButton,Paper,ClickAwayListener} from '@material-ui/core'
+import { Popper, IconButton, Paper, ClickAwayListener } from '@material-ui/core'
 import ColorLensIcon from '@material-ui/icons/ColorLens';
-import {Updatecolors} from '../controller/noteController'
+import { Updatecolors } from '../controller/noteController'
 const colors = [
     { name: "violet", hexcode: "#E6E6FA" },
     { name: "orange", hexcode: "#F47E3F" },
@@ -47,7 +47,7 @@ export class ColorComponent extends Component {
             labelkey: "",
             label: "",
             color: "",
-            openColorPallete:true,
+            openColorPallete: true,
         }
     }
 
@@ -71,16 +71,16 @@ export class ColorComponent extends Component {
             color: event.target.value
         }
         Updatecolors(noteColor).then((res) => {
+            return res
         })
     }
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
-        const id = open ? 'simple-popper' : undefined;
-        var colorList = colors.map((key) => {
+        const colorId = open ? 'simple-popper' : undefined;
+        let colorList = colors.map((key) => {
             return (
-                <IconButton style={{ backgroundColor: key.hexcode,width: "23px",
-                    height: "22px" }}
+                <IconButton style={{ backgroundColor: key.hexcode }}
                     value={key.name} onClick={this.handleColor}>
                 </IconButton>
             )
@@ -91,13 +91,13 @@ export class ColorComponent extends Component {
                     aria-describedby={id} type="button" onClick={this.handlecolormenu}>
                     <div className="ColorLensIcon" title="more"><ColorLensIcon /></div>
                 </IconButton>
-                <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
-                <ClickAwayListener onClickAway={this.handleClickAway}>
-                    <Paper className="colorlense-paper">
-                        <div id="colorpaper" >
-                           <div style={{fontSize:"large"}}>{colorList}</div> 
-                        </div>
-                    </Paper>
+                <Popper id={colorId} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
+                    <ClickAwayListener onClickAway={this.handleClickAway}>
+                        <Paper className="colorlense-paper">
+                            <div id="colorpaper" >
+                                <div style={{ fontSize: "large" }}>{colorList}</div>
+                            </div>
+                        </Paper>
                     </ClickAwayListener>
                 </Popper>
             </div>
