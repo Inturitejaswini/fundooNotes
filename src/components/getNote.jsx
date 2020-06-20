@@ -198,7 +198,7 @@ class GetNotes extends Component {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
-        var pinData = this.state.noteArray.map(key => {
+        let pinData = this.state.noteArray.map(key => {
             if ((key.data().delete == false) && (key.data().archive == false) && (key.data().pin == true)) {
                 return (
                     <div className="getcard-div">
@@ -309,7 +309,7 @@ class GetNotes extends Component {
                 )
             }
         })
-        var noteData = this.state.noteArray.map(key => {
+        let noteData = this.state.noteArray.map(key => {
             console.log("dataaaaa--is generating key", key.id);
             if ((key.data().archive == false) && (key.data().delete == false) && (key.data().pin == false)) {
                 return (
