@@ -124,16 +124,16 @@ export class Notes extends Component {
                                 <div>
                                     <Reminder></Reminder>
                                 </div>
-                                <IconButton className="personadd1" >
+                                <IconButton className="personadd-btn" >
                                     <div className="personAdd" title="collabarator"><PersonAddIcon /></div>
                                 </IconButton>
-                                <IconButton className="colorlens1" >
+                                <IconButton className="colorlens-btn" >
                                     <div className="colorLens" title="change color" ><ColorLensIcon /></div>
                                 </IconButton>
-                                <IconButton className="originalicon1" >
+                                <IconButton className="originalicon-btn" >
                                     <div className="originalIcon" title="add image"><CropOriginalIcon /></div>
                                 </IconButton>
-                                <IconButton className="archeive1" >
+                                <IconButton className="archeive-btn" >
                                     <div className="Archeive" title="Archive"><ArchiveOutlinedIcon /></div>
                                 </IconButton>
                                 <IconButton className="morevert"
@@ -142,17 +142,17 @@ export class Notes extends Component {
                                 </IconButton>
                                 <Popper id={notesId} open={open} anchorEl={anchorEl} >
                                     <ClickAwayListener onClickAway={this.handleClickAway}>
-                                        <Paper className="more-paper1">
+                                        <Paper className="note-paper">
                                             <div className="notemore-div">
-                                                <Button id="lablebutton-btn1">
+                                                <Button >
                                                     <div className="labeladd">
                                                         Add lable</div>
                                                 </Button>
-                                                <Button id="lablebutton-btn2">
+                                                <Button>
                                                     <div className="adddrawing">
                                                         Add drawing</div>
                                                 </Button>
-                                                <Button id="lablebutton-btn3">
+                                                <Button>
                                                     <div className="showtick">
                                                         Show tick boxes</div>
                                                 </Button>

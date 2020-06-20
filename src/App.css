@@ -73,7 +73,7 @@
   height: 22px;
   width: 23px;
 }
-.pindrop2{
+.pindrop-img{
   height: 22px;
   width: 23px;
 }
@@ -628,7 +628,7 @@ height: 0em;
 .button{
   width: 278px;
 }
-.more-paper1{
+.note-paper{
   width: 140px;
   height: 105px;
 }
@@ -643,27 +643,27 @@ height: 0em;
   width: 148px;
   height: 100%;
 }
-#lablebutton1{
+#delete-lable-button{
   height: 26px;
   width: 149px;
 }
-#lablebutton2{
+#addDrawing-lable-button{
   height: 26px;
   width: 149px;
 }
-#lablebutton3{
+#lablebutton{
   height: 26px;
   width: 149px;
 }
-#lablebutton4{
+#lablebutton{
   height: 26px;
   width: 149px;
 }
-#lablebutton5{
+#lablebutton{
   height: 26px;
   width: 149px;
 }
-#lablebutton6{
+#lablebutton{
   height: 26px;
   width: 149px;
 }
@@ -936,7 +936,7 @@ height: 0em;
   font-size: small;
   padding-left: 11px;
 }
-.chip1{
+.chip-div{
   display: inline-flex;
     flex-direction: row;
     background-color: #e5e5e5;
