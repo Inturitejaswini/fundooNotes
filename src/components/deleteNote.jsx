@@ -83,7 +83,7 @@ class Trash extends Component {
                 return (
                     <div className="delete-notecard-div">
                         <Card className="delete-card-div">
-                            <div id="take_note1" >
+                            <div id="take_note" >
                                 <div>
                                     <InputBase
                                         placeholder="title" value={key.data().title}
@@ -95,15 +95,15 @@ class Trash extends Component {
                                         onClick={() => this.handleNote(key.data().title, key.data().takeNote, key.id)}></InputBase>
                                 </div>
                                 <div className="deleteicons">
-                                    <IconButton className="DeleteForever1" >
-                                        <div className="DeleteForeverIcon1"
+                                    <IconButton className="DeleteForever-Btn" >
+                                        <div className="DeleteForeverIcon-div"
                                             title="deleteforever"
                                             onClick={() => this.handlePermenentDelete(key.id)}>
                                             <DeleteForeverIcon />
                                         </div>
                                     </IconButton>
-                                    <IconButton className="RestoreFromTrash1" >
-                                        <div className="RestoreFromTrashIcon1"
+                                    <IconButton >
+                                        <div 
                                             title="restore"
                                             onClick={() => this.handleDelete(key.id)}>
                                             <RestoreFromTrashIcon />
@@ -112,23 +112,23 @@ class Trash extends Component {
                                 </div>
                             </div>
                         </Card>
-                        <Dialog aria-labelledby="simple-dialog-title2"
+                        <Dialog
                             open={this.state.open} onClick={this.handleUpdate}>
                             <div className="card_getNote">
 
-                                <div id="getNotes-align1">
+                                <div>
                                     <InputBase placeholder="title"
                                         value={this.state.title}
                                         onChange={this.handleChangeTitle}>
                                     </InputBase>
                                 </div>
-                                <div className="takeNoteCard1">
+                                <div >
                                     <InputBase placeholder="take a note"
                                         value={this.state.takeNote}
                                         onChange={this.handleChangeTakeNote}>
                                     </InputBase>
                                 </div>
-                                <div className="getnoteicons12">
+                                <div className="getnoteicons">
                                     <IconButton className="DeleteForever"
                                         onClick={() => this.handlePermenentDelete(key.id)}>
                                         <div className="DeleteForeverIcon"
