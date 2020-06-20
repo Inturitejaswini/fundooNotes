@@ -58,13 +58,13 @@ class LabelComponent extends Component {
             takeNote: this.state.takeNote,
             key: this.state.key
         });
-        let delete1 = {
+        let deleteData = {
             title: this.state.title,
             takeNote: this.state.takeNote,
             key: this.state.key,
             delete: this.state.delete
         }
-        deleteNotes(delete1).then((res) => {
+        deleteNotes(deleteData).then((res) => {
             return res
         })
     }
@@ -76,13 +76,13 @@ class LabelComponent extends Component {
             takeNote: this.state.takeNote,
             key: this.state.key
         });
-        let pin = {
+        let pinData = {
             title: this.state.title,
             pin: this.state.pin,
             takeNote: this.state.takeNote,
             key: this.state.key
         }
-        updatePin(pin).then((res) => {
+        updatePin(pinData).then((res) => {
             return res
         })
     }
@@ -94,13 +94,13 @@ class LabelComponent extends Component {
             takeNote: takeNote,
             key: key
         });
-        let pin = {
+        let unPinData = {
             title: title,
             pin: !this.state.pin,
             takeNote: takeNote,
             key: key
         }
-        updateUnPin(pin).then((res) => {
+        updateUnPin(unPinData).then((res) => {
             return res
         })
     }
@@ -113,14 +113,14 @@ class LabelComponent extends Component {
             key: key,
             archive: this.state.archive
         });
-        let archive1 = {
+        let archiveData = {
             title: title,
             takeNote: takeNote,
             key: key,
             delete: this.state.delete,
             archive: this.state.archive
         }
-        ArchiveNotes(archive1).then((res) => {
+        ArchiveNotes(archiveData).then((res) => {
             return res
         })
     }
