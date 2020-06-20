@@ -59,11 +59,11 @@ class Archive extends Component {
             archive: this.state.archive,
             key: this.state.key
         });
-        let archive1 = {
+        let unArchiveData = {
             archive: this.state.archive,
             key: this.state.key,
         }
-        unArchiveNotes(archive1).then((res) => {
+        unArchiveNotes(unArchiveData).then((res) => {
             return res
         })
     }
@@ -132,7 +132,7 @@ class Archive extends Component {
                                         </div>
                                     </IconButton>
                                     <IconButton className="unarcheive1" title="unArchive" onClick={this.handleUnArchive}>
-                                            <OpenInBrowserIcon />
+                                        <OpenInBrowserIcon />
                                     </IconButton>
                                     <MoreComponent
                                         noteId={key.id}></MoreComponent>
@@ -159,25 +159,25 @@ class Archive extends Component {
                                 </div>
                                 <div className="getnoteicons">
                                     <IconButton className="alert1" >
-                                       <AddAlertIcon />
+                                        <AddAlertIcon />
                                     </IconButton>
                                     <IconButton className="personadd1" >
-                                            <PersonAddIcon />
+                                        <PersonAddIcon />
                                     </IconButton>
                                     <ColorComponent noteId={key.id}></ColorComponent>
                                     <IconButton className="originalicon1" >
-                                            <CropOriginalIcon />
+                                        <CropOriginalIcon />
                                     </IconButton>
                                     <IconButton className="unarcheive1" title="unArchive" onClick={this.handleUnArchive}>
-                                            <OpenInBrowserIcon />
+                                        <OpenInBrowserIcon />
                                     </IconButton>
                                     <MoreComponent
                                         noteId={key.id}></MoreComponent>
                                     <IconButton className="undo1">
-                                            <UndoIcon />
+                                        <UndoIcon />
                                     </IconButton>
                                     <IconButton className="redo1" >
-                                            <RedoIcon />
+                                        <RedoIcon />
                                     </IconButton>
                                     <IconButton className="close1" onClick={this.handleUpdate}>
                                         close
@@ -191,7 +191,7 @@ class Archive extends Component {
         })
         return (
             <div>
-                <AppBarComponent/>
+                <AppBarComponent />
                 {noteData}
             </div>
         )
