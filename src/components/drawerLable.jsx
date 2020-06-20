@@ -121,10 +121,10 @@ class Editlabel extends Component {
                 <div>
                     <Button className="editLabelComponent"
                         aria-describedby={id} type="button">
-                        <div className="editLabelComponent1" title="editLabel" onClick={this.handleMoreMenu}>add label</div></Button>
+                        <div className="editLabelComponent-div" title="editLabel" onClick={this.handleMoreMenu}>add label</div></Button>
                     <Popper id={drawerId} open={open} anchorEl={anchorEl}>
                         <ClickAwayListener onClickAway={this.handleClickAway}>
-                            <Paper className="more-paper1">
+                            <Paper className="more-paper">
                                 <h6>edit label</h6>
                                 <InputBase placeholder="enter label name" value={this.state.takeNote} onChange={this.handleChangeTakeNote} ></InputBase>
                                 <button onClick={this.handleLabelNote}>close</button>
