@@ -53,14 +53,14 @@ export class Reminder extends Component {
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
-        const id = open ? 'simple-popper' : undefined;
+        const reminderId = open ? 'simple-popper' : undefined;
         return (
             <div>
                 <IconButton className="AddAlert"
                     aria-describedby={id} type="button" onClick={this.handleReminderMenu}>
                     <div className="AddAlertIcon" title="more"><AddAlertIcon /></div>
                 </IconButton>
-                <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
+                <Popper id={reminderId} open={open} anchorEl={anchorEl} className="reminder-popper-paper">
                     <Paper className="reminder-paper">
                         <div className="reminder-div">
                             Reminder:

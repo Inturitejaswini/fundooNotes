@@ -61,13 +61,13 @@ export class MoreComponent extends Component {
                 </IconButton>
                 <Popper id={moreComponentId} open={open} anchorEl={anchorEl} className="more-poper-Paper">
                     <Paper className="more-paper">
-                        <Button id="lablebutton1">
+                        <Button id="delete-lable-button">
                             <div className="delete" onClick={this.handleDelete}>
                                 Delete note</div>
                         </Button>
                         <EditLabel
                             editlabel={this.props.noteId}></EditLabel>
-                        <Button id="lablebutton3">
+                        <Button id="addDrawing-lable-button">
                             <div className="adddrawing">
                                 Add drawing</div>
                         </Button>

@@ -6,14 +6,14 @@ import { Registration } from './pages/registration'
 import { ForgotPassword } from './pages/forgotPassword'
 import DashBoard from './component/dashBoard'
 import DrawerComponent from './component/drawer'
-import { Notes } from './component/notes';
+import Notes from './component/notes';
 import GetNotes from './component/getNote'
 import MoreComponent from './component/moreComponent'
 import Reminder from './component/reminder'
 import Archive from './component/archiveNote'
 import Trash from './component/deleteNote'
 import SetDateAndTime from './component/setDateAndTime'
-import { AppBar1 } from './component/appBar';
+import AppBarComponent from './component/appBar';
 import EditLabel from './component/drawerLable';
 import EditLabels from './component/editLables';
 import GetLabels from './component/getLables';
@@ -38,7 +38,7 @@ export class App extends Component {
           <Route path='/archiveNote' components={Archive}></Route>
           <Route path='/deleteNote' components={Trash}></Route>
           <Route path='/setDateAndTime' components={SetDateAndTime}></Route>
-          <Route path='/appBar' components={AppBar1}></Route>
+          <Route path='/appBar' components={AppBarComponent}></Route>
           <Route path='/drawerLable' components={EditLabel}></Route>
           <Route path='/editLables' components={EditLabels}></Route>
           <Route path='/getLables' components={GetLabels}></Route>

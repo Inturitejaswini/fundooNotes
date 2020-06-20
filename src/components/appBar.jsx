@@ -41,7 +41,7 @@ const theme = createMuiTheme({
         margintop: "142px",
     }
 })
-export class AppBar1 extends Component {
+export class AppBarComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -227,4 +227,4 @@ export class AppBar1 extends Component {
         )
     }
 }
-export default withRouter(AppBar1)
+export default withRouter(AppBarComponent)
