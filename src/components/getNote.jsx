@@ -341,7 +341,6 @@ class GetNotes extends Component {
                                                 )}
                                             <div id="inner_map_function">
                                                 {this.state.noteArray1.map(key1 => {
-                                                    console.log("to get labels in get note component", key1.data().label, key1.data().checkBox)
                                                     if ((key1.data().checkBox == true) && (key1.data().key == key.id)) {
                                                         return (
                                                             <div className="chip-div" >
