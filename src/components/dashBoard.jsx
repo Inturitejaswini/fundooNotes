@@ -45,7 +45,7 @@ const theme = createMuiTheme({
         }
     },
 })
- class Dashboard extends Component {
+class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -132,7 +132,6 @@ const theme = createMuiTheme({
                                     title="Refresh"
                                     color="default"
                                     aria-label="open drawer"
-                                    style={{ marginLeft: "5px" }}
                                     onClick={this.handleRefreshPage}>
                                     <RefreshIcon />
                                 </IconButton>
@@ -141,7 +140,6 @@ const theme = createMuiTheme({
                                         <IconButton className="gridview"
                                             title="listview"
                                             color="default"
-                                            style={{ marginLeft: "20px" }}
                                             onClick={this.handleLabel}>
                                             <ViewColumnIcon />
                                         </IconButton>
@@ -158,16 +156,14 @@ const theme = createMuiTheme({
                                 <IconButton className="settings"
                                     title="Settings"
                                     color="default"
-                                    aria-label="open drawer"
-                                    style={{ marginLeft: "40px" }}>
+                                    aria-label="open drawer">
                                     <SettingsIcon />
                                 </IconButton>
                                 <IconButton className="googleApps"
                                     title="googleApps"
                                     color="default"
                                     aria-label="open drawer"
-                                    alignItems="center"
-                                    style={{ marginLeft: "40px" }}>
+                                    alignItems="center">
                                     <AppsIcon />
                                 </IconButton>
                             </div>
@@ -175,8 +171,7 @@ const theme = createMuiTheme({
                                 <Grid className="grid"
                                     title="googleAccount"
                                     justify-container="center"
-                                    alignItems="right"
-                                    style={{ marginLeft: "20PX" }}>
+                                    alignItems="right">
                                     <IconButton aria-describedby={id} type="button" onClick={this.handleProfilemenu}>
                                         <Avatar className="account">
                                         </Avatar>
