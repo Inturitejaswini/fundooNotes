@@ -176,8 +176,6 @@ class LabelComponent extends Component {
             addLabel: true
         })
     }
-    handleAddLabel = (event) => {
-    }
     render() {
         let pinData = this.state.noteArray1.map(key1 => {
             if (this.props.location.state == key1.data().label) {
@@ -209,10 +207,9 @@ class LabelComponent extends Component {
                                                         )}
                                                     <div id="inner_map_function">
                                                         {this.state.noteArray1.map(key1 => {
-                                                            console.log("to get labels in get note component", key1.data().label, key1.data().checkBox)
                                                             if ((key1.data().checkBox == true) && (key1.data().key == key.id)) {
                                                                 return (
-                                                                    <div className="chip1" >
+                                                                    <div className="chip-div" >
                                                                         <InputBase id="labelssize" value={key1.data().label} />
                                                                     </div>
                                                                 )
@@ -222,25 +219,25 @@ class LabelComponent extends Component {
                                                 <div className="note-card-div-label">
                                                     <Reminder
                                                         noteId={key.id}></Reminder>
-                                                    <IconButton className="personadd">
+                                                    <IconButton >
                                                         <div className="personAdd"><PersonAddIcon />
                                                         </div>
                                                     </IconButton>
                                                     <Color
                                                         noteId={key.id}></Color>
 
-                                                    <IconButton className="originalicon">
+                                                    <IconButton>
                                                         <div id="originalIcon"><CropOriginalIcon />
                                                         </div>
                                                     </IconButton>
-                                                    <IconButton className="archeive" onClick={() => this.handleArchive(key.data().title, key.data().takeNote, key.id)}>
+                                                    <IconButton onClick={() => this.handleArchive(key.data().title, key.data().takeNote, key.id)}>
                                                         <div id="Archeive"><ArchiveOutlinedIcon />
                                                         </div>
                                                     </IconButton>
                                                     <MoreComponent
                                                         noteId={key.id}></MoreComponent>
                                                     <IconButton className="gettnote_img_img">
-                                                        <img className="pindrop2" src={image1} onClick={this.handlePin} />
+                                                        <img className="pindrop-img" src={image1} onClick={this.handlePin} />
                                                     </IconButton>
                                                 </div>
 
@@ -251,7 +248,7 @@ class LabelComponent extends Component {
                                                 <div id="getNotes-align">
                                                     <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                                                     </InputBase> <IconButton className="gettnote_img_img">
-                                                        <img className="pindrop2" src={image1} onClick={this.handlePin} />
+                                                        <img className="pindrop-img" src={image1} onClick={this.handlePin} />
                                                     </IconButton>
                                                 </div>
                                                 <div className="takeNoteCard">
@@ -261,33 +258,33 @@ class LabelComponent extends Component {
                                                 <div className="getnoteicons">
                                                     <Reminder
                                                         noteId={key.id}></Reminder>
-                                                    <IconButton className="personadd1" >
+                                                    <IconButton className="personadd-btn" >
                                                         <div className="personAdd"><PersonAddIcon />
                                                         </div>
                                                     </IconButton>
-                                                    <IconButton className="Colorlens1" >
+                                                    <IconButton className="Colorlens-btn" >
                                                         <div className="ColorLens" ><ColorLensIcon />
                                                         </div>
                                                     </IconButton>
-                                                    <IconButton className="originalicon1" >
+                                                    <IconButton className="originalicon-btn" >
                                                         <div className="originalIcon" ><CropOriginalIcon />
                                                         </div>
                                                     </IconButton>
-                                                    <IconButton className="archeive1" onClick={() => this.handleArchive(key.data().title, key.data().takeNote, this.state.key)} >
+                                                    <IconButton className="archeive-btn" onClick={() => this.handleArchive(key.data().title, key.data().takeNote, this.state.key)} >
                                                         <div className="Archeive" ><ArchiveOutlinedIcon />
                                                         </div>
                                                     </IconButton>
                                                     <MoreComponent
                                                         noteId={key.id}></MoreComponent>
-                                                    <IconButton className="undo1">
+                                                    <IconButton className="undo-btn">
                                                         <div className="undo" ><UndoIcon />
                                                         </div>
                                                     </IconButton>
-                                                    <IconButton className="redo1" >
+                                                    <IconButton className="redo-btn" >
                                                         <div className="redo" ><RedoIcon />
                                                         </div>
                                                     </IconButton>
-                                                    <IconButton className="close1" onClick={this.handleUpdate}>
+                                                    <IconButton className="close-btn" onClick={this.handleUpdate}>
                                                         close
                                                    </IconButton>
                                                 </div>
