@@ -69,7 +69,7 @@
   height: 30px;
   background-color: rgba(63, 81, 181, 0.5);
 }
-.pushpin{
+.pushpin-img{
   height: 22px;
   width: 23px;
 }
@@ -651,7 +651,7 @@ height: 0em;
   height: 26px;
   width: 149px;
 }
-#lablebutton{
+/* #lablebutton{
   height: 26px;
   width: 149px;
 }
@@ -666,7 +666,7 @@ height: 0em;
 #lablebutton{
   height: 26px;
   width: 149px;
-}
+} */
 .delete{
   margin-left: -109px;
   margin-top: -23px;
@@ -848,20 +848,20 @@ height: 0em;
   margin-block-start: 17px;
   margin-left: 10px;
 }
-.cancel-btn1{
+.cancel-btn{
   height: 38px;
 }
 .save-btn{
   height: 38px;
 }
-.mnb{
+.cancel-div{
   margin-top: -15px;
   margin-left: -38px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.hfg{
+.save-div{
   margin-top: -15px;
     margin-right: 32px;
 }
@@ -906,7 +906,7 @@ height: 0em;
   margin-left: -3px;
   text-transform: capitalize;
 }
-#button0 {
+#time-date-btn {
   width: 289px;
   height: 31px;
 }

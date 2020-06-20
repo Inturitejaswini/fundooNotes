@@ -46,15 +46,15 @@ export class SetDateAndTime extends Component {
     render() {
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
-        const id = open ? 'simple-popper' : undefined;
+        const setTimeDateId = open ? 'simple-popper' : undefined;
         return (
             <div>
-                <Button id="button0" className="adasgfd"
+                <Button id="time-date-btn"
                     aria-describedby={id} type="button" onClick={this.handleTimeAndDate}>
                     <div id="selecttime-div">
                         <AccessTimeIcon /> Select Date and Time</div>
                 </Button>
-                <Popper id={id} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }} >
+                <Popper id={setTimeDateId} open={open} anchorEl={anchorEl}>
                     <ClickAwayListener onClickAway={this.handleClickAway}>
                         <Paper className="datetime">
                             <div className="datepaper">
@@ -65,13 +65,13 @@ export class SetDateAndTime extends Component {
                                     value={this.state.timeDate}
                                     onChange={this.handleDateChange} />
                                 <div className="btns-div">
-                                    <Button className="cancel-btn1">
-                                        <div className="mnb" onClick={this.handleClose1}>
+                                    <Button className="cancel-btn">
+                                        <div className="cancel-div" onClick={this.handleClose1}>
                                             Cancel
                                         </div>
                                     </Button>
                                     <Button className="save-btn">
-                                        <div className="hfg" value={this.state.timeDate} onClick={this.handleValve}>
+                                        <div className="save-div" value={this.state.timeDate} onClick={this.handleValve}>
                                             Save
                                         </div>
                                     </Button>
