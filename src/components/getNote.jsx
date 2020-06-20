@@ -194,7 +194,7 @@ class GetNotes extends Component {
 
     }
     render() {
-        var List = this.props.listId ? "listviewGrid" : null
+        let List = this.props.listId ? "listviewGrid" : null
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
         const id = open ? 'simple-popper' : undefined;
@@ -206,7 +206,7 @@ class GetNotes extends Component {
                             <card>
                                 <div className="take_note">
                                     <div>
-                                        <InputBase style={{ color: "black" }}
+                                        <InputBase
                                             placeholder="Title"
                                             value={key.data().title}
                                             onClick={() => this.handleNote(key.data().title, key.data().takeNote, key.id)} />
@@ -232,17 +232,17 @@ class GetNotes extends Component {
                                     <div className="dailogue-icons-div">
                                         <Reminder
                                             noteId={key.id}></Reminder>
-                                        <IconButton className="personadd2" >
+                                        <IconButton>
                                             <div className="personAdd-div" title="collabarator"><PersonAddIcon />
                                             </div>
                                         </IconButton>
                                         <ColorComponent noteId={key.id}></ColorComponent>
-                                        <IconButton className="originalicon2" >
+                                        <IconButton>
                                             <div className="originalIcon-div" title="add image" ><CropOriginalIcon />
                                             </div>
                                         </IconButton>
-                                        <IconButton className="archeive1" onClick={this.handleArchive} >
-                                            <div className="Archeive1" title="Archive"><ArchiveOutlinedIcon />
+                                        <IconButton onClick={this.handleArchive} >
+                                            <div className="Archeive-div" title="Archive"><ArchiveOutlinedIcon />
                                             </div>
                                         </IconButton>
                                         <MoreComponent
@@ -262,7 +262,7 @@ class GetNotes extends Component {
                                         <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                                         </InputBase>
                                         <IconButton  >
-                                            <img className="pindrop2" src={image1} onClick={() => this.changeHandleUnPin(this.state.title, this.state.takeNote, this.state.key)} />
+                                            <img className="pindrop-img" src={image1} onClick={() => this.changeHandleUnPin(this.state.title, this.state.takeNote, this.state.key)} />
                                         </IconButton>
                                     </div>
                                     <div className="takeNoteCard">
@@ -273,31 +273,31 @@ class GetNotes extends Component {
                                     <div className="dailogue-icons">
                                         <Reminder
                                             noteId={key.id}></Reminder>
-                                        <IconButton className="personadd1" >
+                                        <IconButton className="personadd-btn" >
                                             <div className="personAdd" title="collabarator"><PersonAddIcon />
                                             </div>
                                         </IconButton>
                                         <ColorComponent noteId={key.id}></ColorComponent>
-                                        <IconButton className="originalicon1" >
+                                        <IconButton className="originalicon-btn" >
                                             <div className="originalIcon" title="add image" ><CropOriginalIcon />
                                             </div>
                                         </IconButton>
-                                        <IconButton className="archeive1" onClick={this.handleArchive} >
+                                        <IconButton className="archeive-btn" onClick={this.handleArchive} >
                                             <div className="Archeive" title="Archive"><ArchiveOutlinedIcon />
                                             </div>
                                         </IconButton>
                                         <MoreComponent
                                             noteId={key.id}></MoreComponent>
-                                        <IconButton className="undo1">
+                                        <IconButton className="undo-btn">
                                             <div className="undo" title="redo"><UndoIcon />
                                             </div>
                                         </IconButton>
 
-                                        <IconButton className="redo1" >
+                                        <IconButton className="redo-btn" >
                                             <div className="redo" ><RedoIcon />
                                             </div>
                                         </IconButton>
-                                        <IconButton className="close1" onClick={this.handleClose} >
+                                        <IconButton className="close-btn" onClick={this.handleClose} >
                                             close
                                    </IconButton>
 
@@ -344,7 +344,7 @@ class GetNotes extends Component {
                                                     console.log("to get labels in get note component", key1.data().label, key1.data().checkBox)
                                                     if ((key1.data().checkBox == true) && (key1.data().key == key.id)) {
                                                         return (
-                                                            <div className="chip1" >
+                                                            <div className="chip-div" >
                                                                 <InputBase id="labelssize" value={key1.data().label} />
                                                             </div>
                                                         )
@@ -356,23 +356,23 @@ class GetNotes extends Component {
                                     <div className="dailogue-icons-div">
                                         <Reminder
                                             noteId={key.id}></Reminder>
-                                        <IconButton className="personadd2" >
+                                        <IconButton className="personadd-btn" >
                                             <div className="personAdd-div" title="collabarator"><PersonAddIcon />
                                             </div>
                                         </IconButton>
                                         <ColorComponent noteId={key.id}></ColorComponent>
-                                        <IconButton className="originalicon2" >
+                                        <IconButton className="originalicon-btn" >
                                             <div className="originalIcon-div" title="add image" ><CropOriginalIcon />
                                             </div>
                                         </IconButton>
-                                        <IconButton className="archeive1" onClick={this.handleArchive} >
+                                        <IconButton className="archeive-btn" onClick={this.handleArchive} >
                                             <div className="Archeive" title="Archive"><ArchiveOutlinedIcon />
                                             </div>
                                         </IconButton>
                                         <MoreComponent
                                             noteId={key.id}></MoreComponent>
                                         <IconButton id="pin-btn">
-                                            <img className="pindrop2" src={image1} onClick={() => this.handlePin(key.data().title, key.data().takeNote, key.id)} />
+                                            <img className="pindrop-img" src={image1} onClick={() => this.handlePin(key.data().title, key.data().takeNote, key.id)} />
                                         </IconButton>
                                     </div>
                                 </div>
@@ -385,7 +385,7 @@ class GetNotes extends Component {
                                         <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                                         </InputBase>
                                         <IconButton  >
-                                            <img className="pindrop2" src={image1} onClick={() => this.handlePin(this.state.title, this.state.takeNote, this.state.key)} />
+                                            <img className="pindrop-img" src={image1} onClick={() => this.handlePin(this.state.title, this.state.takeNote, this.state.key)} />
                                         </IconButton>
                                     </div>
                                     <div className="takeNoteCard">
@@ -395,27 +395,27 @@ class GetNotes extends Component {
                                     <div className="dailogue-icons">
                                         <Reminder
                                             noteId={this.state.key}></Reminder>
-                                        <IconButton className="personadd1" >
+                                        <IconButton className="personadd-btn" >
                                             <div className="personAdd" title="collabarator"><PersonAddIcon />
                                             </div>
                                         </IconButton>
                                         <ColorComponent noteId={key.id}></ColorComponent>
-                                        <IconButton className="originalicon1" >
+                                        <IconButton className="originalicon-btn" >
                                             <div className="originalIcon" title="add image" ><CropOriginalIcon />
                                             </div>
                                         </IconButton>
-                                        <IconButton className="archeive1" onClick={this.handleArchive} >
+                                        <IconButton className="archeive-btn" onClick={this.handleArchive} >
                                             <div className="Archeive" title="Archive"><ArchiveOutlinedIcon />
                                             </div>
                                         </IconButton>
                                         <MoreComponent
                                             noteId={this.state.key}></MoreComponent>
-                                        <IconButton className="undo1">
+                                        <IconButton className="undo-btn">
                                             <div className="undo" title="redo"><UndoIcon />
                                             </div>
                                         </IconButton>
 
-                                        <IconButton className="redo1" >
+                                        <IconButton className="redo-btn" >
                                             <div className="redo" ><RedoIcon />
                                             </div>
                                         </IconButton>
