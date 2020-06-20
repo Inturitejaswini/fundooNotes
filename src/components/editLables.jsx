@@ -82,7 +82,7 @@ class EditLabels extends Component {
 
                     </div></Button>
                 <Dialog className="Dialog" aria-labelledby="simple-dialog-title" open={this.state.open}>
-                    <div className="ghig">
+                    <div className="edit-label-div">
                         <h3>Edit labels</h3>
                         <div><IconButton title="cancel"><ClearIcon onClick={this.handleClear}></ClearIcon></IconButton>
                             <TextField placeholder="create new label"></TextField>
@@ -94,7 +94,7 @@ class EditLabels extends Component {
                                     <div className="filled_label_icon">
                                         <div>
                                             <IconButton><LabelIcon /></IconButton>
-                                            <InputBase className="filled_label_icon2"
+                                            <InputBase className="filled_label_icon-btn"
                                                 defaultValue={key.data().label}
                                                 onChange={this.handleLabel}>
                                             </InputBase></div>
