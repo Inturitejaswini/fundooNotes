@@ -832,6 +832,9 @@ height: 0em;
 .more-poper-Paper{
   z-index: 9999;
 }
+.colorList{
+  font-size: "large";
+}
 .noteCard-div{
   display: "flex" 
 }

@@ -91,11 +91,11 @@ export class ColorComponent extends Component {
                     aria-describedby={id} type="button" onClick={this.handlecolormenu}>
                     <div className="ColorLensIcon" title="more"><ColorLensIcon /></div>
                 </IconButton>
-                <Popper id={colorId} open={open} anchorEl={anchorEl} style={{ zIndex: "9999" }}>
+                <Popper id={colorId} open={open} anchorEl={anchorEl}>
                     <ClickAwayListener onClickAway={this.handleClickAway}>
                         <Paper className="colorlense-paper">
                             <div id="colorpaper" >
-                                <div style={{ fontSize: "large" }}>{colorList}</div>
+                                <div className="colorList">{colorList}</div>
                             </div>
                         </Paper>
                     </ClickAwayListener>
