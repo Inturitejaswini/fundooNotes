@@ -40,10 +40,10 @@ class Trash extends Component {
             open: false,
             key: key,
         });
-        let deleteData = {
+        let permanentDeleteData = {
             key: key,
         }
-        deleteNotesPermenently(deleteData).then((res) => {
+        deleteNotesPermenently(permanentDeleteData).then((res) => {
             return res
         })
     }
@@ -56,13 +56,13 @@ class Trash extends Component {
             takeNote: this.state.takeNote,
             key: key,
         });
-        let delete1 = {
+        let deleteData = {
             title: this.state.title,
             takeNote: this.state.takeNote,
             key: key,
             delete: this.state.delete,
         }
-        restoreNotes(delete1).then((res) => {
+        restoreNotes(deleteData).then((res) => {
             return res
         })
     }
