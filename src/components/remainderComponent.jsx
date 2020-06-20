@@ -19,7 +19,7 @@ import { CropOriginalIcon, AddAlertIcon, PersonAddIcon, OpenInBrowserIcon, RedoI
 import image1 from '../assets/pushpin.jpeg'
 import { InputBase, IconButton, Dialog } from '@material-ui/core';
 import { updatePin, updateUnPin, deleteNotes, noteUpdate, unArchiveNotes, ArchiveNotes, getLabelsCard } from '../controller/noteController'
-import AppBar1 from './appBar'
+import AppBarComponent from './appBar'
 import Reminder from './reminder'
 import MoreComponent from './moreComponent';
 import Notes from './notes'
@@ -48,13 +48,14 @@ class RemainderComponent extends Component {
       takeNote: this.state.takeNote,
       key: this.state.key
     });
-    let delete1 = {
+    let deleteData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
       delete: this.state.delete
     }
-    deleteNotes(delete1).then((res) => {
+    deleteNotes(deleteData).then((res) => {
+      return res
     })
   }
   handlePin = (title, takeNote, key) => {
@@ -65,13 +66,14 @@ class RemainderComponent extends Component {
       takeNote: takeNote,
       key: key
     });
-    let pin = {
+    let pinData = {
       pin: this.state.pin,
       title: title,
       takeNote: takeNote,
       key: key
     }
-    updatePin(pin).then((res) => {
+    updatePin(pinData).then((res) => {
+      return res
     })
   }
   handleArchive = () => {
@@ -83,14 +85,15 @@ class RemainderComponent extends Component {
       key: this.state.key,
       archive: this.state.archive
     });
-    let archive1 = {
+    let archiveData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
       delete: this.state.delete,
       archive: this.state.archive
     }
-    ArchiveNotes(archive1).then((res) => {
+    ArchiveNotes(archiveData).then((res) => {
+      return res
     })
   }
   changeHandleUnPin = (key, title, takeNote) => {
@@ -102,13 +105,14 @@ class RemainderComponent extends Component {
       key: key
     });
 
-    let pin = {
+    let unPinData = {
       title: title,
       pin: !this.state.pin,
       takeNote: takeNote,
       key: key
     }
-    updateUnPin(pin).then((res) => {
+    updateUnPin(unPinData).then((res) => {
+      return res
     })
   }
   handleChangeTitle = (event) => {
@@ -135,13 +139,14 @@ class RemainderComponent extends Component {
       takeNote: this.state.takeNote,
       key: this.state.key
     });
-    let archive1 = {
+    let unArchiveData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       archive: this.state.archive,
       key: this.state.key,
     }
-    unArchiveNotes(archive1).then((res) => {
+    unArchiveNotes(unArchiveData).then((res) => {
+      return res
     })
   }
   handleUpdate = () => {
@@ -157,6 +162,7 @@ class RemainderComponent extends Component {
       key: this.state.key
     }
     noteUpdate(update).then((res) => {
+      return res
     })
   };
   componentDidMount = () => {
@@ -199,21 +205,22 @@ class RemainderComponent extends Component {
       key: this.state.key,
       archive: this.state.archive
     });
-    let archive1 = {
+    let archiveData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
       delete: this.state.delete,
       archive: this.state.archive
     }
-    ArchiveNotes(archive1).then((res) => {
+    ArchiveNotes(archiveData).then((res) => {
+      return res
     })
   }
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popper' : undefined;
-    var noteData = this.state.noteArray.map(key => {
+    let noteData = this.state.noteArray.map(key => {
       if (key.data().remainder !== "") {
         return (
           <div>
@@ -234,23 +241,23 @@ class RemainderComponent extends Component {
 
                   <Reminder
                     noteId={key.id}></Reminder>
-                  <IconButton className="personadd">
+                  <IconButton className="personadd-btn">
                     <div className="personAdd"><PersonAddIcon />
                     </div>
                   </IconButton>
                   <ColorComponent noteId={key.id}></ColorComponent>
-                  <IconButton className="originalicon">
+                  <IconButton className="originalicon-btn">
                     <div id="originalIcon"><CropOriginalIcon />
                     </div>
                   </IconButton>
-                  <IconButton className="archeive" onClick={this.handleArchive} >
+                  <IconButton className="archeive-btn" onClick={this.handleArchive} >
                     <div id="Archeive"><ArchiveOutlinedIcon />
                     </div>
                   </IconButton>
                   <MoreComponent
                     noteId={key.id}></MoreComponent>
-                  <IconButton  >
-                    <img className="pushpin" src={image1} onClick={this.handlePin} />
+                  <IconButton>
+                    <img className="pushpin-img" src={image1} onClick={this.handlePin} />
                   </IconButton>
                 </div>
               </card>
@@ -262,7 +269,7 @@ class RemainderComponent extends Component {
                   <InputBase placeholder="title" value={this.state.title} onChange={this.handleChangeTitle}>
                   </InputBase>
                   <IconButton  >
-                    <img className="pindrop2" src={image1} onClick={this.handlePin} />
+                    <img className="pindrop-img" src={image1} onClick={this.handlePin} />
                   </IconButton>
                 </div>
                 <div className="takeNoteCard">
@@ -270,20 +277,20 @@ class RemainderComponent extends Component {
                   </InputBase>
                 </div>
                 <div className="getnoteicons">
-                  <IconButton className="alert1" >
+                  <IconButton className="alert-btn" >
                     <div className="alert" ><AddAlertIcon />
                     </div>
                   </IconButton>
-                  <IconButton className="personadd1" >
+                  <IconButton className="personadd-btn" >
                     <div className="personAdd"><PersonAddIcon />
                     </div>
                   </IconButton>
                   <ColorComponent noteId={key.id}></ColorComponent>
-                  <IconButton className="originalicon1" >
+                  <IconButton className="originalicon-btn" >
                     <div className="originalIcon" ><CropOriginalIcon />
                     </div>
                   </IconButton>
-                  <IconButton className="unarcheive1" title="unArchive" onClick={this.handleUnArchive}>
+                  <IconButton className="unarcheive-btn" title="unArchive" onClick={this.handleUnArchive}>
                     <div className="unArcheive" ><OpenInBrowserIcon />
                     </div>
                   </IconButton>
@@ -291,15 +298,15 @@ class RemainderComponent extends Component {
                     <MoreComponent
                       noteId={this.state.key}></MoreComponent>
                   </div>
-                  <IconButton className="undo1">
+                  <IconButton className="undo-btn">
                     <div className="undo" ><UndoIcon />
                     </div>
                   </IconButton>
-                  <IconButton className="redo1" >
+                  <IconButton className="redo-btn" >
                     <div className="redo" ><RedoIcon />
                     </div>
                   </IconButton>
-                  <IconButton className="close1" onClick={this.handleUpdate}>
+                  <IconButton className="close-btn" onClick={this.handleUpdate}>
                     close
                   </IconButton>
                 </div>
@@ -311,7 +318,7 @@ class RemainderComponent extends Component {
     })
     return (
       <div >
-        <AppBar1 />
+        <AppBarComponent />
         <Notes />
         {noteData}
       </div>
