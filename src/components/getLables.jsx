@@ -32,10 +32,10 @@ class GetLabels extends Component {
     let pinData = this.state.noteArray.map((key1) => {
       return (
         <div className="getting_labels_inDrawercomponent">
-          <Button id="abcd1" onClick={this.handleGetNotes}>
+          <Button id="abcd" onClick={this.handleGetNotes}>
             <LabelOutlinedIcon className="labelbtnicon" />
             <InputBase
-              id="labelssize1"
+              id="labelssize"
               value={key1.data().label}
               onClick={() => this.handleComponet(key1.data().label)}
             />
