@@ -6,13 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:lightgray;
+  background-color: lightgray;
   height: 588px;
   background-image: url("./assets/teju.jpg");
 }
-.fogot-div{
+.fogot-div {
   cursor: pointer;
-   color: currentColor;
+  color: currentColor;
 }
 .MuiAvatar-colorDefault {
   color: #fafafa;
@@ -23,36 +23,35 @@
   width: 107%;
   height: 99%;
 }
-.acnt-btn-div{
+.acnt-btn-div {
   height: 25px;
-    width: 243px;
-    margin-top: 34px;
-    margin-left: 35px;
+  width: 243px;
+  margin-top: 34px;
+  margin-left: 35px;
 }
 .login_card-div {
   background-color: lightpink;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-    height: 26em;
-    width: 52vh;
-    margin-top: -22px;
-    background-image: url("./assets/abc.jpg");
-} 
-.register{
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  height: 26em;
+  width: 52vh;
+  margin-top: -22px;
+  background-image: url("./assets/abc.jpg");
+}
+.register {
   margin-top: -21px;
   margin-left: -50px;
 }
-.login{
+.login {
   margin-top: -21px;
   margin-left: -50px;
-} 
-.card-inner-div{
+}
+.card-inner-div {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 .card_getNote {
   padding: 8px;
@@ -63,17 +62,17 @@
   height: 30px;
   background-color: rgba(63, 81, 181, 0.5);
 }
-#register_Btn{
+#register_Btn {
   width: 230px;
   margin-bottom: 20px;
   height: 30px;
   background-color: rgba(63, 81, 181, 0.5);
 }
-.pushpin-img{
+.pushpin-img {
   height: 22px;
   width: 23px;
 }
-.pindrop-img{
+.pindrop-img {
   height: 22px;
   width: 23px;
 }
@@ -95,7 +94,7 @@
   height: 38px;
   margin-left: -13px;
 }
-.drawer{
+.drawer {
   transform: none;
   transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
   height: 648px;
@@ -123,19 +122,19 @@
   height: 566px;
   width: 200px;
 }
-#name{
+#name {
   margin-left: 25px;
 }
 /*****************************************************************
 /**
 *signout page
 ***/
-#manageaccount{
+#manageaccount {
   /* height: 28px; */
   margin-bottom: 11px;
   background-color: lightgray;
 }
-#btns0{
+#btns0 {
   margin: auto;
 }
 #manage-div-btn {
@@ -149,12 +148,12 @@
   margin-bottom: 10px;
   margin-top: 8px;
 }
-.accounttext{
+.accounttext {
   margin-block-start: -21px;
 }
-.accounticon{
+.accounticon {
   margin-block-start: -23px;
-    margin-left: -49px;
+  margin-left: -49px;
 }
 #signout-btn {
   margin-top: 10px;
@@ -171,7 +170,7 @@
 *registration card css
 */
 
-#registration_modules{
+#registration_modules {
   padding-top: 6px;
 }
 .registration-div {
@@ -185,10 +184,10 @@
   padding: 3.5px 14px;
 }
 .MuiCard-root {
-    overflow: hidden;
-    background-color: rgba(0,0,0,0.2);
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
 }
-#btn{
+#btn {
   width: 230px;
   margin-left: 32px;
   margin-right: 30px;
@@ -196,57 +195,57 @@
   height: 30px;
   background-color: rgba(63, 81, 181, 0.5);
 }
-.submit_Btn{
+.submit_Btn {
   margin-left: 10px;
-    margin-top: 1px;
-   size: a3;
-   height: 32px;
+  margin-top: 1px;
+  size: a3;
+  height: 32px;
 }
 .MuiButton-containedPrimary {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgb(245, 241, 241);
 }
 
-.forgot_password{
+.forgot_password {
   justify-content: center;
   height: "20px";
   margin-top: 0px;
   margin-left: 10px;
 }
-.login_Btn{
+.login_Btn {
   justify-content: center;
   height: 2e;
   width: 20vh;
   background-color: lightcoral;
 }
-.registration-card{
+.registration-card {
   overflow: hidden;
-    /* margin-top: 47px; */
-    width: 332px;
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 83px;
-    height: 461px;
-    background-image: url("./assets//teju.jpg");
+  /* margin-top: 47px; */
+  width: 332px;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 83px;
+  height: 461px;
+  background-image: url("./assets//teju.jpg");
 }
-.Registration_Btn{
+.Registration_Btn {
   justify-content: center;
   height: 2e;
   width: 20vh;
 }
 
-.cancel_Btn{
+.cancel_Btn {
   justify-content: center;
   height: 2e;
   width: 4vh;
 }
- .MuiOutlinedInput-input {
-    padding: 10.5px 14px;
+.MuiOutlinedInput-input {
+  padding: 10.5px 14px;
 }
-.register_id{
+.register_id {
   padding: 80px 47px;
 }
 .register-divtag {
@@ -256,7 +255,7 @@
   padding: 2px;
   background-color: lightcoral;
 }
-.outlined-basic{
+.outlined-basic {
   padding: 9.5px 13px;
 }
 /* .cancel{
@@ -274,8 +273,8 @@
   margin-left: 1px;
   margin-top: 93px;
 }
-#rgst{
-height: 0em;
+#rgst {
+  height: 0em;
 }
 
 /***************************************************/
@@ -290,25 +289,25 @@ height: 0em;
   width: 1256px;
   background: blanchedalmond;
 }
-.forgot_card-card{
+.forgot_card-card {
   height: 231px;
-    width: 356px;
-    background-color: rgb(185, 48, 48);
+  width: 356px;
+  background-color: rgb(185, 48, 48);
 }
-.abcd{
+.abcd {
   margin-left: 126px;
 }
-.efgh{
+.efgh {
   margin-left: 66px;
 }
 .hfgh {
   padding: 32px;
   margin-left: 112px;
 }
-.sub{
+.sub {
   margin-top: -10px;
-    margin-left: -41px;
-    color:black;
+  margin-left: -41px;
+  color: black;
 }
 #noteicon-btn {
   width: 216px;
@@ -327,7 +326,7 @@ height: 0em;
   margin-top: 2px;
   text-transform: capitalize;
 }
-#remindericon-btn{
+#remindericon-btn {
   width: 216px;
   height: 47px;
   border-radius: 88px;
@@ -339,12 +338,12 @@ height: 0em;
   margin-top: 2px;
   text-transform: capitalize;
 }
-.remaindericon{
+.remaindericon {
   margin: auto;
   margin-left: 34px;
   margin-top: 2px;
 }
-#editlabelicon-btn{
+#editlabelicon-btn {
   width: 216px;
   height: 47px;
   border-radius: 88px;
@@ -353,7 +352,7 @@ height: 0em;
 #editlabelicon {
   margin-left: -113px;
 }
-#archivicon-btn{
+#archivicon-btn {
   width: 216px;
   height: 47px;
   border-radius: 88px;
@@ -365,23 +364,23 @@ height: 0em;
   margin-top: 2px;
   text-transform: capitalize;
 }
-.archeiveicon{
+.archeiveicon {
   margin: auto;
   margin-left: 34px;
   margin-top: 2px;
 }
-#trashicon-btn{
+#trashicon-btn {
   width: 216px;
   height: 47px;
   border-radius: 88px;
   margin-left: -16px;
 }
-.trashicon{
+.trashicon {
   margin: auto;
   margin-left: 34px;
   margin-top: 2px;
 }
-.trashtext{
+.trashtext {
   margin: auto;
   margin-left: -43px;
   margin-top: 2px;
@@ -390,96 +389,96 @@ height: 0em;
 /****************************************************************/
 /*fundoonotes app.css
 */
-     .toolbar {
-      background:white;
-      height: 56px;
-      }
-      .toolbar__logo{
-      margin-left: 1rem;
-      }
-      .toolbar__logo a{
-      color:white;
-      text-decoration: none;
-      font-size: 1.5rem
-      }
-      .spacer{
-      flex: 0.75;
-      }
-      .label bar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      /*  */
-      .toggle-button{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      height: 28px;
-      width: 34px;
-      background:transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      box-sizing: border-box
-      }
-      .toggle-button:focus{
-      outline: none;
-      }
-      .toggle-button_line{
-      width: 20px;
-      height: 4px;
-      background:black;
-      }
-      .fundooimage{
-        width: 4%;
-        height: 40px;
-      }
-      .icons {
-        display: flex;
-        height: 30px;
-        width: 440px;
-        font-size: smaller;
-    }
-      
-      .MuiDrawer-paperAnchorLeft {
-        top: 67px;
-        left: 0;
-        right: auto;
-        height: 373px;
-        width: 180px;
-    }
-  
-    .search_box {
-      display: flex;
-      align-items: center;
-      border: 1px solid;
-      padding: 2px;
-      border-radius: 11px;
-      width: 582px;
-      color: #f5f5f5;
-      margin: 29px;
-      background-color: lightgray;
-      height: 38px;
-  }
-  
-  .searchIcon{
-    color:#e0e0e0;
-  }
-   .menuButton {
-      margin-left: 10px;
-      margin-right: -43px;
-  }
+.toolbar {
+  background: white;
+  height: 56px;
+}
+.toolbar__logo {
+  margin-left: 1rem;
+}
+.toolbar__logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.spacer {
+  flex: 0.75;
+}
+.label bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/*  */
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 28px;
+  width: 34px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+.toggle-button:focus {
+  outline: none;
+}
+.toggle-button_line {
+  width: 20px;
+  height: 4px;
+  background: black;
+}
+.fundooimage {
+  width: 4%;
+  height: 40px;
+}
+.icons {
+  display: flex;
+  height: 30px;
+  width: 440px;
+  font-size: smaller;
+}
+
+.MuiDrawer-paperAnchorLeft {
+  top: 67px;
+  left: 0;
+  right: auto;
+  height: 373px;
+  width: 180px;
+}
+
+.search_box {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  padding: 2px;
+  border-radius: 11px;
+  width: 582px;
+  color: #f5f5f5;
+  margin: 29px;
+  background-color: lightgray;
+  height: 38px;
+}
+
+.searchIcon {
+  color: #e0e0e0;
+}
+.menuButton {
+  margin-left: 10px;
+  margin-right: -43px;
+}
 .profilepage {
   width: 277px;
   height: 100%;
   text-align: center;
 }
-.visible-icons{
+.visible-icons {
   display: flex;
-    justify-content: center;
-    padding: 0px;
+  justify-content: center;
+  padding: 0px;
 }
 .MuiButton-label {
   width: 100%;
@@ -508,10 +507,10 @@ height: 0em;
 .element.style {
   display: flex;
 }
-.input-text{
+.input-text {
   color: black;
   outline: none;
-   border: none;
+  border: none;
 }
 /************************************************
 *notecard css
@@ -531,68 +530,68 @@ height: 0em;
   margin-block-start: 6em;
   box-shadow: 1px 2px lightgrey;
 }
-  /* .MuiButton-text {
+/* .MuiButton-text {
     padding: 0px 0px;
 } */
 
-  .take_note {
-    color: gray;
-    margin-left: 12px;
+.take_note {
+  color: gray;
+  margin-left: 12px;
 }
-  .take_title{
+.take_title {
   margin-top: 8px;
   margin-left: 25px;
-  }
-.trash-btn{
+}
+.trash-btn {
   display: flex;
-   width: 59px;
+  width: 59px;
 }
-.alert{
+.alert {
   height: 47px;
-   width: 44px;
+  width: 44px;
 }
-  .take_Note{
-      color: gray;
-      margin-right: 20px;
-      margin-left: 15px;
-      margin-top: 10px;
-  }
-  .paintIcon{
-    margin-top: -23px;
-    color: silver;
-  }
-  .cropIcon{
-    margin-top: -5px;
-    color: silver;
-  }
-  .MuiButton-text {
-    color: silver;
-    margin-left: 141px;
-  }
-  .icons {
-    font-size: xx-large;
-    display: flex;
-    flex-direction: inherit;
-    align-items: center;
-    justify-content: space-around;
+.take_Note {
+  color: gray;
+  margin-right: 20px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
-.checkCircleicon{
+.paintIcon {
+  margin-top: -23px;
+  color: silver;
+}
+.cropIcon {
+  margin-top: -5px;
+  color: silver;
+}
+.MuiButton-text {
+  color: silver;
+  margin-left: 141px;
+}
+.icons {
+  font-size: xx-large;
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: space-around;
+}
+.checkCircleicon {
   font-size: 1px;
 }
-.painticon{
+.painticon {
   font-size: 1px;
 }
-.cropicon{
+.cropicon {
   font-size: 1px;
 }
 
-  .notecard2 { 
-    width: 31em;
-    height: 133px;
-    border-radius: 17px;
-    border: 1px solid rgb(224, 224, 224);
-    margin: auto;
-    margin-block-start: 46px;
+.notecard2 {
+  width: 31em;
+  height: 133px;
+  border-radius: 17px;
+  border: 1px solid rgb(224, 224, 224);
+  margin: auto;
+  margin-block-start: 46px;
 }
 .note-card-div {
   /* transition: box-shadow,3s; */
@@ -612,27 +611,27 @@ height: 0em;
   box-shadow: 0 0 11px black;
   visibility: visible;
 } */
-.carg_getNote{
+.carg_getNote {
   width: 550px;
   height: 155px;
 }
-.Icons{
+.Icons {
   display: flex;
 }
-.alertpage{
+.alertpage {
   height: 312px;
   width: 278px;
   background-color: #f5f5f5;
 }
 
-.button{
+.button {
   width: 278px;
 }
-.note-paper{
+.note-paper {
   width: 140px;
   height: 105px;
 }
-.notemore-div{
+.notemore-div {
   display: flex;
   flex-direction: column;
 }
@@ -643,11 +642,11 @@ height: 0em;
   width: 148px;
   height: 100%;
 }
-#delete-lable-button{
+#delete-lable-button {
   height: 26px;
   width: 149px;
 }
-#addDrawing-lable-button{
+#addDrawing-lable-button {
   height: 26px;
   width: 149px;
 }
@@ -667,27 +666,27 @@ height: 0em;
   height: 26px;
   width: 149px;
 } */
-.delete{
+.delete {
   margin-left: -109px;
   margin-top: -23px;
 }
-.labeladd{
+.labeladd {
   margin-left: -124px;
   margin-top: -23px;
 }
-.adddrawing{
+.adddrawing {
   margin-left: -107px;
   margin-top: -23px;
 }
-.makeacopy{
+.makeacopy {
   margin-left: -105px;
   margin-top: -23px;
 }
-.showtick{
+.showtick {
   margin-left: -85px;
   margin-top: -23px;
 }
-.googledocs{
+.googledocs {
   margin-left: -64px;
   margin-top: -23px;
 }
@@ -698,15 +697,15 @@ height: 0em;
 /*getnote card css
 */
 
-#getNotes-align{
+#getNotes-align {
   display: flex;
- flex-direction: row;
- justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.getnote-divcard{
+.getnote-divcard {
   width: 30%;
 }
-.getnoteicons{
+.getnoteicons {
   display: flex;
 }
 .MuiDrawer-paperAnchorLeft {
@@ -734,68 +733,67 @@ height: 0em;
   justify-content: space-between;
   font-size: xx-large;
 }
-  .undo-redo-close{
+.undo-redo-close {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 54px;
   width: 177px;
-  }
-  .dailogue-icons-div {
-    transition: box-shadow,3s;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    visibility: hidden;
-    width: 275px;
-    justify-content: center;
-    justify-content: space-between;
-    margin-block-start: 39px;
-    margin-left: -9px;
 }
-  .dailogue-icons-div::hover{
-    box-shadow: 0 0 11px black;
-    visibility: visible;
-    
-  }
-  .note-card-div:hover .dailogue-icons-div{
-    visibility: visible;
-  }
-  /* #pin-btn{
+.dailogue-icons-div {
+  transition: box-shadow, 3s;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  visibility: hidden;
+  width: 275px;
+  justify-content: center;
+  justify-content: space-between;
+  margin-block-start: 39px;
+  margin-left: -9px;
+}
+.dailogue-icons-div::hover {
+  box-shadow: 0 0 11px black;
+  visibility: visible;
+}
+.note-card-div:hover .dailogue-icons-div {
+  visibility: visible;
+}
+/* #pin-btn{
     margin-top: -204px;
     margin-left: 240px;
   } */
-  /**
+/**
   *archive note css
   */
-  .archive-notecard-div {
-    width: 359px;
-    margin: auto;
-    margin-block-start: 8px;
-    display: flex;
+.archive-notecard-div {
+  width: 359px;
+  margin: auto;
+  margin-block-start: 8px;
+  display: flex;
 }
-  .Getnotes{
-    display: flex;
-    margin: auto;
-    margin-block-start: 27px;
-  }
-  .archive-card {
-    width: 393px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: auto;
-    margin-block-start: 15px;
+.Getnotes {
+  display: flex;
+  margin: auto;
+  margin-block-start: 27px;
 }
-.dailogue-icons-divcard{
+.archive-card {
+  width: 393px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+  margin-block-start: 15px;
+}
+.dailogue-icons-divcard {
   flex-direction: row;
   display: flex;
   visibility: hidden;
 }
-.dailogue-icons-divcard::hover{
+.dailogue-icons-divcard::hover {
   visibility: visible;
 }
-.archive-notecard-div:hover .dailogue-icons-divcard{
+.archive-notecard-div:hover .dailogue-icons-divcard {
   visibility: visible;
 }
 /*
@@ -811,33 +809,33 @@ height: 0em;
   margin-block-start: 26px;
   padding-left: 15px;
 }
-.deleteicons{
+.deleteicons {
   visibility: hidden;
 }
-.deleteicons::hover{
+.deleteicons::hover {
   visibility: visible;
 }
-.delete-notecard-div:hover .deleteicons{
+.delete-notecard-div:hover .deleteicons {
   visibility: visible;
 }
-.deleteicons{
-  padding:0px;
+.deleteicons {
+  padding: 0px;
 }
 /**
 *reminder app.css
 */
-.reminder-poper-paper{
+.reminder-poper-paper {
   z-index: 9999;
 }
-.more-poper-Paper{
+.more-poper-Paper {
   z-index: 9999;
 }
-.colorList{
+.colorList {
   font-size: "large";
 }
 
-.noteCard-div{
-  display: "flex" 
+.noteCard-div {
+  display: "flex";
 }
 .datepaper {
   height: 110px;
@@ -848,22 +846,22 @@ height: 0em;
   margin-block-start: 17px;
   margin-left: 10px;
 }
-.cancel-btn{
+.cancel-btn {
   height: 38px;
 }
-.save-btn{
+.save-btn {
   height: 38px;
 }
-.cancel-div{
+.cancel-div {
   margin-top: -15px;
   margin-left: -38px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.save-div{
+.save-div {
   margin-top: -15px;
-    margin-right: 32px;
+  margin-right: 32px;
 }
 .reminder-paper {
   display: flex;
@@ -885,8 +883,8 @@ height: 0em;
   font-size: smaller;
   margin-block-start: 20px;
 }
-.close-btn{
-  font-size: inherit
+.close-btn {
+  font-size: inherit;
 }
 #remainder-div-btns {
   display: flex;
@@ -916,14 +914,7 @@ height: 0em;
   margin-left: -42px;
   text-transform: capitalize;
 }
-/* #pinned-div-component{
-  margin-left: 52px;
-  margin-top: -6px;
-}
-#others-div-component{
-  margin-left: 52px;
-    margin-top: -6px;
-} */
+
 #inner_map_function {
   display: flex;
   flex-direction: row;
@@ -936,32 +927,32 @@ height: 0em;
   font-size: small;
   padding-left: 11px;
 }
-.chip-div{
+.chip-div {
   display: inline-flex;
-    flex-direction: row;
-    background-color: #e5e5e5;
-    border: none;
-    cursor: default;
-    height: 23px;
-    outline: none;
-    padding: 0;
-    font-size: 10px;
-    font-color: #333333;
-    font-family:"Open Sans", sans-serif;
-    white-space: nowrap;
-    align-items: center;
-    border-radius: 16px;
-    vertical-align: middle;
-    text-decoration: none;
-    justify-content: center;
+  flex-direction: row;
+  background-color: #e5e5e5;
+  border: none;
+  cursor: default;
+  height: 23px;
+  outline: none;
+  padding: 0;
+  font-size: 10px;
+  font-color: #333333;
+  font-family: "Open Sans", sans-serif;
+  white-space: nowrap;
+  align-items: center;
+  border-radius: 16px;
+  vertical-align: middle;
+  text-decoration: none;
+  justify-content: center;
 }
-.editLabelComponent{
+.editLabelComponent {
   width: 148px;
-    height: 27px;
+  height: 27px;
 }
-.editLabelComponent-div{
+.editLabelComponent-div {
   margin-block-start: -22px;
-    margin-left: -119px;
+  margin-left: -119px;
 }
 #label_note {
   display: flex;
@@ -969,19 +960,19 @@ height: 0em;
   align-items: stretch;
   height: 27px;
 }
-.labelcomponent{
+.labelcomponent {
   height: 24px;
 }
-.chip-div{
+.chip-div {
   width: 76px;
-    height: 19px;
+  height: 19px;
 }
 
 /* #edit-lables {
   display: flex;
   margin-left: -28px;
 } */
-.filled_label_icon{
+.filled_label_icon {
   display: flex;
 }
 .editlabel2 {
@@ -1004,7 +995,7 @@ height: 0em;
 *reminder app.css
  */
 
- .remainder_note-card-div {
+.remainder_note-card-div {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -1013,10 +1004,10 @@ height: 0em;
   height: 56px;
   visibility: hidden;
 }
-.remainder_note-card-div::hover{
+.remainder_note-card-div::hover {
   visibility: visible;
 }
-.getnotecomponetnotecardremainder:hover .remainder_note-card-div{
+.getnotecomponetnotecardremainder:hover .remainder_note-card-div {
   visibility: visible;
 }
 .getnotecomponetnotecardremainder {
@@ -1030,10 +1021,9 @@ height: 0em;
   border-color: #e0e0e0;
 }
 
-#take_note3{
+#take_note3 {
   padding-left: 14px;
 }
-
 
 /*
 *label component css
@@ -1046,18 +1036,18 @@ height: 0em;
   margin: auto;
   margin-block-start: 36px;
 }
-#take_note_labelcomponent{
+#take_note_labelcomponent {
   display: flex;
-    flex-direction: column;
-    margin-block-start: -59px;
-    padding-left: 10px;
+  flex-direction: column;
+  margin-block-start: -59px;
+  padding-left: 10px;
 }
-.note-card-div-label{
+.note-card-div-label {
   display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-block-start: 102px;
-    margin-left: -204px;
+  flex-direction: row;
+  align-items: center;
+  margin-block-start: 102px;
+  margin-left: -204px;
 }
 #inner_take_note_labelcomponent {
   display: flex;
@@ -1065,7 +1055,7 @@ height: 0em;
   margin-block-start: -82px;
   margin-left: 13px;
 }
-.date_and_time{
+.date_and_time {
   justify-content: center;
 }
 #inner_date_and_time {
@@ -1074,37 +1064,34 @@ height: 0em;
   padding-left: 14px;
 }
 
-
-.note-card-div-label{
+.note-card-div-label {
   visibility: hidden;
 }
-.note-card-div-label::hover{
+.note-card-div-label::hover {
   visibility: visible;
 }
-#labelComponent-card:hover .note-card-div-label{
-  visibility: visible
+#labelComponent-card:hover .note-card-div-label {
+  visibility: visible;
 }
 
-
-.getcard-div{
+.getcard-div {
   margin-top: 13px;
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
 }
-.getcard-div:hover .note-card-div{
+.getcard-div:hover .note-card-div {
   visibility: visible;
 }
-.getcard-div:hover{
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+.getcard-div:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
-
-@media screen and (max-width:678px){
-.body{
-  width: 95vh;
+@media screen and (max-width: 678px) {
+  .body {
+    width: 95vh;
     height: 100vh;
-}
-#dashboard-appbar{
-  width: 107vh;
-  height: 100vh;
-}
+  }
+  #dashboard-appbar {
+    width: 107vh;
+    height: 100vh;
+  }
 }
