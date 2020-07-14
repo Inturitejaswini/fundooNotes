@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Login } from './pages/login';
 import { Registration } from './pages/registration'
-import { ForgotPassword } from './pages/forgotPassword'
+import { ForgetPassword } from './pages/forgetPassword'
 import DashBoard from './component/dashBoard'
 import DrawerComponent from './component/drawer'
 import Notes from './component/notes';
@@ -28,7 +28,7 @@ export class App extends Component {
           <Route path='/' exact pages={Login}></Route>
           <Route path='/login' pages={Login}></Route>
           <Route path='/registration' pages={Registration}></Route>
-          <Route path='/forgotPassword' pages={ForgotPassword}></Route>
+          <Route path='/forgetPassword' pages={ForgetPassword}></Route>
           <Route path='/DashBoard' components={DashBoard}></Route>
           <Route path='/drawer' components={DrawerComponent}></Route>
           <Route path='/notes' components={Notes}></Route>

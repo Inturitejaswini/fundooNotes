@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { Card, TextField, Button } from "@material-ui/core";
-import forgot from "../controller/userController";
-export class ForgotPassword extends Component {
+import {forget} from "../controller/userController";
+export class ForgetPassword extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,7 +16,7 @@ export class ForgotPassword extends Component {
     const user = {
       email: this.state.email,
     };
-    forgot(user);
+    forget(user);
   };
 
   render() {
@@ -46,4 +46,4 @@ export class ForgotPassword extends Component {
   }
 }
 
-export default withRouter(ForgotPassword);
+export default withRouter(ForgetPassword);
