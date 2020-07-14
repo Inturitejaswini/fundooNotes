@@ -30,7 +30,7 @@ export default async function register(data) {
  * @param {data} data as a perameter.
  * login data form
  */
-export async function Log(data) {
+export async function userLogin(data) {
   let user = {
     email: data.email,
     password: data.password,

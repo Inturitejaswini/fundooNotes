@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { TextField, Card, Button, Avatar } from "@material-ui/core";
-import { Log } from "../controller/userController";
+import { userLogin } from "../controller/userController";
 class Login extends Component {
   constructor() {
     super();
@@ -27,7 +27,7 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password,
     };
-    Log(user).then((response) => {
+    userLogin(user).then((response) => {
       if (response) {
         this.props.history.push("/dashBoard");
       }
