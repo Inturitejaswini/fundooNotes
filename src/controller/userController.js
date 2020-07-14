@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 import serviceConstant from "../const";
 import fire from "../config/fire";
 const db = firebase.firestore();
-export default async function register(data) {
+export default async function userRegistration(data) {
   const user = {
     firstName: data.firstName,
     lastName: data.lastName,

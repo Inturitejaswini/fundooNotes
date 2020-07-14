@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { Card, Button, Snackbar, TextField } from "@material-ui/core";
-import register from "../controller/userController";
+import { userRegistration } from "../controller/userController";
 export class Registration extends Component {
   constructor(props) {
     super(props);
@@ -70,7 +70,7 @@ export class Registration extends Component {
       email: this.state.email,
       password: this.state.password,
     };
-    register(user);
+    userRegistration(user);
   };
   handleLogin = () => {
     this.props.history.push("/login");
