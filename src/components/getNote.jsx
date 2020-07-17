@@ -1,29 +1,9 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  getNotes,
-  ArchiveNotes,
-  updatePin,
-  updateUnPin,
-  noteUpdate,
-  deleteNotes,
-  getLabelsCard,
-} from "../controller/noteController";
-import MoreComponent from "../components/moreComponent";
-import {
-  CropOriginalIcon,
-  UndoIcon,
-  ArchiveOutlinedIcon,
-  RedoIcon,
-  PersonAddIcon,
-} from "@material-ui/icons";
-import {
-  IconButton,
-  Dialog,
-  InputBase,
-  createMuiTheme,
-  MuiThemeProvider,
-} from "@material-ui/core";
+import { getNotes, archiveNotes, updatePin, updateUnPin, noteUpdate, deleteNotes, getLabelsCard} from "../controller/noteController";
+import {MoreComponent} from "../components/moreComponent";
+import {CropOriginalIcon,UndoIcon,ArchiveOutlinedIcon,RedoIcon,PersonAddIcon} from "@material-ui/icons";
+import {IconButton,Dialog,InputBase,createMuiTheme,MuiThemeProvider} from "@material-ui/core";
 import { Reminder } from "./reminder";
 import ColorComponent from "./color";
 import image1 from "../assets/pushpin.jpeg";
@@ -69,7 +49,6 @@ class GetNotes extends Component {
       this.setState({
         noteArray: res,
       });
-      this.state.noteArray.map((key) => {});
     });
     this.setState({
       open: false,
@@ -91,18 +70,21 @@ class GetNotes extends Component {
     });
   };
   handleClose = (value) => {
-    this.setState({
-      open: false,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let update = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
     };
-    noteUpdate(update);
+    noteUpdate(update).then(res=>{
+      this.setState({
+        open: false,
+        title: this.state.title,
+        takeNote: this.state.takeNote,
+        key: this.state.key,
+      });
+    }).catch(err=>{
+      throw err;
+    })
   };
   handleMoreMenu = (event) => {
     this.setState({
@@ -118,46 +100,44 @@ class GetNotes extends Component {
     this.setState({ takeNote: event.target.value });
   };
   handleDelete = () => {
-    this.setState({
-      open: false,
-      delete: this.state.delete,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let deleteData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
       delete: this.state.delete,
     };
-    deleteNotes(deleteData);
+    deleteNotes(deleteData).then(res=>{
+      this.setState({
+        open: false,
+        delete: this.state.delete,
+        title: this.state.title,
+        takeNote: this.state.takeNote,
+        key: this.state.key,
+      });
+    }).catch(err=>{
+      throw err;
+    })
   };
   handlePin = (title, takeNote, key) => {
-    this.setState({
-      open: false,
-      pin: this.state.pin,
-      title: title,
-      takeNote: takeNote,
-      key: key,
-    });
     let pin = {
       pin: this.state.pin,
       title: title,
       takeNote: takeNote,
       key: key,
     };
-    updatePin(pin);
+    updatePin(pin).then(res=>{
+      this.setState({
+        open: false,
+        pin: this.state.pin,
+        title: title,
+        takeNote: takeNote,
+        key: key,
+      });
+    }).catch(err=>{
+      throw err;
+    })
   };
   handleArchive = () => {
-    this.setState({
-      open: false,
-      delete: this.state.delete,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-      archive: this.state.archive,
-    });
     let archive = {
       title: this.state.title,
       takeNote: this.state.takeNote,
@@ -165,23 +145,37 @@ class GetNotes extends Component {
       delete: this.state.delete,
       archive: this.state.archive,
     };
-    ArchiveNotes(archive);
+    archiveNotes(archive).then(res=>{
+      this.setState({
+        open: false,
+        delete: this.state.delete,
+        title: this.state.title,
+        takeNote: this.state.takeNote,
+        key: this.state.key,
+        archive: this.state.archive,
+      });
+    }).catch(err=>{
+      throw err;
+    })
   };
   changeHandleUnPin = (key, title, takeNote) => {
-    this.setState({
-      open: false,
-      pin: this.state.pin,
-      title: title,
-      takeNote: takeNote,
-      key: key,
-    });
     let pin = {
       title: title,
       pin: !this.state.pin,
       takeNote: takeNote,
       key: key,
     };
-    updateUnPin(pin);
+    updateUnPin(pin).then(res=>{
+      this.setState({
+        open: false,
+        pin: this.state.pin,
+        title: title,
+        takeNote: takeNote,
+        key: key,
+      });
+    }).catch(err=>{
+      throw err;
+    })
   };
 
   render() {

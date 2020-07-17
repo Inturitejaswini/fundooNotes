@@ -1,24 +1,9 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { InputBase, Button, IconButton, Card, Dialog } from "@material-ui/core";
-import {
-  getNotes,
-  getLabelsCard,
-  noteUpdate,
-  ArchiveNotes,
-  updatePin,
-  updateUnPin,
-  deleteNotes,
-} from "../controller/noteController";
+import { getNotes, getLabelsCard, noteUpdate, archiveNotes, updatePin, updateUnPin, deleteNotes} from "../controller/noteController";
 import image1 from "../assets/pushpin.jpeg";
-import {
-  CropOriginalIcon,
-  PersonAddIcon,
-  ColorLensIcon,
-  ArchiveOutlinedIcon,
-  RedoIcon,
-  UndoIcon,
-} from "@material-ui/icons";
+import {CropOriginalIcon,PersonAddIcon,ColorLensIcon,ArchiveOutlinedIcon,RedoIcon,UndoIcon} from "@material-ui/icons";
 import AppBarComponent from "../components/appBar";
 import MoreComponent from "../components/moreComponent";
 import Reminder from "../components/reminder";
@@ -44,7 +29,6 @@ class LabelComponent extends Component {
       this.setState({
         noteArray: res,
       });
-      this.state.noteArray.map((key) => {});
     });
     this.setState({
       open: false,
@@ -74,62 +58,69 @@ class LabelComponent extends Component {
     });
   };
   handleDelete = () => {
-    this.setState({
-      open: false,
-      delete: this.state.delete,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let deleteData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
       delete: this.state.delete,
     };
-    deleteNotes(deleteData);
+    deleteNotes(deleteData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: this.state.delete,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   handlePin = () => {
-    this.setState({
-      open: false,
-      pin: this.state.pin,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let pinData = {
       title: this.state.title,
       pin: this.state.pin,
       takeNote: this.state.takeNote,
       key: this.state.key,
     };
-    updatePin(pinData);
+    updatePin(pinData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          pin: this.state.pin,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   changeHandleUnPin = (key, title, takeNote) => {
-    this.setState({
-      open: false,
-      pin: this.state.pin,
-      title: title,
-      takeNote: takeNote,
-      key: key,
-    });
     let unPinData = {
       title: title,
       pin: !this.state.pin,
       takeNote: takeNote,
       key: key,
     };
-    updateUnPin(unPinData);
+    updateUnPin(unPinData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          pin: this.state.pin,
+          title: title,
+          takeNote: takeNote,
+          key: key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   handleArchive = (title, takeNote, key) => {
-    this.setState({
-      open: false,
-      delete: this.state.delete,
-      title: title,
-      takeNote: takeNote,
-      key: key,
-      archive: this.state.archive,
-    });
     let archiveData = {
       title: title,
       takeNote: takeNote,
@@ -137,21 +128,39 @@ class LabelComponent extends Component {
       delete: this.state.delete,
       archive: this.state.archive,
     };
-    ArchiveNotes(archiveData);
+    archiveNotes(archiveData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: this.state.delete,
+          title: title,
+          takeNote: takeNote,
+          key: key,
+          archive: this.state.archive,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   handleUpdate = () => {
-    this.setState({
-      open: false,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let update = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
     };
-    noteUpdate(update);
+    noteUpdate(update)
+      .then((res) => {
+        this.setState({
+          open: false,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
 
   handleMoreMenu = (event) => {
