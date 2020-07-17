@@ -71,19 +71,22 @@ class Editlabel extends Component {
     checkBox(createcheckbox);
   };
   handleLabelNote = () => {
-    this.setState({
-      takeNote: this.state.takeNote,
-      key: this.props.editlabel,
-      checkBox: this.state.checkBox,
-    });
     let createLabel = {
       takeNote: this.state.takeNote,
       key: this.props.editlabel,
       checkBox: this.state.checkBox,
     };
-    createLabelNotes(createLabel);
+    createLabelNotes(createLabel).then((res) => {
+      this.setState({
+        takeNote: this.state.takeNote,
+        key: this.props.editlabel,
+        checkBox: this.state.checkBox,
+      });
+    });
     this.setState({
       open: false,
+    }).catch((err) => {
+      throw err;
     });
   };
   handleClickAway = () => {
