@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  Paper,
-  Button,
-  Popper,
-  TextField,
-  ClickAwayListener,
-} from "@material-ui/core";
+import {Paper,Button,Popper,TextField,ClickAwayListener} from "@material-ui/core";
 import "date-fns";
 import { remainder } from "../controller/noteController";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
