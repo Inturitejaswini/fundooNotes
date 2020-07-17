@@ -1,18 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  Popper,
-  Paper,
-  Checkbox,
-  Button,
-  InputBase,
-  ClickAwayListener,
-} from "@material-ui/core";
-import {
-  createLabelNotes,
-  getLabels,
-  checkBox,
-} from "../controller/noteController";
+import {Popper,Paper,Checkbox,Button,InputBase,ClickAwayListener} from "@material-ui/core";
+import {createLabelNotes,getLabels,checkBox} from "../controller/noteController";
 class Editlabel extends Component {
   constructor(props) {
     super(props);
