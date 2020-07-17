@@ -17,8 +17,12 @@ export async function notes(data) {
     remainder: data.remainder,
     note: data.note,
   };
+  try{
   let response = await db.collection("notes").add(userData);
   return response;
+  }catch(err){
+    return err;
+  }
 }
 
 /**
@@ -50,11 +54,15 @@ export async function noteUpdate(data) {
     takeNote: data.takeNote,
     key: data.key,
   };
+  try{
   let response = await serviceConstant.firestore
     .collection("notes")
     .doc(data.key)
     .update(userData);
   return response;
+  }catch(err){
+    return err;
+  }
 }
 
 export async function deleteNotes(data) {
@@ -62,6 +70,7 @@ export async function deleteNotes(data) {
     key: data.key,
     delete: data.delete,
   };
+  try{
   if (userData.delete == false) {
     userData.delete = true;
   } else {
@@ -72,6 +81,9 @@ export async function deleteNotes(data) {
     .doc(userData.key)
     .update(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 
 export async function ArchiveNotes(data) {
@@ -81,6 +93,7 @@ export async function ArchiveNotes(data) {
     key: data.key,
     archive: data.archive,
   };
+  try{
   if (userData.archive == false) {
     userData.archive = true;
   } else {
@@ -91,6 +104,9 @@ export async function ArchiveNotes(data) {
     .doc(data.key)
     .update(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 export async function ArchiveNotesCreate(data) {
   const token = localStorage.usertoken;
@@ -104,6 +120,7 @@ export async function ArchiveNotesCreate(data) {
     archive: data.archive,
     token_id: token,
   };
+  try{
   if (userData.archive == false) {
     userData.archive = true;
   } else {
@@ -111,12 +128,16 @@ export async function ArchiveNotesCreate(data) {
   }
   let response = await db.collection("notes").add(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 export async function unArchiveNotes(data) {
   let userData = {
     key: data.key,
     archive: data.archive,
   };
+  try{
   if (userData.archive == false) {
     userData.archive = true;
   } else {
@@ -127,17 +148,24 @@ export async function unArchiveNotes(data) {
     .doc(data.key)
     .update(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 
 export async function deleteNotesPermenently(data) {
   let userData = {
     key: data.key,
   };
+  try{
   let response1 = await serviceConstant.firestore
     .collection("notes")
     .doc(data.key)
     .delete();
   return response1;
+}catch(err){
+  return err;
+}
 }
 
 export async function restoreNotes(data) {
@@ -147,6 +175,7 @@ export async function restoreNotes(data) {
     key: data.key,
     delete: data.delete,
   };
+  try{
   if (userData.delete == false) {
     userData.delete = true;
   } else {
@@ -157,6 +186,9 @@ export async function restoreNotes(data) {
     .doc(data.key)
     .update(userData);
   return response1;
+}catch(err){
+  return err;
+}
 }
 
 export async function updatePin(data) {
@@ -166,6 +198,7 @@ export async function updatePin(data) {
     key: data.key,
     pin: data.pin,
   };
+  try{
   if (userData.pin == false) {
     userData.pin = true;
   } else {
@@ -185,6 +218,7 @@ export async function updateUnPin(data) {
     key: data.key,
     pin: data.pin,
   };
+  try{
   if (userData.pin == false) {
     userData.pin = true;
   } else {
@@ -195,6 +229,9 @@ export async function updateUnPin(data) {
     .doc(data.key)
     .update(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 
 export async function remainder(data) {
@@ -202,11 +239,15 @@ export async function remainder(data) {
     remainder: data.timeDate,
     key: data.key,
   };
+  try{
   let response = await serviceConstant.firestore
     .collection("notes")
     .doc(data.key)
     .update(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 
 export async function checkBox(data) {
@@ -214,6 +255,7 @@ export async function checkBox(data) {
     checkBox: data.checkBox,
     labelkey: data.labelkey,
   };
+  try{
   if (userData.checkBox == false) {
     userData.checkBox = true;
   } else {
@@ -224,6 +266,9 @@ export async function checkBox(data) {
     .doc(data.labelkey)
     .update(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 
 export async function getLabelsCard() {
@@ -257,11 +302,15 @@ export async function createLabelNotes(data) {
     key: data.key,
     checkBox: data.checkBox,
   };
+  try{
   let response = await db.collection("labels").add(userData);
   let userdata1 = {
     labelkey: response.id,
   };
   return response;
+}catch(err){
+  return err;
+}
 }
 
 export async function getLabels(data) {
@@ -269,7 +318,8 @@ export async function getLabels(data) {
     let userData = {
       key: data.key,
     };
-    var labels = [];
+    try{
+    let labels = [];
     await serviceConstant.firestore
       .collection("labels")
       .where("key", "==", userData.key)
@@ -288,12 +338,16 @@ export async function updateLabel(data) {
   let userData = {
     key: data.key,
     label: data.label,
-  };
+  }
+  try{
   let response = await serviceConstant.firestore
     .collection("labels")
     .doc(data.key)
     .update(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 
 export async function UpdateColors(data) {
@@ -301,9 +355,13 @@ export async function UpdateColors(data) {
     key: data.key,
     color: data.color,
   };
+  try{
   let response = await serviceConstant.firestore
     .collection("notes")
     .doc(data.key)
     .update(noteColor);
   return response;
+}catch(err){
+  return err;
+}
 }
