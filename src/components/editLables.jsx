@@ -33,7 +33,6 @@ class EditLabels extends Component {
       open: !this.state.open,
     });
   };
-  
 
   getAllLables = () => {
     getLabelsCard().then((res) => {
@@ -56,16 +55,21 @@ class EditLabels extends Component {
     });
   };
   handleUpdate = (key) => {
-    this.setState({
-      open: false,
-      label: this.state.label,
-      key: key,
-    });
     let userData = {
       label: this.state.label,
       key: key,
     };
-    updateLabel(userData);
+    updateLabel(userData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          label: this.state.label,
+          key: key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   render() {
     return (
