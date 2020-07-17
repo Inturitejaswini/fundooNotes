@@ -7,7 +7,7 @@ import {
   ClickAwayListener,
 } from "@material-ui/core";
 import ColorLensIcon from "@material-ui/icons/ColorLens";
-import { Updatecolors } from "../controller/noteController";
+import { UpdateColors } from "../controller/noteController";
 const colors = [
   { name: "violet", hexcode: "#E6E6FA" },
   { name: "orange", hexcode: "#F47E3F" },
@@ -51,15 +51,20 @@ export class ColorComponent extends Component {
     });
   };
   handleColor = (event) => {
-    this.setState({
-      color: event.target.value,
-      key: this.props.noteId,
-    });
     let noteColor = {
       key: this.props.noteId,
       color: event.target.value,
     };
-    Updatecolors(noteColor);
+    UpdateColors(noteColor)
+      .then((res) => {
+        this.setState({
+          color: event.target.value,
+          key: this.props.noteId,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   render() {
     const { anchorEl } = this.state;
