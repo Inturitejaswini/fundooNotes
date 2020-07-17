@@ -1,31 +1,7 @@
-/******************************************************************************
- * Execution : 1. default node cmd> node archive.jsx
- * 2. if nodemon installed cmd> nodemodule archive.jsx
- * Purpose : create archive page.
- * @description
- *
- * @file :archive.jsx
- * @overview :archive form problem.
- * @module :archive - This is optional if expeclictly its an npm or local package
- * @author :tejaswini<chowdarytejaswini2@gmail.com>
- * @version :1.0
- * @since :-28-01-2020
- ******************************************************************************/
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  getNotes,
-  noteUpdate,
-  unArchiveNotes,
-} from "../controller/noteController";
-import {
-  CropOriginalIcon,
-  AddAlertIcon,
-  PersonAddIcon,
-  OpenInBrowserIcon,
-  RedoIcon,
-  UndoIcon,
-} from "@material-ui/icons";
+import {getNotes,noteUpdate,unArchiveNotes,} from "../controller/noteController";
+import {CropOriginalIcon,AddAlertIcon,PersonAddIcon,OpenInBrowserIcon,RedoIcon,UndoIcon,} from "@material-ui/icons";
 import { Card, InputBase, IconButton } from "@material-ui/core";
 import Dialog from "@material-ui/core/Dialog";
 import image1 from "../assets/pushpin.jpeg";

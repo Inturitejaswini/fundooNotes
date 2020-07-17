@@ -68,7 +68,7 @@ export class Registration extends Component {
       lastName: this.state.lastName,
       fullName: this.state.fullName,
       email: this.state.email,
-      password: this.state.password,
+      password: this.state.password
     };
     userRegistration(user);
   };
@@ -88,7 +88,6 @@ export class Registration extends Component {
                 </a>
               </h2>
             </div>
-
             <Snackbar
               anchorOrigin={{
                 vertical: "top",
