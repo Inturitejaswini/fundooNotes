@@ -1,31 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  Toolbar,
-  IconButton,
-  createMuiTheme,
-  Paper,
-  Popper,
-  MuiThemeProvider,
-  AppBar,
-  InputBase,
-  Grid,
-  Avatar,
-  Divider,
-  Button,
-  Typography,
-  ClickAwayListener,
-} from "@material-ui/core";
-import {
-  RefreshIcon,
-  AppsIcon,
-  SettingsIcon,
-  ViewColumnIcon,
-  MenuIcon,
-  SearchIcon,
-  ViewStreamRoundedIcon,
-  PersonAddIcon,
-} from "@material-ui/icons";
+import {Toolbar,IconButton,createMuiTheme,Paper,Popper,MuiThemeProvider,AppBar,InputBase,Grid,Avatar,Divider,Button,Typography,ClickAwayListener} from "@material-ui/core";
+import {RefreshIcon,AppsIcon,SettingsIcon,ViewColumnIcon,MenuIcon,SearchIcon,ViewStreamRoundedIcon,PersonAddIcon} from "@material-ui/icons";
 import Notes from "../components/notes";
 import GetNotes from "../components/getNote";
 import image from "../assets/keep.jpeg";
@@ -56,7 +32,6 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       initialState: "Search...",
-      currentText: " ",
       anchorEl: null,
       open: false,
       openn: false,
@@ -74,9 +49,6 @@ class Dashboard extends Component {
     });
   };
 
-  changeText(currentText) {
-    this.setState({ currentText });
-  }
   handleNavigationbar = () => {
     this.setState({
       open: !this.state.open,
