@@ -21,16 +21,21 @@ export class MoreComponent extends Component {
     });
   };
   handleDelete = () => {
-    this.setState({
-      open: false,
-      delete: this.state.delete,
-      key: this.props.noteId,
-    });
     let deleteData = {
       key: this.props.noteId,
       delete: this.state.delete,
     };
-    deleteNotes(deleteData);
+    deleteNotes(deleteData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: this.state.delete,
+          key: this.props.noteId,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   render() {
     const { anchorEl } = this.state;
