@@ -1,26 +1,10 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { getnotes } from "../controller/noteController";
-import {
-  CropOriginalIcon,
-  AddAlertIcon,
-  PersonAddIcon,
-  OpenInBrowserIcon,
-  RedoIcon,
-  ArchiveOutlinedIcon,
-  UndoIcon,
-} from "@material-ui/icons";
+import {CropOriginalIcon,AddAlertIcon,PersonAddIcon,OpenInBrowserIcon,RedoIcon,ArchiveOutlinedIcon,UndoIcon} from "@material-ui/icons";
 import image from "../assets/pushpin.jpeg";
 import { InputBase, IconButton, Dialog } from "@material-ui/core";
-import {
-  updatePin,
-  updateUnPin,
-  deleteNotes,
-  noteUpdate,
-  unArchiveNotes,
-  ArchiveNotes,
-  getLabelsCard,
-} from "../controller/noteController";
+import {updatePin,updateUnPin,deleteNotes,noteUpdate,unArchiveNotes,ArchiveNotes,getLabelsCard} from "../controller/noteController";
 import AppBarComponent from "./appBar";
 import Reminder from "./reminder";
 import MoreComponent from "./moreComponent";
@@ -65,46 +49,48 @@ class RemainderComponent extends Component {
     });
   };
   handleDelete = () => {
-    this.setState({
-      open: false,
-      delete: this.state.delete,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let deleteData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
       delete: this.state.delete,
     };
-    deleteNotes(deleteData);
+    deleteNotes(deleteData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: this.state.delete,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   handlePin = (title, takeNote, key) => {
-    this.setState({
-      open: false,
-      pin: this.state.pin,
-      title: title,
-      takeNote: takeNote,
-      key: key,
-    });
     let pinData = {
       pin: this.state.pin,
       title: title,
       takeNote: takeNote,
       key: key,
     };
-    updatePin(pinData);
+    updatePin(pinData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          pin: this.state.pin,
+          title: title,
+          takeNote: takeNote,
+          key: key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   handleArchive = () => {
-    this.setState({
-      open: false,
-      delete: this.state.delete,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-      archive: this.state.archive,
-    });
     let archiveData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
@@ -112,24 +98,41 @@ class RemainderComponent extends Component {
       delete: this.state.delete,
       archive: this.state.archive,
     };
-    ArchiveNotes(archiveData);
+    ArchiveNotes(archiveData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: this.state.delete,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+          archive: this.state.archive,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   changeHandleUnPin = (key, title, takeNote) => {
-    this.setState({
-      open: false,
-      pin: this.state.pin,
-      title: title,
-      takeNote: takeNote,
-      key: key,
-    });
-
     let unPinData = {
       title: title,
       pin: !this.state.pin,
       takeNote: takeNote,
       key: key,
     };
-    updateUnPin(unPinData);
+    updateUnPin(unPinData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          pin: this.state.pin,
+          title: title,
+          takeNote: takeNote,
+          key: key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   handleChangeTitle = (event) => {
     this.setState({
@@ -148,34 +151,44 @@ class RemainderComponent extends Component {
     });
   };
   handleUnArchive = () => {
-    this.setState({
-      open: false,
-      archive: this.state.archive,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let unArchiveData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       archive: this.state.archive,
       key: this.state.key,
     };
-    unArchiveNotes(unArchiveData);
+    unArchiveNotes(unArchiveData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          archive: this.state.archive,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   handleUpdate = () => {
-    this.setState({
-      open: false,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let update = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
     };
-    noteUpdate(update);
+    noteUpdate(update)
+      .then((res) => {
+        this.setState({
+          open: false,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
 
   handlemoremenu = (event) => {
@@ -184,14 +197,6 @@ class RemainderComponent extends Component {
     });
   };
   handleArchive = () => {
-    this.setState({
-      open: false,
-      delete: this.state.delete,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-      archive: this.state.archive,
-    });
     let archiveData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
@@ -199,7 +204,20 @@ class RemainderComponent extends Component {
       delete: this.state.delete,
       archive: this.state.archive,
     };
-    ArchiveNotes(archiveData);
+    ArchiveNotes(archiveData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: this.state.delete,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+          archive: this.state.archive,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   render() {
     const { anchorEl } = this.state;
