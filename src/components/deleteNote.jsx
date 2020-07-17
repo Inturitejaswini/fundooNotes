@@ -40,31 +40,41 @@ class Trash extends Component {
     });
   };
   handlePermenentDelete = (key) => {
-    this.setState({
-      open: false,
-      key: key,
-    });
     let permanentDeleteData = {
       key: key,
     };
-    deleteNotesPermenently(permanentDeleteData);
+    deleteNotesPermenently(permanentDeleteData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          key: key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
 
   handleDelete = (key) => {
-    this.setState({
-      open: false,
-      delete: !this.state.delete,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: key,
-    });
     let deleteData = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: key,
       delete: this.state.delete,
     };
-    restoreNotes(deleteData);
+    restoreNotes(deleteData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: !this.state.delete,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: key,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
   };
   componentDidMount = () => {
     getnotes().then((res) => {
