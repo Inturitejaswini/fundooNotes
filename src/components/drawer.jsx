@@ -1,18 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  EmojiObjectsOutlinedIcon,
-  NotificationsNoneOutlinedIcon,
-  ArchiveOutlinedIcon,
-  DeleteOutlineOutlinedIcon,
-} from "@material-ui/icons";
-import {
-  Drawer,
-  createMuiTheme,
-  MuiThemeProvider,
-  Button,
-  Divider,
-} from "@material-ui/core";
+import {EmojiObjectsOutlinedIcon,NotificationsNoneOutlinedIcon,ArchiveOutlinedIcon,DeleteOutlineOutlinedIcon} from "@material-ui/icons";
+import {Drawer,createMuiTheme,MuiThemeProvider,Button,Divider} from "@material-ui/core";
 import Editlabels from "../components/editLables";
 import Getlabels from "../components/getLables";
 const theme = createMuiTheme({
@@ -71,8 +60,8 @@ class DrawerComponent extends Component {
                     <div className="remaindericon">
                       <NotificationsNoneOutlinedIcon />
                     </div>
-                    <div className="remaindertext" title="remainder">
-                      Remainder
+                    <div className="remindertext" title="reminder">
+                      Reminder
                     </div>
                   </Button>
                 </div>
