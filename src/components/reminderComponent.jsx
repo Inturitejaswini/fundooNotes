@@ -1,10 +1,26 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { getnotes } from "../controller/noteController";
-import {CropOriginalIcon,AddAlertIcon,PersonAddIcon,OpenInBrowserIcon,RedoIcon,ArchiveOutlinedIcon,UndoIcon} from "@material-ui/icons";
+import {
+  CropOriginalIcon,
+  AddAlertIcon,
+  PersonAddIcon,
+  OpenInBrowserIcon,
+  RedoIcon,
+  ArchiveOutlinedIcon,
+  UndoIcon,
+} from "@material-ui/icons";
 import image from "../assets/pushpin.jpeg";
-import { InputBase, IconButton, Dialog } from "@material-ui/core";
-import {updatePin,updateUnPin,deleteNotes,noteUpdate,unArchiveNotes,ArchiveNotes,getLabelsCard} from "../controller/noteController";
+import { InputBase, IconButton, Dialog, Snackbar } from "@material-ui/core";
+import {
+  updatePin,
+  updateUnPin,
+  deleteNotes,
+  noteUpdate,
+  unArchiveNotes,
+  ArchiveNotes,
+  getLabelsCard,
+} from "../controller/noteController";
 import AppBarComponent from "./appBar";
 import Reminder from "./reminder";
 import MoreComponent from "./moreComponent";
@@ -24,6 +40,8 @@ class RemainderComponent extends Component {
       pin: false,
       archive: false,
       delete: false,
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   componentDidMount = () => {
@@ -65,7 +83,10 @@ class RemainderComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   handlePin = (title, takeNote, key) => {
@@ -86,7 +107,10 @@ class RemainderComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   handleArchive = () => {
@@ -97,7 +121,7 @@ class RemainderComponent extends Component {
       delete: this.state.delete,
       archive: this.state.archive,
     };
-    ArchiveNotes(archiveData)
+    archiveNotes(archiveData)
       .then((res) => {
         this.setState({
           open: false,
@@ -109,7 +133,10 @@ class RemainderComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   changeHandleUnPin = (key, title, takeNote) => {
@@ -130,7 +157,10 @@ class RemainderComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   handleChangeTitle = (event) => {
@@ -167,7 +197,10 @@ class RemainderComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   handleUpdate = () => {
@@ -186,7 +219,10 @@ class RemainderComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
 
@@ -195,29 +231,7 @@ class RemainderComponent extends Component {
       anchorEl: this.state.anchorEl ? null : event.currentTarget,
     });
   };
-  handleArchive = () => {
-    let archiveData = {
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-      delete: this.state.delete,
-      archive: this.state.archive,
-    };
-    ArchiveNotes(archiveData)
-      .then((res) => {
-        this.setState({
-          open: false,
-          delete: this.state.delete,
-          title: this.state.title,
-          takeNote: this.state.takeNote,
-          key: this.state.key,
-          archive: this.state.archive,
-        });
-      })
-      .catch((err) => {
-        throw err;
-      });
-  };
+
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
@@ -285,6 +299,15 @@ class RemainderComponent extends Component {
                   </IconButton>
                 </div>
               </card>
+              <Snackbar
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                autoHideDuration={3000}
+                open={this.state.snackbarOpen}
+                message={<span id="message-id">{this.state.SnackbarMsg}</span>}
+              />
             </div>
             <Dialog
               aria-labelledby="simple-dialog-title"
@@ -357,6 +380,15 @@ class RemainderComponent extends Component {
                 </div>
               </div>
             </Dialog>
+            <Snackbar
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center",
+              }}
+              autoHideDuration={3000}
+              open={this.state.snackbarOpen}
+              message={<span id="message-id">{this.state.SnackbarMsg}</span>}
+            />
           </div>
         );
       }
