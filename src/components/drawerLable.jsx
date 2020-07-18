@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {Popper,Paper,Checkbox,Button,InputBase,ClickAwayListener} from "@material-ui/core";
-import {createLabelNotes,getLabels,checkBox} from "../controller/noteController";
+import {
+  Popper,
+  Paper,
+  Checkbox,
+  Button,
+  InputBase,
+  ClickAwayListener,
+} from "@material-ui/core";
+import {
+  createLabelNotes,
+  getLabels,
+  checkBox,
+} from "../controller/noteController";
 class Editlabel extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +24,8 @@ class Editlabel extends Component {
       checkBox: false,
       labelkey: "",
       label: "",
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   componentDidMount = () => {
@@ -47,17 +60,25 @@ class Editlabel extends Component {
     });
   };
   handleCheckBox = (label, key, id) => {
-    this.setState({
-      checkBox: this.state.checkBox,
-      key: this.props.editlabel,
-      labelkey: id,
-    });
     let createcheckbox = {
       checkBox: this.state.checkBox,
       key: this.props.editlabel,
       labelkey: id,
     };
-    checkBox(createcheckbox);
+    checkBox(createcheckbox)
+      .then((res) => {
+        this.setState({
+          checkBox: this.state.checkBox,
+          key: this.props.editlabel,
+          labelkey: id,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
+      });
   };
   handleLabelNote = () => {
     let createLabel = {
@@ -65,18 +86,23 @@ class Editlabel extends Component {
       key: this.props.editlabel,
       checkBox: this.state.checkBox,
     };
-    createLabelNotes(createLabel).then((res) => {
-      this.setState({
-        takeNote: this.state.takeNote,
-        key: this.props.editlabel,
-        checkBox: this.state.checkBox,
+    createLabelNotes(createLabel)
+      .then((res) => {
+        this.setState({
+          takeNote: this.state.takeNote,
+          key: this.props.editlabel,
+          checkBox: this.state.checkBox,
+        });
+        this.setState({
+          open: false,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    });
-    this.setState({
-      open: false,
-    }).catch((err) => {
-      throw err;
-    });
   };
   handleClickAway = () => {
     this.setState({
