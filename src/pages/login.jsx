@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { TextField, Card, Button, Avatar } from "@material-ui/core";
+import { TextField, Card, Button, Avatar, Snackbar } from "@material-ui/core";
 import { userLogin } from "../controller/userController";
 class Login extends Component {
   constructor() {
@@ -8,13 +8,25 @@ class Login extends Component {
     this.state = {
       email: "",
       password: "",
+      snackbarOpen: false,
+      snackbarMessage: "",
     };
   }
   handleChangeEmail = (event) => {
-    this.setState({ email: event.target.value });
+    event.target.value.match("^([a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z])*$") != null
+      ? this.setState({ email: event.target.value })
+      : this.setState({
+          snackbarOpen: true,
+          snackbarMessage: " *enter valid email",
+        });
   };
   handleChangePassword = (event) => {
-    this.setState({ password: event.target.value });
+    event.target.value.match("^[a-z0-9 ]*$") != null
+      ? this.setState({ password: event.target.value })
+      : this.setState({
+          snackbarOpen: true,
+          snackbarMessage: " *password should minimum 6 character",
+        });
   };
   handleRegister = () => {
     this.props.history.push("/registration");
@@ -94,6 +106,16 @@ class Login extends Component {
             </div>
           </div>
         </Card>
+        <Snackbar
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+          open={this.state.snackbarOpen}
+          autoHideDuration={6000}
+          onClose={this.snackbarOpen}
+          message={<span id="messege-id">{this.state.snackbarMessage}</span>}
+        ></Snackbar>
       </div>
     );
   }
