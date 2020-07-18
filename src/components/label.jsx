@@ -1,9 +1,24 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { InputBase, Button, IconButton, Card, Dialog } from "@material-ui/core";
-import { getNotes, getLabelsCard, noteUpdate, archiveNotes, updatePin, updateUnPin, deleteNotes} from "../controller/noteController";
+import {
+  getNotes,
+  getLabelsCard,
+  noteUpdate,
+  archiveNotes,
+  updatePin,
+  updateUnPin,
+  deleteNotes,
+} from "../controller/noteController";
 import image1 from "../assets/pushpin.jpeg";
-import {CropOriginalIcon,PersonAddIcon,ColorLensIcon,ArchiveOutlinedIcon,RedoIcon,UndoIcon} from "@material-ui/icons";
+import {
+  CropOriginalIcon,
+  PersonAddIcon,
+  ColorLensIcon,
+  ArchiveOutlinedIcon,
+  RedoIcon,
+  UndoIcon,
+} from "@material-ui/icons";
 import AppBarComponent from "../components/appBar";
 import MoreComponent from "../components/moreComponent";
 import Reminder from "../components/reminder";
@@ -18,6 +33,9 @@ class LabelComponent extends Component {
       open: false,
       delete: false,
       key: "",
+      keyItem: "",
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   componentDidMount = () => {
@@ -75,7 +93,10 @@ class LabelComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   handlePin = () => {
@@ -96,7 +117,10 @@ class LabelComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   changeHandleUnPin = (key, title, takeNote) => {
@@ -117,7 +141,10 @@ class LabelComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   handleArchive = (title, takeNote, key) => {
@@ -140,7 +167,10 @@ class LabelComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   handleUpdate = () => {
@@ -159,7 +189,10 @@ class LabelComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
 
@@ -174,12 +207,12 @@ class LabelComponent extends Component {
     });
   };
   render() {
-    let pinData = this.state.noteArray1.map((key1) => {
-      if (this.props.location.state == key1.data().label) {
+    let pinData = this.state.noteArray1.map((keyItem) => {
+      if (this.props.location.state == keyItem.data().label) {
         return (
           <div className="labelComponent">
             {this.state.noteArray.map((key) => {
-              if (key.id == key1.data().key) {
+              if (key.id == keyItem.data().key) {
                 return (
                   <div className="noteContainer_labelcomponent">
                     <div
@@ -222,16 +255,16 @@ class LabelComponent extends Component {
                             <div></div>
                           )}
                           <div id="inner_map_function">
-                            {this.state.noteArray1.map((key1) => {
+                            {this.state.noteArray1.map((keyItem) => {
                               if (
-                                key1.data().checkBox == true &&
-                                key1.data().key == key.id
+                                keyItem.data().checkBox == true &&
+                                keyItem.data().key == key.id
                               ) {
                                 return (
                                   <div className="chip-div">
                                     <InputBase
                                       id="labelssize"
-                                      value={key1.data().label}
+                                      value={keyItem.data().label}
                                     />
                                   </div>
                                 );
