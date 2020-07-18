@@ -29,15 +29,15 @@ class GetLabels extends Component {
     this.props.history.push("/label", label);
   };
   render() {
-    let pinData = this.state.noteArray.map((key1) => {
+    let pinData = this.state.noteArray.map((key) => {
       return (
         <div className="getting_labels_inDrawercomponent">
           <Button id="abcd" onClick={this.handleGetNotes}>
             <LabelOutlinedIcon className="labelbtnicon" />
             <InputBase
               id="labelssize"
-              value={key1.data().label}
-              onClick={() => this.handleComponet(key1.data().label)}
+              value={key.data().label}
+              onClick={() => this.handleComponet(key.data().label)}
             />
           </Button>
         </div>
