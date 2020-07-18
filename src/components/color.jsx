@@ -37,6 +37,8 @@ export class ColorComponent extends Component {
       label: "",
       color: "",
       openColorPallete: true,
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
 
@@ -63,7 +65,10 @@ export class ColorComponent extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   render() {
