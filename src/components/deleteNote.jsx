@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {getnotes,restoreNotes,deleteNotesPermenently,} from "../controller/noteController";
+import {
+  getnotes,
+  restoreNotes,
+  deleteNotesPermenently,
+} from "../controller/noteController";
 import { Card, InputBase, IconButton, Dialog } from "@material-ui/core";
 import { DeleteForeverIcon, RestoreFromTrashIcon } from "@material-ui/icons";
 import AppBarComponent from "../components/appBar";
@@ -17,6 +21,8 @@ class Trash extends Component {
       key: "",
       archive: false,
       anchorEl: null,
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   handleChangeTitle = (event) => {
@@ -47,7 +53,10 @@ class Trash extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
 
@@ -69,7 +78,10 @@ class Trash extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   componentDidMount = () => {
