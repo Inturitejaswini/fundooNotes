@@ -1,7 +1,31 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {Toolbar,IconButton,createMuiTheme,Paper,Popper,MuiThemeProvider,AppBar,InputBase,Grid,Avatar,Divider,Button,Typography,ClickAwayListener} from "@material-ui/core";
-import {RefreshIcon,AppsIcon,SettingsIcon,ViewColumnIcon,MenuIcon,SearchIcon,ViewStreamRoundedIcon,PersonAddIcon} from "@material-ui/icons";
+import {
+  Toolbar,
+  IconButton,
+  createMuiTheme,
+  Paper,
+  Popper,
+  MuiThemeProvider,
+  AppBar,
+  InputBase,
+  Grid,
+  Avatar,
+  Divider,
+  Button,
+  Typography,
+  ClickAwayListener,
+} from "@material-ui/core";
+import {
+  RefreshIcon,
+  AppsIcon,
+  SettingsIcon,
+  ViewColumnIcon,
+  MenuIcon,
+  SearchIcon,
+  ViewStreamRoundedIcon,
+  PersonAddIcon,
+} from "@material-ui/icons";
 import Notes from "../components/notes";
 import GetNotes from "../components/getNote";
 import image from "../assets/keep.jpeg";
@@ -34,18 +58,20 @@ class Dashboard extends Component {
       initialState: "Search...",
       anchorEl: null,
       open: false,
-      openn: false,
+      openList: false,
       profileOpen: false,
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   handleLabel = () => {
     this.setState({
-      openn: true,
+      openList: true,
     });
   };
   handleLabels = () => {
     this.setState({
-      openn: false,
+      openList: false,
     });
   };
 
@@ -230,7 +256,7 @@ class Dashboard extends Component {
           </AppBar>
           <Notes />
           <GetNotes
-            listId={this.state.openn}
+            listId={this.state.openList}
             className="getnote-divcard"
           ></GetNotes>
         </MuiThemeProvider>
