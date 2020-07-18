@@ -60,8 +60,6 @@ class Dashboard extends Component {
       open: false,
       openList: false,
       profileOpen: false,
-      snackbarOpen: false,
-      snackbarMsg: "",
     };
   }
   handleLabel = () => {

@@ -1,9 +1,30 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { getNotes, archiveNotes, updatePin, updateUnPin, noteUpdate, deleteNotes, getLabelsCard} from "../controller/noteController";
-import {MoreComponent} from "../components/moreComponent";
-import {CropOriginalIcon,UndoIcon,ArchiveOutlinedIcon,RedoIcon,PersonAddIcon} from "@material-ui/icons";
-import {IconButton,Dialog,InputBase,createMuiTheme,MuiThemeProvider} from "@material-ui/core";
+import {
+  getNotes,
+  archiveNotes,
+  updatePin,
+  updateUnPin,
+  noteUpdate,
+  deleteNotes,
+  getLabelsCard,
+} from "../controller/noteController";
+import { MoreComponent } from "../components/moreComponent";
+import {
+  CropOriginalIcon,
+  UndoIcon,
+  ArchiveOutlinedIcon,
+  RedoIcon,
+  PersonAddIcon,
+} from "@material-ui/icons";
+import {
+  IconButton,
+  Dialog,
+  InputBase,
+  createMuiTheme,
+  MuiThemeProvider,
+  Snackbar
+} from "@material-ui/core";
 import { Reminder } from "./reminder";
 import ColorComponent from "./color";
 import image1 from "../assets/pushpin.jpeg";
@@ -38,6 +59,8 @@ class GetNotes extends Component {
       pin: false,
       archive: false,
       delete: false,
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   componentDidMount = () => {
@@ -75,16 +98,21 @@ class GetNotes extends Component {
       takeNote: this.state.takeNote,
       key: this.state.key,
     };
-    noteUpdate(update).then(res=>{
-      this.setState({
-        open: false,
-        title: this.state.title,
-        takeNote: this.state.takeNote,
-        key: this.state.key,
+    noteUpdate(update)
+      .then((res) => {
+        this.setState({
+          open: false,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    }).catch(err=>{
-      throw err;
-    })
   };
   handleMoreMenu = (event) => {
     this.setState({
@@ -106,17 +134,22 @@ class GetNotes extends Component {
       key: this.state.key,
       delete: this.state.delete,
     };
-    deleteNotes(deleteData).then(res=>{
-      this.setState({
-        open: false,
-        delete: this.state.delete,
-        title: this.state.title,
-        takeNote: this.state.takeNote,
-        key: this.state.key,
+    deleteNotes(deleteData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: this.state.delete,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    }).catch(err=>{
-      throw err;
-    })
   };
   handlePin = (title, takeNote, key) => {
     let pin = {
@@ -125,17 +158,22 @@ class GetNotes extends Component {
       takeNote: takeNote,
       key: key,
     };
-    updatePin(pin).then(res=>{
-      this.setState({
-        open: false,
-        pin: this.state.pin,
-        title: title,
-        takeNote: takeNote,
-        key: key,
+    updatePin(pin)
+      .then((res) => {
+        this.setState({
+          open: false,
+          pin: this.state.pin,
+          title: title,
+          takeNote: takeNote,
+          key: key,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    }).catch(err=>{
-      throw err;
-    })
   };
   handleArchive = () => {
     let archive = {
@@ -145,18 +183,23 @@ class GetNotes extends Component {
       delete: this.state.delete,
       archive: this.state.archive,
     };
-    archiveNotes(archive).then(res=>{
-      this.setState({
-        open: false,
-        delete: this.state.delete,
-        title: this.state.title,
-        takeNote: this.state.takeNote,
-        key: this.state.key,
-        archive: this.state.archive,
+    archiveNotes(archive)
+      .then((res) => {
+        this.setState({
+          open: false,
+          delete: this.state.delete,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+          archive: this.state.archive,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    }).catch(err=>{
-      throw err;
-    })
   };
   changeHandleUnPin = (key, title, takeNote) => {
     let pin = {
@@ -165,17 +208,22 @@ class GetNotes extends Component {
       takeNote: takeNote,
       key: key,
     };
-    updateUnPin(pin).then(res=>{
-      this.setState({
-        open: false,
-        pin: this.state.pin,
-        title: title,
-        takeNote: takeNote,
-        key: key,
+    updateUnPin(pin)
+      .then((res) => {
+        this.setState({
+          open: false,
+          pin: this.state.pin,
+          title: title,
+          takeNote: takeNote,
+          key: key,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    }).catch(err=>{
-      throw err;
-    })
   };
 
   render() {
@@ -195,6 +243,25 @@ class GetNotes extends Component {
               className="note-card-div"
               style={{ background: key.data().color }}
             >
+              <Snackbar
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                autoHideDuration={3000}
+                open={this.state.snackbarOpen}
+                message={<span id="message-id">{this.state.SnackbarMsg}</span>}
+                action={
+                  <IconButton
+                    size="small"
+                    aria-label="close"
+                    color="secondary"
+                    onClick={this.handleClose}
+                  >
+                    <CloseIcon fontSize="small" />
+                  </IconButton>
+                }
+              />
               <card>
                 <div className="take_note">
                   <div>

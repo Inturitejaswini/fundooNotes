@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {InputBase,TextField,IconButton,Button,Dialog} from "@material-ui/core";
+import {InputBase,TextField,IconButton,Button,Dialog,Snackbar} from "@material-ui/core";
 import {LabelIcon,ClearIcon,DoneIcon,CreateIcon,EditOutlinedIcon} from "@material-ui/icons";
 import { updateLabel, getLabelsCard } from "../controller/noteController";
 class EditLabels extends Component {
@@ -11,6 +11,8 @@ class EditLabels extends Component {
       open: false,
       key: "",
       label: "",
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   componentDidMount = () => {
@@ -56,7 +58,10 @@ class EditLabels extends Component {
         });
       })
       .catch((err) => {
-        throw err;
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
   };
   render() {

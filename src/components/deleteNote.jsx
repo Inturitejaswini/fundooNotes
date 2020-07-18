@@ -5,7 +5,7 @@ import {
   restoreNotes,
   deleteNotesPermenently,
 } from "../controller/noteController";
-import { Card, InputBase, IconButton, Dialog } from "@material-ui/core";
+import { Card, InputBase, IconButton, Dialog,Snackbar } from "@material-ui/core";
 import { DeleteForeverIcon, RestoreFromTrashIcon } from "@material-ui/icons";
 import AppBarComponent from "../components/appBar";
 class Trash extends Component {

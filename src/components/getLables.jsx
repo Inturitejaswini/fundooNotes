@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { InputBase, Button } from "@material-ui/core";
+import { InputBase, Button} from "@material-ui/core";
 import LabelOutlinedIcon from "@material-ui/icons/LabelOutlined";
 import { getLabelsCard } from "../controller/noteController";
 class GetLabels extends Component {

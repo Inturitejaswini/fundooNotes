@@ -5,6 +5,7 @@ import {
   IconButton,
   Paper,
   ClickAwayListener,
+  Snackbar
 } from "@material-ui/core";
 import ColorLensIcon from "@material-ui/icons/ColorLens";
 import { UpdateColors } from "../controller/noteController";
@@ -86,6 +87,7 @@ export class ColorComponent extends Component {
     });
     return (
       <div className="colorcomponent-div">
+        <div>
         <IconButton
           className="colorlense"
           aria-describedby={id}
@@ -96,6 +98,7 @@ export class ColorComponent extends Component {
             <ColorLensIcon />
           </div>
         </IconButton>
+        </div>
         <Popper id={colorId} open={open} anchorEl={anchorEl}>
           <ClickAwayListener onClickAway={this.handleClickAway}>
             <Paper className="colorlense-paper">
@@ -105,6 +108,25 @@ export class ColorComponent extends Component {
             </Paper>
           </ClickAwayListener>
         </Popper>
+        <Snackbar
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                autoHideDuration={3000}
+                open={this.state.snackbarOpen}
+                message={<span id="message-id">{this.state.SnackbarMsg}</span>}
+                action={
+                  <IconButton
+                    size="small"
+                    aria-label="close"
+                    color="secondary"
+                    onClick={this.handleClose}
+                  >
+                    <CloseIcon fontSize="small" />
+                  </IconButton>
+                }
+              />
       </div>
     );
   }

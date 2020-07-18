@@ -7,6 +7,7 @@ import {
   Button,
   InputBase,
   ClickAwayListener,
+  Snackbar
 } from "@material-ui/core";
 import {
   createLabelNotes,
