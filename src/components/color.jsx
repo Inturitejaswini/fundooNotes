@@ -43,7 +43,7 @@ export class ColorComponent extends Component {
     };
   }
 
-  handlecolormenu = (event) => {
+  handleColorMenu = (event) => {
     this.setState({
       anchorEl: this.state.anchorEl ? null : event.currentTarget,
     });
@@ -92,7 +92,7 @@ export class ColorComponent extends Component {
           className="colorlense"
           aria-describedby={id}
           type="button"
-          onClick={this.handlecolormenu}
+          onClick={this.handleColorMenu}
         >
           <div className="ColorLensIcon" title="more">
             <ColorLensIcon />
