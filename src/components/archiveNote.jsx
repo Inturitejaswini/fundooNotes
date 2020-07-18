@@ -1,8 +1,19 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {getNotes,noteUpdate,unArchiveNotes,} from "../controller/noteController";
-import {CropOriginalIcon,AddAlertIcon,PersonAddIcon,OpenInBrowserIcon,RedoIcon,UndoIcon,} from "@material-ui/icons";
-import { Card, InputBase, IconButton } from "@material-ui/core";
+import {
+  getNotes,
+  noteUpdate,
+  unArchiveNotes,
+} from "../controller/noteController";
+import {
+  CropOriginalIcon,
+  AddAlertIcon,
+  PersonAddIcon,
+  OpenInBrowserIcon,
+  RedoIcon,
+  UndoIcon,
+} from "@material-ui/icons";
+import { Card, InputBase, IconButton, Snackbar } from "@material-ui/core";
 import Dialog from "@material-ui/core/Dialog";
 import image1 from "../assets/pushpin.jpeg";
 import ColorComponent from "../components/color";
@@ -21,6 +32,8 @@ class Archive extends Component {
       archive: true,
       key: "",
       anchorEl: null,
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   handleChangeTitle = (event) => {
@@ -45,15 +58,20 @@ class Archive extends Component {
       archive: this.state.archive,
       key: this.state.key,
     };
-    unArchiveNotes(unArchiveData).then(res=>{
-      this.setState({
-        open: false,
-        archive: this.state.archive,
-        key: this.state.key,
+    unArchiveNotes(unArchiveData)
+      .then((res) => {
+        this.setState({
+          open: false,
+          archive: this.state.archive,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    }).catch(err=>{
-      throw err;
-    })
   };
   handleUpdate = () => {
     let update = {
@@ -61,16 +79,21 @@ class Archive extends Component {
       takeNote: this.state.takeNote,
       key: this.state.key,
     };
-    noteUpdate(update).then(res=>{
-      this.setState({
-        open: false,
-        title: this.state.title,
-        takeNote: this.state.takeNote,
-        key: this.state.key,
+    noteUpdate(update)
+      .then((res) => {
+        this.setState({
+          open: false,
+          title: this.state.title,
+          takeNote: this.state.takeNote,
+          key: this.state.key,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    }).catch(err=>{
-      throw err;
-    })
   };
   componentDidMount = () => {
     getNotes().then((res) => {
