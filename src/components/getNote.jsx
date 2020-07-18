@@ -290,7 +290,7 @@ class GetNotes extends Component {
                         )
                       }
                     ></InputBase>
-                    {key.data().remainder != null ? (
+                    {key.data().reminder != null ? (
                       <div className="date_and_time">
                         <InputBase
                           id="inner_date_and_time"
@@ -303,7 +303,7 @@ class GetNotes extends Component {
                     <div className="date_and_time">
                       <InputBase
                         id="inner_date_and_time"
-                        value={key.data().remainder}
+                        value={key.data().reminder}
                       ></InputBase>
                     </div>
                   </div>
