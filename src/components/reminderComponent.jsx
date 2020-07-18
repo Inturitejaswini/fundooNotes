@@ -35,7 +35,6 @@ class RemainderComponent extends Component {
       this.setState({
         noteArray: res,
       });
-      this.state.noteArray.map((key) => {});
     });
     this.setState({
       open: false,

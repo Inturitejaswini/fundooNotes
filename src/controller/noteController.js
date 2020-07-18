@@ -86,7 +86,7 @@ export async function deleteNotes(data) {
 }
 }
 
-export async function ArchiveNotes(data) {
+export async function archiveNotes(data) {
   let userData = {
     title: data.title,
     takeNote: data.takeNote,
@@ -209,6 +209,9 @@ export async function updatePin(data) {
     .doc(data.key)
     .update(userData);
   return response;
+}catch(err){
+  return err;
+}
 }
 
 export async function updateUnPin(data) {
@@ -318,7 +321,6 @@ export async function getLabels(data) {
     let userData = {
       key: data.key,
     };
-    try{
     let labels = [];
     await serviceConstant.firestore
       .collection("labels")
@@ -333,7 +335,8 @@ export async function getLabels(data) {
   } catch (error) {
     return error.message;
   }
-}
+  }
+
 export async function updateLabel(data) {
   let userData = {
     key: data.key,

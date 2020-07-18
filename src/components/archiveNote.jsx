@@ -41,30 +41,36 @@ class Archive extends Component {
   };
 
   handleUnArchive = () => {
-    this.setState({
-      open: false,
-      archive: this.state.archive,
-      key: this.state.key,
-    });
     let unArchiveData = {
       archive: this.state.archive,
       key: this.state.key,
     };
-    unArchiveNotes(unArchiveData);
+    unArchiveNotes(unArchiveData).then(res=>{
+      this.setState({
+        open: false,
+        archive: this.state.archive,
+        key: this.state.key,
+      });
+    }).catch(err=>{
+      throw err;
+    })
   };
   handleUpdate = () => {
-    this.setState({
-      open: false,
-      title: this.state.title,
-      takeNote: this.state.takeNote,
-      key: this.state.key,
-    });
     let update = {
       title: this.state.title,
       takeNote: this.state.takeNote,
       key: this.state.key,
     };
-    noteUpdate(update);
+    noteUpdate(update).then(res=>{
+      this.setState({
+        open: false,
+        title: this.state.title,
+        takeNote: this.state.takeNote,
+        key: this.state.key,
+      });
+    }).catch(err=>{
+      throw err;
+    })
   };
   componentDidMount = () => {
     getNotes().then((res) => {

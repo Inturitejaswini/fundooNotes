@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  getnotes,
-  restoreNotes,
-  deleteNotesPermenently,
-} from "../controller/noteController";
+import {getnotes,restoreNotes,deleteNotesPermenently,} from "../controller/noteController";
 import { Card, InputBase, IconButton, Dialog } from "@material-ui/core";
 import { DeleteForeverIcon, RestoreFromTrashIcon } from "@material-ui/icons";
 import AppBarComponent from "../components/appBar";

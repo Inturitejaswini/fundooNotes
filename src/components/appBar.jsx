@@ -1,31 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  Toolbar,
-  IconButton,
-  MuiThemeProvider,
-  createMuiTheme,
-  Paper,
-  Popper,
-  ClickAwayListener,
-  AppBar,
-  InputBase,
-  Grid,
-  Avatar,
-  Divider,
-  Button,
-  Typography,
-} from "@material-ui/core";
-import {
-  RefreshIcon,
-  AppsIcon,
-  SettingsIcon,
-  ViewColumnIcon,
-  MenuIcon,
-  SearchIcon,
-  ViewStreamRoundedIcon,
-  PersonAddIcon,
-} from "@material-ui/icons";
+import { Toolbar, IconButton, MuiThemeProvider, createMuiTheme, Paper, Popper, ClickAwayListener, AppBar, InputBase, Grid, Avatar, Divider, Button, Typography,} from "@material-ui/core";
+import { RefreshIcon,AppsIcon,SettingsIcon,ViewColumnIcon,MenuIcon,SearchIcon,ViewStreamRoundedIcon,PersonAddIcon} from "@material-ui/icons";
 import image from "../assets/keep.jpeg";
 import DrawerComponent from "./drawer";
 const theme = createMuiTheme({
