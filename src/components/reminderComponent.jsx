@@ -18,7 +18,7 @@ import {
   deleteNotes,
   noteUpdate,
   unArchiveNotes,
-  ArchiveNotes,
+  archiveNotes,
   getLabelsCard,
 } from "../controller/noteController";
 import AppBarComponent from "./appBar";
@@ -264,7 +264,7 @@ class RemainderComponent extends Component {
                   <div className="date_and_time">
                     <InputBase
                       id="inner_date_and_time"
-                      value={key.data().remainder}
+                      value={key.data().reminder}
                     ></InputBase>
                   </div>
                 </div>
