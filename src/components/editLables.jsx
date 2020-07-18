@@ -1,7 +1,21 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {InputBase,TextField,IconButton,Button,Dialog,Snackbar} from "@material-ui/core";
-import {LabelIcon,ClearIcon,DoneIcon,CreateIcon,EditOutlinedIcon} from "@material-ui/icons";
+import {
+  InputBase,
+  TextField,
+  IconButton,
+  Button,
+  Dialog,
+  Snackbar,
+} from "@material-ui/core";
+import {
+  LabelIcon,
+  ClearIcon,
+  DoneIcon,
+  CreateIcon,
+  EditOutlinedIcon,
+  CloseIcon,
+} from "@material-ui/icons";
 import { updateLabel, getLabelsCard } from "../controller/noteController";
 class EditLabels extends Component {
   constructor(props) {
@@ -120,6 +134,25 @@ class EditLabels extends Component {
             </Button>
           </div>
         </Dialog>
+        <Snackbar
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          autoHideDuration={3000}
+          open={this.state.snackbarOpen}
+          message={<span id="message-id">{this.state.SnackbarMsg}</span>}
+          action={
+            <IconButton
+              size="small"
+              aria-label="close"
+              color="secondary"
+              onClick={this.handleClose}
+            >
+              <CloseIcon fontSize="small" />
+            </IconButton>
+          }
+        />
       </div>
     );
   }

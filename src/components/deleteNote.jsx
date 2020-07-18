@@ -185,6 +185,7 @@ class Trash extends Component {
                 </div>
               </div>
             </Dialog>
+            
           </div>
         );
       }
