@@ -146,6 +146,15 @@ class Trash extends Component {
                     </div>
                   </IconButton>
                 </div>
+                <Snackbar
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                autoHideDuration={3000}
+                open={this.state.snackbarOpen}
+                message={<span id="message-id">{this.state.SnackbarMsg}</span>}
+              />
               </div>
             </Card>
             <Dialog open={this.state.open} onClick={this.handleUpdate}>
@@ -185,7 +194,7 @@ class Trash extends Component {
                 </div>
               </div>
             </Dialog>
-            
+
           </div>
         );
       }
