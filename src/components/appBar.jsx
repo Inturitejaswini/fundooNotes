@@ -31,9 +31,6 @@ export class AppBarComponent extends Component {
     };
   }
 
-  changeText(currentText) {
-    this.setState({ currentText });
-  }
   handlenavigationbar = () => {
     this.setState({
       open: !this.state.open,
