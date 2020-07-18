@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import {Paper,Button,Popper,TextField,ClickAwayListener} from "@material-ui/core";
 import "date-fns";
-import { remainder } from "../controller/noteController";
+import { reminder } from "../controller/noteController";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 export class SetDateAndTime extends Component {
   constructor(props) {
@@ -37,9 +37,9 @@ export class SetDateAndTime extends Component {
   handleValve = () => {
     let timeDetails = {
       timeDate: this.state.timeDate,
-      key: this.props.remainderId,
+      key: this.props.reminderId,
     };
-    remainder(timeDetails);
+    reminder(timeDetails);
   };
   render() {
     const { anchorEl } = this.state;
