@@ -116,16 +116,6 @@ export class ColorComponent extends Component {
                 autoHideDuration={3000}
                 open={this.state.snackbarOpen}
                 message={<span id="message-id">{this.state.SnackbarMsg}</span>}
-                action={
-                  <IconButton
-                    size="small"
-                    aria-label="close"
-                    color="secondary"
-                    onClick={this.handleClose}
-                  >
-                    <CloseIcon fontSize="small" />
-                  </IconButton>
-                }
               />
       </div>
     );
