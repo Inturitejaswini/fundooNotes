@@ -7,7 +7,7 @@ import {
   Button,
   InputBase,
   ClickAwayListener,
-  Snackbar
+  Snackbar,
 } from "@material-ui/core";
 import {
   createLabelNotes,
@@ -167,6 +167,15 @@ class Editlabel extends Component {
             </ClickAwayListener>
           </Popper>
         </div>
+        <Snackbar
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          autoHideDuration={3000}
+          open={this.state.snackbarOpen}
+          message={<span id="message-id">{this.state.SnackbarMsg}</span>}
+        />
         {pinData}
       </div>
     );
