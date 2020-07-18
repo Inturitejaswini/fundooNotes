@@ -1,9 +1,18 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import {InputBase,Button,IconButtonPopper,PaperClickAwayListener} from "@material-ui/core";
-import {BrushIcon,CropOriginalIcon,PersonAddIcon,ColorLensIcon,UndoIcon,MoreVertIcon,CheckCircleOutlineIcon,ArchiveOutlinedIconRedoIcon} from "@material-ui/icons";
+import { InputBase, Button, Snackbar } from "@material-ui/core";
+import {
+  BrushIcon,
+  CropOriginalIcon,
+  PersonAddIcon,
+  ColorLensIcon,
+  UndoIcon,
+  MoreVertIcon,
+  CheckCircleOutlineIcon,
+  ArchiveOutlinedIconRedoIcon,
+} from "@material-ui/icons";
 import { notes } from "../controller/noteController";
-import { Reminder } from "./reminder";
+import  Reminder  from "./reminder";
 export class Notes extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +29,8 @@ export class Notes extends Component {
       remainder: "",
       delete: false,
       note: false,
+      snackbarOpen: false,
+      snackbarMsg: "",
     };
   }
   handleNote = () => {
@@ -43,13 +54,18 @@ export class Notes extends Component {
       remainder: this.state.remainder,
       note: this.state.note,
     };
-    notes(newUser).then((res) => {
-      this.setState({
-        open: false,
+    notes(newUser)
+      .then((res) => {
+        this.setState({
+          open: false,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          snackbarOpen: true,
+          SnackbarMsg: err,
+        });
       });
-    }).catch(err=>{
-      throw err;
-    })
   };
   handleChangeTitle = (event) => {
     this.setState({ title: event.target.value });
@@ -185,6 +201,15 @@ export class Notes extends Component {
             </div>
           </div>
         </card>
+        <Snackbar
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          autoHideDuration={3000}
+          open={this.state.snackbarOpen}
+          message={<span id="message-id">{this.state.SnackbarMsg}</span>}
+        />
       </div>
     );
   }
