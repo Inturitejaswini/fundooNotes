@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { Popper, IconButton, Paper, Button, Snackbar } from "@material-ui/core";
+import { Popper, IconButton, Paper, Button } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { deleteNotes } from "../controller/noteController";
 import EditLabel from "./drawerLable";
