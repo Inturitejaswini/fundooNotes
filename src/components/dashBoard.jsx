@@ -145,7 +145,7 @@ class Dashboard extends Component {
                 >
                   <RefreshIcon />
                 </IconButton>
-                {!this.state.open ? (
+                {!this.state.openList ? (
                   <div>
                     <IconButton
                       className="gridview"
