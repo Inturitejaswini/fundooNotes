@@ -28,23 +28,24 @@ export class AppBarComponent extends Component {
       anchorEl: null,
       open: false,
       profileOpen: false,
+      openLabel:""
     };
   }
 
-  handlenavigationbar = () => {
+  handleNavigationBar = () => {
     this.setState({
       open: !this.state.open,
     });
   };
-  handlerefreshPage = () => {
+  handleRefreshPage = () => {
     window.location.reload(false);
   };
-  handleprofilemenu = (event) => {
+  handleProfileMenu = (event) => {
     this.setState({
       anchorEl: this.state.anchorEl ? null : event.currentTarget,
     });
   };
-  handlesignout = (event) => {
+  handleSignout = (event) => {
     this.props.history.push("/login");
   };
 
@@ -55,12 +56,12 @@ export class AppBarComponent extends Component {
   };
   handleLabel = () => {
     this.setState({
-      openn: true,
+      openLabel: true,
     });
   };
   handleLabels = () => {
     this.setState({
-      openn: false,
+      openLabel: false,
     });
   };
   render() {
@@ -78,7 +79,7 @@ export class AppBarComponent extends Component {
                   className="menuButton"
                   color="primary"
                   aria-label="menu"
-                  onClick={this.handlenavigationbar}
+                  onClick={this.handleNavigationBar}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -110,11 +111,11 @@ export class AppBarComponent extends Component {
                   color="default"
                   aria-label="open drawer"
                   style={{ marginLeft: "5px" }}
-                  onClick={this.handlerefreshPage}
+                  onClick={this.handleRefreshPage}
                 >
                   <RefreshIcon />
                 </IconButton>
-                {!this.state.openn ? (
+                {!this.state.openLabel ? (
                   <div>
                     <IconButton
                       className="gridview"
@@ -167,7 +168,7 @@ export class AppBarComponent extends Component {
                   <IconButton
                     aria-describedby={id}
                     type="button"
-                    onClick={this.handleprofilemenu}
+                    onClick={this.handleProfileMenu}
                   >
                     <Avatar className="account"></Avatar>
                   </IconButton>
@@ -206,7 +207,7 @@ export class AppBarComponent extends Component {
                                 <Button
                                   size="small"
                                   color="primary"
-                                  onClick={this.handlesignout}
+                                  onClick={this.handleSignout}
                                   id="signout-btn"
                                 >
                                   <div id="div-sign">Sign out</div>
